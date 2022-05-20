@@ -15,25 +15,26 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->increments("id");
-            $table->string('name_categorie');
-            $table->string('description');
+            $table->string('name_categorie')->nullable();
+            $table->string('description')->nullable();
             $table->timestamps();
 
         });
         Schema::create('exercices', function (Blueprint $table) {
-            $table->increments("id");
-            $table->string('exercice');
-            $table->string('numero');
-            $table->string('description');
+            $table->increments("id")->nullable();
+            $table->string('exercice')->nullable();
+            $table->string('numero')->nullable();
+            $table->string('description')->nullable();
+            $table->string('photo')->nullable();
             $table->timestamps();
 
         });
 
         Schema::create('jours', function (Blueprint $table) {
-            $table->increments("id");
-            $table->string('jour');
-            $table->unsignedInteger("id_categories");
-            $table->unsignedInteger("id_exercice");
+            $table->increments("id")->nullable();
+            $table->string('jour')->nullable();
+            $table->unsignedInteger("id_categories")->nullable();
+            $table->unsignedInteger("id_exercice")->nullable();
             $table->timestamps();
             $table->foreign('id_categories')
             ->references('id')

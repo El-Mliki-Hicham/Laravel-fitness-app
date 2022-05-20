@@ -16,19 +16,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $categories = DB::table('categories')
-                
-                ->select('*')
-                ->get()->toArray();  
-        $exercices = DB::table('exercices')
-                
-                ->select('*')
-                ->get()->toArray();  
-                
-                
-            
-                return view('pageee.index',compact('categories',"exercices")) ;
-            
+        
+       return view("sportss.index");     
     }
 
     /**
@@ -38,7 +27,18 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        $categories = DB::table('categories')
+                
+        ->select('*')
+        ->get()->toArray();  
+$exercices = DB::table('exercices')
+        
+        ->select('*')
+        ->get()->toArray();  
+        
+        
+    
+        return view('sportss.create',compact('categories',"exercices")) ;
     }
 
     /**

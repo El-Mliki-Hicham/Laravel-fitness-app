@@ -16,15 +16,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/index', function () {
-    return view('pagee.index');
-});
+// Route::get('/index', function () {
+//     return view('pageeee.index');
+// });
+// Route::get('/ajouter', function () {
+//     return view('pageeee.create');
+// });
 //afficher pour crud jours
-Route::get("/index",[AdminController::class,'index']);
+
 
 // Route::get("/index",[SportController::class,'index']);
 
 
 Route::resource('sport', SportController::class);
-Route::resource('categorie', AdminController::class);
+Route::resource('sportss', AdminController::class);
 Route::resource('jours', joursController::class);

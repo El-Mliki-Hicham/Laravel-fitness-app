@@ -39,7 +39,7 @@ public function store(Request $request)
     $description=$request->input('description');
     $photos=$request->input('photo');
     
-    $insert = DB::insert('insert into exercices (exercice,numero,description,photos) values(?,?,?,?)',
+    $insert = DB::insert('insert into exercices (exercice,numero,description,photo) values(?,?,?,?)',
             [$exercice,$numero,$description,$photos]);
    
 

@@ -1,6 +1,6 @@
 hello<!-- create.blade.php -->
 
-@extends('layouts/layout')
+@extends('layouts/app')
 
 @section('content')
 <style>
@@ -55,7 +55,7 @@ hello<!-- create.blade.php -->
     Ajouter categorie
   </div>
 
-<form method="post" action="{{ route('categorie.store') }}">
+<form method="post" action="{{ route('sportss.store') }}">
     .         @csrf
               <div class="form-group">
                   <label for="nom d'exercice">categorie </label>
