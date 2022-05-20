@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SportController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,4 @@ Route::get('/', function () {
 // Route::get('/index',[SportController::class,'index']);
 
 Route::resource('sport', SportController::class);
+Route::resource('categorie', AdminController::class);

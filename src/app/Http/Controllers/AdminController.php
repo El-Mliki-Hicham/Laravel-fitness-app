@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\admin;
 use App\Models\Sport;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -36,16 +37,18 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        $exercice = new Sport();
-        $exercice->exercice=$request->input('exercice');
-        $exercice->numero=$request->input('numero');
-        $exercice->description=$request->input('decription');
-        $exercice->photos=$request->input('photo');
-        $insert=$exercice->save();
+        $categorie=$request->input('categorie');
+   
+    $description=$request->input('description');
+   
+    
+    $insert = DB::insert('insert into categories (name_categorie,description) values(?,?)',
+            [$categorie,$description]);
+   
 
-        if($insert){
-           return redirect('table');
-        }
+    if($insert){
+       return redirect('index');
+    }
     }
 
     /**

@@ -49,4 +49,19 @@ hello<!-- create.blade.php -->
       </form>
   </div>
 </div>
+
+<form method="post" action="{{ route('categorie.store') }}">
+    .         @csrf
+              <div class="form-group">
+                  <label for="nom d'exercice">categorie </label>
+                  <input type="text" class="form-control" name="categorie"/>
+              </div>
+    
+            
+              <div class="form-group">
+                  <label for="Description">description</label>
+                  <input type="text" class="form-control" name="description"/>
+              </div>
+              <button type="submit" class="btn btn-primary">Ajouter</button>
+          </form>
 @endsection
