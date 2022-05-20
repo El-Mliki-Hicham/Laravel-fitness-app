@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\joursController;
 use App\Http\Controllers\SportController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,11 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/index', function () {
+    return view('pages.index');
 });
+//afficher pour crud jours
+Route::get("/index",[AdminController::class,'index']);
+// Route::get("/index",[SportController::class,'index']);
 
-// Route::get('/index',[SportController::class,'index']);
 
 Route::resource('sport', SportController::class);
 Route::resource('categorie', AdminController::class);
+Route::resource('jours', joursController::class);

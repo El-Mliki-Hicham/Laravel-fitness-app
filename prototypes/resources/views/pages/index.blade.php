@@ -1,6 +1,6 @@
 hello<!-- create.blade.php -->
 
-@extends('layout')
+@extends('layouts/layout')
 
 @section('content')
 <style>
@@ -50,6 +50,11 @@ hello<!-- create.blade.php -->
   </div>
 </div>
 
+
+<div class="card-header">
+    Ajouter categorie
+  </div>
+
 <form method="post" action="{{ route('categorie.store') }}">
     .         @csrf
               <div class="form-group">
@@ -64,4 +69,62 @@ hello<!-- create.blade.php -->
               </div>
               <button type="submit" class="btn btn-primary">Ajouter</button>
           </form>
+
+
+
+
+<div class="card-header">
+    Ajouter jours
+  </div>
+
+<form method="post" action="{{ route('jours.store') }}">
+    .         @csrf
+              <div class="form-group">
+                  <label for="nom d'exercice">jour </label>
+                  <input type="text" class="form-control" name="jour"/>
+              </div>
+    
+            
+              <div class="form-group">
+                <label for="cc-exp" class="control-label mb-1">Categorie</label>
+                <select name="categorie" id="select" class="form-control">
+                 
+                <option selected>Select category</option>
+                
+                    
+               
+                @forelse ($categories as $value)
+            <option value="{{$value->id}}">{{$value->name_categorie}}{{$value->numero}}
+
+                @empty                    
+                @endforelse
+            </option>
+            php artisan make:controller  jours 
+
+
+                   
+                </select>
+                <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="cc-exp" class="control-label mb-1">Categorie</label>
+              <select name="categorie" id="select" class="form-control">
+               
+              <option selected>Select category</option>
+              
+                  
+             
+         
+          php artisan make:controller  jours 
+
+
+                 
+              </select>
+              <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+          </div>
+
+              <button type="submit" class="btn btn-primary">Ajouter</button>
+          </form>
+          
 @endsection

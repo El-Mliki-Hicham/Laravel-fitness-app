@@ -22,6 +22,8 @@ class SportController extends Controller
 public function index()
 {
    
+
+
 }
 
 /**
