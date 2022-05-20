@@ -92,7 +92,7 @@ class imageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+      $id=  $request->input('id');
         if($request->hasfile('image_new'))
         {
             $file = $request->file('image_new');
@@ -112,7 +112,7 @@ class imageController extends Controller
         }
 
       $insert =  DB::table('student')
-        ->where('id',$request->input('id'))
+        ->where('id',$id)
         ->update([
            'image'=>$images
            
