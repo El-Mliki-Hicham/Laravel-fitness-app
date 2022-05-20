@@ -90,11 +90,13 @@ hello<!-- create.blade.php -->
                 <select name="categorie" id="select" class="form-control">
                  
                 <option selected>Select category</option>
-                
-                    
+                @forelse ($exercices as $value)
+                  {{print_r($value)}}
                
-                @forelse ($categories as $value)
-            <option value="{{$value->id}}">{{$value->name_categorie}}
+                
+            <option value="{{$value->id}}">{{$value->categories->name_categorie}}
+             
+               
 
                 @empty                    
                 @endforelse

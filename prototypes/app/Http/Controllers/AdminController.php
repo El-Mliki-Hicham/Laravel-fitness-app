@@ -16,11 +16,20 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $categories =DB::table(DB::raw('categories','exercices'))
-                    ->select(DB::raw('*'))
-                    ->get()->toArray();       
+        $categories =DB::table('categories')
+        ->select('*');
+                           
+        $exercices =DB::table('exercices')
+        ->select('*')
+        ->union($categories)
+        ->get(); 
+                    
+                    // print_r($exercices["categories.id"]);
+                    print_r($exercices);
+                    
+
                        
-                    return view('pages.index',['categories'=>$categories]) ;
+                    // return view('pages.indexxx',['exercices'=>$exercices]) ;
     }
 
     /**

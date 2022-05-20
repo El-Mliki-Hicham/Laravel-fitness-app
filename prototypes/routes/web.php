@@ -21,6 +21,7 @@ Route::get('/index', function () {
 });
 //afficher pour crud jours
 Route::get("/index",[AdminController::class,'index']);
+Route::get("/showw",[AdminController::class,'index']);
 // Route::get("/index",[SportController::class,'index']);
 
 
