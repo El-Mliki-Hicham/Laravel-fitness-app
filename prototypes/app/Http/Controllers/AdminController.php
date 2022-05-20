@@ -16,8 +16,17 @@ class AdminController extends Controller
      */
     public function index()
     {
-        
-       return view("sportss.index");     
+      $categories=  DB::table('categories')
+        ->select('*')
+        ->get();
+      $exercices=  DB::table('exercices')
+        ->select('*')
+        ->get();
+      $jours=  DB::table('jours')
+        ->select('*')
+        ->get();
+
+       return view("sportss.index",compact("categories","exercices","jours"));     
     }
 
     /**
