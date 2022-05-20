@@ -36,7 +36,17 @@ class joursController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $exercice=$request->input('exercice');
+        $jour=$request->input('jour');
+        $categorie=$request->input('categorie');
+        
+        $insert = DB::insert('insert into jours(jour,id_categories,id_exercice) values(?,?,?)',
+                [$jour,$categorie,$exercice]);
+       
+    
+        if($insert){
+           return redirect('index');
+        }
     }
 
     /**

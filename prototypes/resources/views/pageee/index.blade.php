@@ -68,48 +68,62 @@ hello<!-- create.blade.php -->
                   <input type="text" class="form-control" name="description"/>
               </div>
               <button type="submit" class="btn btn-primary">Ajouter</button>
-          </form>
-
-
-
-
-<div class="card-header">
-    Ajouter jours
-  </div>
-
-<form method="post" action="{{ route('jours.store') }}">
-    .         @csrf
-              <div class="form-group">
-                  <label for="nom d'exercice">jour </label>
-                  <input type="text" class="form-control" name="jour"/>
-              </div>
-    
+            </form>
             
-              <div class="form-group">
-                <label for="cc-exp" class="control-label mb-1">Categorie</label>
-                <select name="categorie" id="select" class="form-control">
-                 
-                <option selected>Select categorie</option>
-             @forelse ($categories as $value)
-                 
-             <option value="{{$value->id}}">{{$value->name_categorie}} </option>
-             @empty
-                 
-             @endforelse
-              
-            </option>
-        
-
-
-                   
-                </select>
-           
-                <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+            
+            
+            
+            <div class="card-header">
+              Ajouter jours
             </div>
+            
+            <form method="post" action="{{ route('jours.store') }}">
+@csrf
+           
+            
+           
+             <div class="form-group">
+              <label for="cc-exp" class="control-label mb-1">Exercices</label>
+              <select name="jour" id="select" class="form-control">
+               
+              <option selected>Select exercice</option>
+              <option > Dimanche  </option>
+              <option > Lundi </option>
+              <option > Mardi </option>
+              <option > Mercredi </option>
+              <option > Jeudi </option>
+              <option > Vendredi </option>
+              <option > Samedi </option>
+              
+              </option>
+          </select>
+              <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+          </div>
+
+
+{{-- categories --}}
+
+             <div class="form-group">
+              <label for="cc-exp" class="control-label mb-1">categories</label>
+              <select name="categorie" id="select" class="form-control">
+               
+              <option selected>Select exercice</option>
+              @forelse ($categories as $value)
+              <option value="{{$value->id}}">{{$value->name_categorie}} </option>
+              @empty
+                  
+              @endforelse
+             
+              </option>
+          </select>
+              <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+          </div>
+
+            {{-- exercice --}}
 
             <div class="form-group">
               <label for="cc-exp" class="control-label mb-1">Exercices</label>
-              <select name="categorie" id="select" class="form-control">
+              <select name="exercice" id="select" class="form-control">
                
               <option selected>Select exercice</option>
               @forelse ($exercices as $value)

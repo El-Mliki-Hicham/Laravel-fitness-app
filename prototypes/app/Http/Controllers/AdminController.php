@@ -27,7 +27,7 @@ class AdminController extends Controller
                 
                 
             
-                return view('pagee.index',compact('categories',"exercices")) ;
+                return view('pageee.index',compact('categories',"exercices")) ;
             
     }
 
