@@ -90,18 +90,11 @@ hello<!-- create.blade.php -->
                 <select name="categorie" id="select" class="form-control">
                  
                 <option selected>Select category</option>
-                @forelse ($exercices as $value)
-                  {{print_r($value)}}
-               
-                
-            <option value="{{$value->id}}">{{$value->categories->name_categorie}}
              
-               
 
-                @empty                    
-                @endforelse
+              
             </option>
-            php artisan make:controller  jours 
+        
 
 
                    
@@ -114,11 +107,11 @@ hello<!-- create.blade.php -->
               <select name="categorie" id="select" class="form-control">
                
               <option selected>Select category</option>
-              
+       
                   
              
-         
-          php artisan make:controller  jours 
+              </option>
+          
 
 
                  

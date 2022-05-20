@@ -16,20 +16,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $categories =DB::table('categories')
-        ->select('*');
-                           
-        $exercices =DB::table('exercices')
-        ->select('*')
-        ->union($categories)
-        ->get(); 
-                    
-                    // print_r($exercices["categories.id"]);
-                    print_r($exercices);
-                    
-
-                       
-                    // return view('pages.indexxx',['exercices'=>$exercices]) ;
+        
     }
 
     /**
