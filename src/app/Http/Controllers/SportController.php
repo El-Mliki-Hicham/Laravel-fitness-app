@@ -42,15 +42,18 @@ public function create()
  */
 public function store(Request $request)
 {
-    $exercice = new Sport();
-    $exercice->exercice=$request->input('exercice');
-    $exercice->numero=$request->input('numero');
-    $exercice->description=$request->input('decription');
-    $exercice->photos=$request->input('photo');
-    $insert=$exercice->save();
+    
+    $exercice=$request->input('exercice');
+    $numero=$request->input('numero');
+    $description=$request->input('description');
+    $photos=$request->input('photo');
+    
+    $insert = DB::insert('insert into exercices (exercice,numero,description,photos) values(?,?,?,?)',
+            [$exercice,$numero,$description,$photos]);
+   
 
     if($insert){
-       return redirect('table');
+       return redirect('index');
     }
 }
 
