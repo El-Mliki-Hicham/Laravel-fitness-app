@@ -1,0 +1,95 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\admin;
+use App\Models\Sport;
+use Illuminate\Http\Request;
+
+class AdminController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+       
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $exercice = new Sport();
+        $exercice->exercice=$request->input('exercice');
+        $exercice->numero=$request->input('numero');
+        $exercice->description=$request->input('decription');
+        $exercice->photos=$request->input('photo');
+        $insert=$exercice->save();
+
+        if($insert){
+           return redirect('table');
+        }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\admin  $admin
+     * @return \Illuminate\Http\Response
+     */
+    public function show( $admin)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\admin  $admin
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($admin)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\admin  $admin
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request,  $admin)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\admin  $admin
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy( $admin)
+    {
+        //
+    }
+}

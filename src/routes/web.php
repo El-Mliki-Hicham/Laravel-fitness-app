@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index',[SportController::class,'index']);
+// Route::get('/index',[SportController::class,'index']);
+
+Route::resource('sport', SportController::class);
