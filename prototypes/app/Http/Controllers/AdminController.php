@@ -16,8 +16,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $categories = DB::table('categories','exercices')
-                    ->select('*')
+        $categories =DB::table(DB::raw('categories','exercices'))
+                    ->select(DB::raw('*'))
                     ->get()->toArray();       
                        
                     return view('pages.index',['categories'=>$categories]) ;

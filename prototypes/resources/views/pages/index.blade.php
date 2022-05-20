@@ -94,7 +94,7 @@ hello<!-- create.blade.php -->
                     
                
                 @forelse ($categories as $value)
-            <option value="{{$value->id}}">{{$value->name_categorie}}{{$value->numero}}
+            <option value="{{$value->id}}">{{$value->name_categorie}}
 
                 @empty                    
                 @endforelse
