@@ -89,9 +89,13 @@ hello<!-- create.blade.php -->
                 <label for="cc-exp" class="control-label mb-1">Categorie</label>
                 <select name="categorie" id="select" class="form-control">
                  
-                <option selected>Select category</option>
-             
-
+                <option selected>Select categorie</option>
+             @forelse ($categories as $value)
+                 
+             <option value="{{$value->id}}">{{$value->name_categorie}} </option>
+             @empty
+                 
+             @endforelse
               
             </option>
         
@@ -99,23 +103,23 @@ hello<!-- create.blade.php -->
 
                    
                 </select>
+           
                 <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
             </div>
 
             <div class="form-group">
-              <label for="cc-exp" class="control-label mb-1">Categorie</label>
+              <label for="cc-exp" class="control-label mb-1">Exercices</label>
               <select name="categorie" id="select" class="form-control">
                
-              <option selected>Select category</option>
-       
+              <option selected>Select exercice</option>
+              @forelse ($exercices as $value)
+              <option value="{{$value->id}}">{{$value->exercice}} </option>
+              @empty
                   
+              @endforelse
              
               </option>
-          
-
-
-                 
-              </select>
+          </select>
               <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
           </div>
 

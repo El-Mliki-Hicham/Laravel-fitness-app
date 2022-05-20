@@ -16,7 +16,19 @@ class AdminController extends Controller
      */
     public function index()
     {
-        
+        $categories = DB::table('categories')
+                
+                ->select('*')
+                ->get()->toArray();  
+        $exercices = DB::table('exercices')
+                
+                ->select('*')
+                ->get()->toArray();  
+                
+                
+            
+                return view('pagee.index',compact('categories',"exercices")) ;
+            
     }
 
     /**
