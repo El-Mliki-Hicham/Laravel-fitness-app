@@ -112,7 +112,7 @@
 		</tbody>
 	</table>
 	<div>
-{{-- categories --}}
+{{-- joure --}}
 	<table border="1" >
 		<thead>
 			<tr>

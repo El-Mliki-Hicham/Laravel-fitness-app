@@ -70,7 +70,7 @@ $exercices = DB::table('exercices')
    
 
     if($insert){
-       return redirect('index');
+       return redirect('sports.index');
     }
     }
 
