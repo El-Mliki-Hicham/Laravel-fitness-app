@@ -91,9 +91,15 @@ $exercices = DB::table('exercices')
      * @param  \App\Models\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function edit($admin)
+    public function edit($id)
     {
-        //
+        
+
+      $row = db::table("categories")
+      ->where('id',$id)
+      ->get();
+  
+      return view('sports.edit', compact('row'));
     }
 
     /**
@@ -105,7 +111,13 @@ $exercices = DB::table('exercices')
      */
     public function update(Request $request,  $admin)
     {
-        
+      DB::table('categories')
+      ->where('id',$request->input('id'))
+      ->update([
+         'name_categorie'=>$request->input('name'),
+         'description'=>$request->input('description')
+
+      ]);
     }
 
     /**
