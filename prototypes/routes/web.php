@@ -22,12 +22,12 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/ajouter', function () {
 //     return view('pageeee.create');
 // });
-//afficher pour crud jours
+//afficher pour crud jours 
 
 
 // Route::get("/index",[SportController::class,'index']);
 
 
 Route::resource('sport', SportController::class);
-Route::resource('sportss', AdminController::class);
+Route::resource('sports', AdminController::class);
 Route::resource('jours', joursController::class);

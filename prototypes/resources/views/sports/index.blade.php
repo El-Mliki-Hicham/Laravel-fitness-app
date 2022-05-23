@@ -6,7 +6,7 @@
 
 	<p>
 		<!-- Lien pour créer un nouvel article : "posts.create" -->
-		<a href="{{ route('sportss.create') }}" title="Créer un article" >Créer un nouveau post</a>
+		<a href="{{ route('sports.create') }}" title="Créer un article" >Créer un nouveau post</a>
 	</p>
 
 	<!-- Le tableau pour lister les articles/posts -->

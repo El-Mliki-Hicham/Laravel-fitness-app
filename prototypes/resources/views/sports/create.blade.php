@@ -55,7 +55,7 @@ hello<!-- create.blade.php -->
     Ajouter categorie
   </div>
 
-<form method="post" action="{{ route('sportss.store') }}">
+<form method="post" action="{{ route('sports.store') }}">
     .         @csrf
               <div class="form-group">
                   <label for="nom d'exercice">categorie </label>

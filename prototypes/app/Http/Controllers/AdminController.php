@@ -26,7 +26,7 @@ class AdminController extends Controller
         ->select('*')
         ->get();
 
-       return view("sportss.index",compact("categories","exercices","jours"));     
+       return view("sports.index",compact("categories","exercices","jours"));     
     }
 
     /**
@@ -47,7 +47,7 @@ $exercices = DB::table('exercices')
         
         
     
-        return view('sportss.create',compact('categories',"exercices")) ;
+        return view('sports.create',compact('categories',"exercices")) ;
     }
 
     /**
