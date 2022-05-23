@@ -24,6 +24,8 @@ class AdminController extends Controller
         ->get();
       $jours=  DB::table('jours')
         ->select('*')
+        ->join('categories', 'jours.id_categories', '=', 'categories.id')
+        ->join('exercices', 'jours.id_exercice', '=', 'exercices.id')
         ->get();
 
        return view("sports.index",compact("categories","exercices","jours"));     
