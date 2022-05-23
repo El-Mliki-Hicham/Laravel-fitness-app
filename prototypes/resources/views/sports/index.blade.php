@@ -43,11 +43,11 @@
 				</td>
 				<td>
 					<!-- Formulaire pour supprimer un Post : "posts.destroy" -->
-					<form method="POST" action="{{ route('sport.destroy', $value->id) }}" >
+					<form method="post" action="{{ route('sport.destroy', $value->id	) }}" >
 						<!-- CSRF token -->
 						@csrf
 						<!-- <input type="hidden" name="_method" value="DELETE"> -->
-					
+						@method('DELETE')
 						<input type="submit" value="x Supprimer" >
 					</form>
 				</td>
@@ -95,15 +95,15 @@
 				
 				<td>
 					<!-- Lien pour modifier un Post : "posts.edit" -->
-					<a href="{{ route('sport.edit',$value->id) }}" title="Modifier l'article" >Modifier</a>
+					<a href="{{ route('sports.edit',$value->id) }}" title="Modifier l'article" >Modifier</a>
 				</td>
 				<td>
 					<!-- Formulaire pour supprimer un Post : "posts.destroy" -->
-					<form method="POST" action="{{ route('sport.destroy', $value->id) }}" >
+					<form method="POST" action="{{ route('sports.destroy', $value->id) }}" >
 						<!-- CSRF token -->
 						@csrf
 						<!-- <input type="hidden" name="_method" value="DELETE"> -->
-					
+						@method('DELETE')
 						<input type="submit" value="x Supprimer" >
 					</form>
 				</td>
@@ -150,15 +150,15 @@
 				
 				<td>
 					<!-- Lien pour modifier un Post : "posts.edit" -->
-					<a href="{{ route('sport.edit',$value->id) }}" title="Modifier l'article" >Modifier</a>
+					<a href="{{ route('jours.edit',$value->id) }}" title="Modifier l'article" >Modifier</a>
 				</td>
 				<td>
 					<!-- Formulaire pour supprimer un Post : "posts.destroy" -->
-					<form method="POST" action="{{ route('sport.destroy', $value->id) }}" >
+					<form method="POST" action="{{ route('jours.destroy', $value->id) }}" >
 						<!-- CSRF token -->
 						@csrf
 						<!-- <input type="hidden" name="_method" value="DELETE"> -->
-					
+						@method('DELETE')
 						<input type="submit" value="x Supprimer" >
 					</form>
 				</td>
@@ -167,4 +167,4 @@
 		</tbody>
 	</table>
 	<div>
-@endsection
+@endsection	

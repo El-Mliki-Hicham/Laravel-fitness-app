@@ -45,7 +45,7 @@ class joursController extends Controller
        
     
         if($insert){
-           return redirect('index');
+           return redirect('sports');
         }
     }
 
@@ -91,6 +91,8 @@ class joursController extends Controller
      */
     public function destroy($id)
     {
-        //
+        db::table('jours')->where('id',$id)
+    ->delete();
+    return redirect('sports');
     }
 }

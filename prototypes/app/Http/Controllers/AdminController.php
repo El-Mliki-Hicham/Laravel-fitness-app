@@ -70,7 +70,7 @@ $exercices = DB::table('exercices')
    
 
     if($insert){
-       return redirect('sports.index');
+       return redirect('sports');
     }
     }
 
@@ -105,7 +105,7 @@ $exercices = DB::table('exercices')
      */
     public function update(Request $request,  $admin)
     {
-        //
+        
     }
 
     /**
@@ -114,8 +114,10 @@ $exercices = DB::table('exercices')
      * @param  \App\Models\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function destroy( $admin)
+    public function destroy( $id)
     {
-        //
+      db::table('categories')->where('id',$id)
+      ->delete();
+      return redirect('sports');
     }
 }

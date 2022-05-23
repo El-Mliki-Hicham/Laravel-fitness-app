@@ -38,10 +38,12 @@ return new class extends Migration
             $table->timestamps();
             $table->foreign('id_categories')
             ->references('id')
-            ->on('categories');
+            ->on('categories')
+            ->onDelete('cascade');;
             $table->foreign('id_exercice')
             ->references('id')
-            ->on('exercices');
+            ->on('exercices')
+            ->onDelete('cascade');;
         });
     }
 

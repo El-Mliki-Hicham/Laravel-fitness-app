@@ -44,7 +44,7 @@ public function store(Request $request)
    
 
     if($insert){
-       return redirect('index');
+       return redirect('sports');
     }
 }
 
@@ -88,9 +88,11 @@ public function update(Request $request,  $admin)
  * @param  \App\Models\admin  $admin
  * @return \Illuminate\Http\Response
  */
-public function destroy( $admin)
+public function destroy( $id)
 {
-    //
+    db::table('exercices')->where('id',$id)
+    ->delete();
+    return redirect('sports');
 }
 
 }
