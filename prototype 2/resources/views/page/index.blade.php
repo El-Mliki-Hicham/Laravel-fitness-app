@@ -6,8 +6,8 @@
 
 
 
+@forelse ($image as $item)
 <div class="card" style="width: 18rem;">
-    @forelse ($image as $item)
     <img src="image/{{$item->image}}" class="card-img-top" style="width: 200px" alt="...">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
@@ -20,7 +20,7 @@
         <input type="submit" value="x Supprimer" >
     </form>
     </div>
-    @empty
-    @endforelse
-      
-  </div>
+    
+</div>
+@empty
+@endforelse
