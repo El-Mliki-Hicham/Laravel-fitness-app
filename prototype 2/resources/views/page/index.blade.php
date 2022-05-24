@@ -10,9 +10,9 @@
 <div class="card" style="width: 18rem;">
     <img src="image/{{$item->image}}" class="card-img-top" style="width: 200px" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <form method="post" action="{{ route('page.destroy', $item->id	) }}" >
+      <h5 class="card-title"></h5>
+      <a href="{{ route('page.edit', $item->id) }}"><button>mofidier</button></p></a>
+      <form method="post" action="{{ route('page.destroy', $item->id) }}" >
         <!-- CSRF token -->
         @csrf
         <!-- <input type="hidden" name="_method" value="DELETE"> -->

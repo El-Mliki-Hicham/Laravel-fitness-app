@@ -79,7 +79,8 @@ class imageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $image = DB::table('student')->select("*")->where("id",$id)->get();
+        return view("page.edit",compact("image"));
     }
 
     /**

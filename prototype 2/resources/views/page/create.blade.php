@@ -17,11 +17,11 @@
 
                         <div class="mb-3">
                             <label for="">Name</label>
-                            <input type="text" name="name" required class="form-control">
+                            <input type="text" name="name"  class="form-control">
                         </div>
                         <div class="mb-3">
                             <label for="">Upload Image</label>
-                            <input type="file" name="image" required class="course form-control">
+                            <input type="file" name="image" value="" required class="course form-control">
                         </div>
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary">Save</button>
