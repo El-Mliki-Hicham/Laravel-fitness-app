@@ -50,7 +50,7 @@ class imageController extends Controller
             $images = $filename;
         }
     
-        $input = $request->all();
+       
         $insert= DB::insert('insert into student (image) values(?)', [$images]);
     
 
@@ -92,7 +92,37 @@ class imageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        if($request->hasfile('image_new'))
+        {
+            $file = $request->file('image_new');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('image', $filename);
+            $images = $filename;
+        }
+
+        else{ 
+             
+            $file = $request->file('image');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('image', $filename);
+            $images = $filename;
+        }
+
+      $insert =  DB::table('student')
+        ->where('id',$request->input('id'))
+        ->update([
+           'image'=>$images
+           
+  
+        ]);
+      
+     
+        if($insert){
+            return redirect('/page');
+        }
     }
 
     /**

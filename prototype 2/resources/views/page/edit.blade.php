@@ -4,18 +4,21 @@
 
 
 
-
 @forelse ($image as $item)
+<form method="post" action="{{route('page.update',$item->id)}}" >
+    @method('PUT')
+    @csrf
 <div class="card" style="width: 18rem;">
     <img src="{{ asset('image')}}/{{ ($item->image) }}" alt="">
+    <input type="hidden" name="image" value="{{ $item->image }}">
+    <input type="hidden" name="id" value="{{ $item->id }}">
     {{-- <img src="image/{{$item->image}}" class="card-img-top" style="width: 200px" alt="..."> --}}
+    
     <div class="card-body">
-      <h5 class="card-title"></h5>
+    <input type="file" name="image_new">
+        <h5 class="card-title"></h5>
         <!-- CSRF token -->
-        @csrf
-        <!-- <input type="hidden" name="_method" value="DELETE"> -->
-        @method('DELETE')
-        <input type="submit" value="x Supprimer" >
+     <button>ajoute</button>
     </form>
     </div>
     
