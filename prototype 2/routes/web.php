@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-route::resource('/page',imageController::class);
+route::resource('/pageeee',imageController::class);
