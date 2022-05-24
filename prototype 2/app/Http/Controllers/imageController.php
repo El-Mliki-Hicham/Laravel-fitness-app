@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class imageController extends Controller
 {
@@ -13,7 +14,9 @@ class imageController extends Controller
      */
     public function index()
     {
-      return view("page.index");
+       $image= DB::table('student')->select("*")->get();
+
+      return view("page.index",compact("image"));
     }
 
     /**
@@ -23,6 +26,7 @@ class imageController extends Controller
      */
     public function create()
     {
+        
         return view("page.create");
     }
 
@@ -34,8 +38,27 @@ class imageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        
+       
+        if($request->hasfile('image'))
+        {
+            $file = $request->file('image');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('image', $filename);
+            $images = $filename;
+        }
+    
+        $input = $request->all();
+        $insert= DB::insert('insert into student (image) values(?)', [$images]);
+    
+
+        
+    if($insert){
+        return redirect('/page');
     }
+}
 
     /**
      * Display the specified resource.
@@ -79,6 +102,7 @@ class imageController extends Controller
      */
     public function destroy($id)
     {
-        //
-    }
+        db::table('student')->where('id',$id)
+        ->delete();
+        return redirect('page');    }
 }
