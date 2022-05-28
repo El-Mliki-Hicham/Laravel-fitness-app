@@ -80,4 +80,6 @@
       <!-- end head bottom -->
     </div>
     <!-- end content head -->
-
+<body>
+  @yield('content')
+</body>

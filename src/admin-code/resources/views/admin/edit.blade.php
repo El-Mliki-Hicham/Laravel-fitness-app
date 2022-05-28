@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 
     <!-- end content head -->
     <!-- start with the real content -->

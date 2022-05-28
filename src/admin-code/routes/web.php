@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 
-route::resource("/admin",Controller::class);
+route::resource("admin",Controller::class);
 route::resource("/admin-categorie",CategoriesController::class);
 route::resource("/admin-exercice",ExercicesController::class);
 route::resource("/admin-jour",JoursController::class);

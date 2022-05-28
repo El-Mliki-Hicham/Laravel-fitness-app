@@ -13,7 +13,7 @@ class Controller extends Controller
      */
     public function index()
     {
-        //
+        return view("admin.index");
     }
 
     /**
@@ -34,7 +34,7 @@ class Controller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view("admin.creat");
     }
 
     /**
