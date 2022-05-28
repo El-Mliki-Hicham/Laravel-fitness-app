@@ -1,0 +1,42 @@
+#log
+  .left
+    height: 100vh
+    background: url('img/log.png') center center no-repeat
+    background-size: cover
+    display: flex
+    justify-content: center
+    align-items: center
+    .logo
+      height: 180px
+      width: 180px
+      img
+        width: 100%
+  .right
+    height: 100vh
+    background-color: #1a1a1a
+    display: flex
+    justify-content: center
+    align-items: center
+    input
+      border-radius: 3px
+      background-color: #303030
+      padding: 10px 20px
+      margin-bottom: 10px
+      width: 100%
+      color: #fff
+      font-size: 14px
+      font-weight: 300
+      letter-spacing: 1px
+      margin-bottom: 20px
+      &::placeholder
+        color: #fff
+        text-transform: capitalize
+    button
+      padding: 10px 40px
+      background-color: $color1
+      font-weight: 600
+      transition: all 0.4s
+      &:hover
+        opacity: 0.6
+    .btn-link
+      color: $color1

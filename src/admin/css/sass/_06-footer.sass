@@ -1,0 +1,49 @@
+footer
+  background-color: #f6f9fc
+  border-top: 1px solid $color4
+  padding: 70px 0
+  .emailList
+    p
+      margin-top: 20px
+    .emailForm
+      margin-top: 30px
+      input
+        padding-top: 10px
+        padding-bottom: 10px
+  .links
+    ul
+      margin-top: 30px
+      padding: 0
+      display: flex
+      li
+        width: 33.3%
+        list-style: none
+        display: flex
+        flex-direction: column
+        a
+          color: $color5
+          opacity: 0.5
+          letter-spacing: 1px
+          text-transform: capitalize
+          transition: all 0.3s
+          margin-bottom: 5px
+          &:hover
+            opacity: 1
+            color: $color1
+  .bottom
+    display: flex
+    justify-content: center
+    border-top: 1px solid $color4
+    padding-top: 50px
+    margin-top: 50px
+    a
+      color: $color5
+      transition: all 0.3s
+      letter-spacing: 0
+      &:hover
+        letter-spacing: 2px
+        color: $color2
+@media (max-width: 992px)
+  footer
+    .links
+      margin-top: 60px

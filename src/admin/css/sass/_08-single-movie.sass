@@ -1,0 +1,346 @@
+#big
+  padding: 0
+  margin: 0
+  position: relative
+  .vid
+    position: relative
+    overflow: hidden
+    height: 600px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #000
+    &:before
+      position: absolute
+      z-index: 2
+      content: ''
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      background-color: rgba(0,0,0,0.5)
+    #vimg
+      position: absolute
+      left: 0
+      top: 0
+      z-index: 1
+      width: 100%
+    #vlink
+      position: absolute
+      z-index: 3
+      color: black
+      font-size: 20px
+      background-color: #fff
+      padding: 40px
+      border-radius: 100px
+      transition: all 0.3s
+      &:hover
+        transform: scale(1.2)
+    iframe
+      width: 100%
+      height: 600px
+      border: 0
+#topInfo
+  background-color: $color3
+  border-bottom: 1px solid $color4
+  padding: 20px 0
+  color: $color5
+  .info
+    width: 100%
+    display: flex
+    // flex-direction: row
+    .left
+      flex: 1
+      p
+        padding: 0
+        margin: 0
+        font-weight: 600
+        line-height: 40px
+        .fa
+          margin-right: 20px
+    .right
+      .btn
+        box-shadow: 0 0 0
+        margin-left: 10px
+        &:hover
+          box-shadow: 0px 3px 10px 0px rgba(123, 1, 233, 0.4)
+        .fa
+          font-size: 12px
+          margin-right: 4px
+      .download
+        background-color: #ae55ff
+      .favorite
+        background-color: $color2
+#server
+  background-color: $color3
+  border-bottom: 1px solid $color4
+  color: $color5
+  .info
+    padding: 20px 0
+    position: relative
+    display: flex
+    &:before
+      content: ''
+      position: absolute
+      width: 1px
+      height: 100%
+      background-color: $color4
+      left: 160px
+      top: 0
+    h1
+      font-size: 16px
+      margin: 0
+      padding: 0
+      line-height: 34px
+    .links
+      margin-left: 55px
+      .btn
+        color: $color5
+        border: 1px solid $color4
+        font-weight: 600
+        margin-right: 14px
+        &:hover
+          color: $color2
+          border: 1px solid $color2
+#movieInfo
+  border-bottom: 1px solid $color4
+  .left
+    padding: 30px 30px 30px 0
+    display: flex
+    border-right: 1px solid $color4
+    .poster
+      .img
+        width: 200px
+        height: 280px
+        overflow: hidden
+        border-radius: 5px
+        background-color: red
+        box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.28)
+        position: relative
+        &:before
+          position: absolute
+          content: ''
+          left: 0
+          top: 0
+          width: 100%
+          height: 100%
+          background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%)
+        img
+          width: 100%
+    .info
+      margin-left: 30px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      .big
+        color: $color2
+        font-size: 25px
+        font-weight: 600
+      .paragraph
+        margin-bottom: 20px
+      .director , .writers
+        h1
+          font-size: 16px
+          padding: 0
+          margin: 0
+          margin-right: 10px
+          color: $color5
+        a
+          padding: 0
+          margin: 0
+          color: $color1
+          margin-right: 8px
+      .actors
+        margin-top: 20px
+        display: flex
+        .actor
+          width: 40px
+          height: 40px
+          border-radius: 100px
+          overflow: hidden
+          box-shadow: 0px 5px 10px rgba(0,0,0,0.2)
+          margin-right: 5px
+          transition: all 0.4s
+          &:hover
+            transform: scale(1.1)
+          img
+            width: 100%
+  .right
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    .stars
+      .true
+        text-shadow: 0px 3px 7px rgba(79, 214, 167, 0.6)
+        color: $color1
+      .false
+        color: $color4
+    .rate
+      margin: 20px 0
+      h1
+        text-shadow: 0px 3px 7px rgba(79, 214, 167, 0.6)
+        color: $color1
+        font-weight: 800
+        font-size: 34px
+        letter-spacing: 2px
+    .info
+      margin-bottom: 10px
+      .list-group
+        .list-group-item
+          border: 0
+          padding: 0
+          h1
+            font-size: 18px
+            color: $color5
+            font-weight: 600
+            margin-right: 5px
+          p
+            padding: 0
+            margin: 0
+            margin-bottom: 5px
+            color: $color5
+            font-size: 13px
+    .trailer
+      .btn
+        font-weight: 600
+        .fa
+          font-size: 12px
+          margin-right: 10px
+#TrailerModal
+  background-color: rgba(250,250,250,0.9)
+  .modal-dialog
+    margin-top: 200px
+  .modal-header
+    border: 0
+    padding: 0
+    .close
+      position: absolute
+      right: -20px
+      z-index: 1
+      background-color: $color2
+      padding: 10px 14px
+      opacity: 1
+      border-radius: 100px
+      color: #fff
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.6)
+  .modal-body
+    background-color: transparent
+    border-radius: 3px
+    overflow: hidden
+    padding: 0
+    margin: 0
+    height: 450px
+    iframe
+      border-radius: 2px
+      width: 100%
+      height: 100%
+      padding: 0
+      margin: 0
+      border: 0
+#comments
+  padding: 60px 0
+  background-color: #fafcfe
+  .big
+    font-size: 22px
+    text-transform: capitalize
+    letter-spacing: 2px
+    font-weight: 600
+    color: $color5
+  .wrapper
+    background-color: #fff
+    border-radius: 5px
+    overflow: hidden
+    padding: 30px
+    margin-top: 30px
+    box-shadow: 0px 3px 32px 0px rgba(141, 162, 183, 0.08)
+    .comment
+      .top
+        display: flex
+        .user
+          width: 40px
+          height: 40px
+          overflow: hidden
+          border-radius: 100px
+          img
+            width: 100%
+        .name
+          margin: 8px 10px 0 10px
+          h1
+            padding: 0
+            margin: 0
+            text-transform: capitalize
+            font-size: 17px
+            font-weight: 600
+            color: $color5
+        .rate
+          margin-top: 8px
+          h1
+            font-size: 16px
+            font-weight: 800
+            color: $color1
+            text-shadow: 0px 3px 7px rgba(79, 214, 167, 0.6)
+      .bottom
+        margin-top: 20px
+        margin-bottom: 20px
+        border-bottom: 1px solid $color3
+    .addComment
+      h1
+        font-size: 16px
+        margin: 40px 0
+      .rateValue
+        background-color: #fff
+        border-radius: 5px
+        border: 1px solid $color4
+        width: 33%
+        padding: 10px
+        select
+          border: 0
+          background-color: transparent
+          width: 100%
+          color: $color5
+          &:hover , &:active , &:focus
+            outline: 0
+            box-shadow: 0
+      textarea
+        width: 100%
+        border-radius: 5px
+        border: 1px solid $color4
+        text-transform: capitalize
+        padding: 20px
+        margin-top: 30px
+        color: $color5
+        &::placeholder
+          color: $color5
+      .btn-primary
+        background-color: $color2
+        margin-top: 20px
+        padding: 13px 60px
+      .logoin
+        display: flex
+        justify-content: center
+// start responsive
+@media(max-width: 1300px)
+  #vlink , #vimg
+    display: none
+@media(max-width: 992px)
+  #server
+    .info
+      &:before
+        width: 0
+      h1
+        display: none
+    button
+      margin-bottom: 10px
+  #movieInfo
+    .left
+      border-right: 0
+      border-bottom: 1px solid $color4
+      margin-bottom: 20px
+    .right
+      padding-bottom: 30px
+@media(max-width: 576px)
+  #movieInfo
+    .left        
+      .info
+        display: none
