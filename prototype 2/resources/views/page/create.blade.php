@@ -12,7 +12,7 @@
                 </div>
                 <div class="card-body">
 
-                    <form action="{{ route('pageeee.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('page.store') }}" method="POST"  enctype="multipart/form-data">
                         @csrf
 
                         <div class="mb-3">

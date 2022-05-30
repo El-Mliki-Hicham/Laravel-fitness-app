@@ -8,7 +8,7 @@
 
 
 @forelse ($image as $item)
-<form method="post" action="{{route('pageeee.update',$item->id)}}" enctype="multipart/form-data" >
+<form method="post" action="{{route('page.update',$item->id)}}" enctype="multipart/form-data">
     @method('PUT')
     @csrf
 <div class="card" style="width: 18rem;">

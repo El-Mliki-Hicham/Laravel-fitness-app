@@ -16,7 +16,7 @@ class imageController extends Controller
     {
        $image= DB::table('student')->select("*")->get();
 
-      return view("pagee.index",compact("image"));
+      return view("page.index",compact("image"));
     }
 
     /**
@@ -27,7 +27,7 @@ class imageController extends Controller
     public function create()
     {
         
-        return view("pagee.create");
+        return view("page.create");
     }
 
     /**
@@ -80,7 +80,7 @@ class imageController extends Controller
     public function edit($id)
     {
         $image = DB::table('student')->select("*")->where("id",$id)->get();
-        return view("pageee.edit",compact("image"));
+        return view("page.edit",compact("image"));
     }
 
     /**
@@ -92,12 +92,19 @@ class imageController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-        $file = $request->file('image');
+       
+        if ( $request->hasFile('imagg')) {  
+        $file = $request->file('imagg');
             $extenstion = $file->getClientOriginalExtension();
             $filename = time().'.'.$extenstion;
             $file->move('image', $filename);
             $images = $filename;
+           
+  
+}
+else{
+    $images= $request->input("image");
+}
 
         DB::table('student')
         ->where('id',$id)
