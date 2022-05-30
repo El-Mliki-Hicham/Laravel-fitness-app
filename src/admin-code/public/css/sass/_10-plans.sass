@@ -1,0 +1,68 @@
+#plans
+  margin: 100px 0
+  text-align: center
+  .top
+    .big
+      font-size: 24px
+      font-weight: 600
+      color: $color5
+    .small
+      margin-top: 20px
+      color: $color5
+      font-weight: 500
+      font-size: 16px
+    .usd , .bit
+      text-transform: uppercase
+      font-weight: 800
+      letter-spacing: 2px
+    .usd
+      color: $color1
+    .bit
+      color: $color2
+  .bottom
+    .plan
+      background-color: $color3
+      border-radius: 5px
+      border: 1px solid $color4
+      margin-top: 60px
+      margin-bottom: 20px
+      position: relative
+      display: flex
+      justify-content: center
+      ul
+        padding: 40px
+        margin: 0
+        list-style: none
+        li
+          text-transform: capitalize
+          letter-spacing: 1px
+          font-family: 'Nunito'
+          font-weight: 500
+          color: $color5
+          margin-bottom: 16px
+          &:last-of-type
+            font-weight: 800
+        .big
+          font-size: 45px
+          font-weight: 600
+          color: $color1
+          span
+            font-size: 18px
+      .btn
+        position: absolute
+        bottom: -20px
+        padding: 10px 30px
+        background-color: $color1
+        color: #fff
+        box-shadow: 0px 8px 21px 0px rgba(79, 214, 167, 0.41)
+        &:hover
+          box-shadow: 0 0 0 0
+    .active
+      background-color: #d4a5ff
+      border: 1px solid $color2
+      ul
+        li , .big
+          color: $color2
+      .btn
+        background-color: $color2
+        box-shadow: 0px 8px 21px 0px rgba(123, 1, 233, 0.41)

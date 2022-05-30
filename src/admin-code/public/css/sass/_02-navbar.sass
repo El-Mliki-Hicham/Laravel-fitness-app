@@ -1,0 +1,119 @@
+.navbar
+  background-color: #fff
+  position: relative
+  padding: 0
+  border-bottom: 1px solid #f5f5f5
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    height: 3px
+    width: 100%
+    background-image: -webkit-linear-gradient( 0deg, rgb(79,214,167) 0%, rgb(123,1,233) 100%)
+  #dropdownUser
+    .fa
+      font-size: 12px
+  .d-user
+    right: 0
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.08) !important
+    .submnue
+      flex-direction: column
+      a
+        text-transform: capitalize
+        .fa
+          font-size: 12px
+          margin-right: 8px
+  .navbar-brand
+    img
+      width: 152px
+  .btn
+    margin-left: 10px
+  .btn-success
+    padding-left: 10px
+    padding-right: 10px
+    font-size: 14px
+  .top
+    text-align: right
+    position: relative
+    margin-top: 30px
+    padding-bottom: 25px
+    margin-bottom: 10px
+    &::before
+      position: absolute
+      content: ''
+      bottom: 0
+      right: 0
+      height: 1px
+      width: 100%
+      background-image: -webkit-linear-gradient( 0deg, rgb(255,255,255) 0%, rgb(228,228,228) 100%)
+  .bottom
+    .nav-link
+      text-transform: capitalize
+      color: $color2
+      transition: all 0.3s
+      padding-bottom: 30px
+      &:hover
+        color: $color2
+        opacity: 0.6
+    .navbar-nav
+      .nav-item
+        &:last-child
+          a
+            padding-right: 0
+  .dropdown-menu
+    transition: all 0.4s
+    border-radius: 0px
+    border: 0
+    margin-top: 0
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.18)
+    padding: 20px
+    .submnue
+      min-width: 0
+      overflow: hidden
+      display: flex
+      flex-wrap: wrap
+      .dropdown-item
+        flex-basis: 33.3%
+        padding: 10px 15px
+        color: #8da2b7
+        transition: all 0.4s
+        position: relative
+        &::before
+          position: absolute
+          content: ''
+          width: 4px
+          height: 25px
+          top: 10px
+          left: 0
+          opacity: 1
+          background-color: $color2
+          transform: scale(0)
+          transition: all 0.4s
+        &:hover
+          background-color: #fff
+          color: $color2
+          &::before
+            transform: scale(1)
+@media (max-width: 990px)
+  .container
+    margin-top: 50px
+    display: flex
+    flex-direction: row
+  .navbar-brand
+    position: absolute
+    top: -50px
+@media (max-width: 992px)
+  .navbar
+    padding: 30px 50px
+    display: flex
+    justify-content: center
+    .navbar-toggler
+      position: absolute
+      z-index: 1
+      top: 35px
+    .navbar-brand
+      position: absolute !important
+      z-index: 1
+      @media (max-width: 576px)
+        right: 0

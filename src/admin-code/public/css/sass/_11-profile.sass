@@ -1,0 +1,92 @@
+#profile
+  .head
+    padding: 80px 0 0 0
+    .user
+      display: flex
+      .photo
+        height: 80px
+        width: 80px
+        border-radius: 5px
+        overflow: hidden
+        img
+          width: 100%
+      .info
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin-left: 20px
+        h1
+          font-size: 18px
+          font-weight: 700
+          color: $color5
+        .badge-primary
+          background-color: #c5f1e2
+          border: 1px solid $color1
+          color: $color1
+          padding: 8px 20px
+          font-weight: 500
+          font-size: 12px
+          letter-spacing: 1px
+    .infoLeft
+      display: flex
+      justify-content: flex-end
+      .fav
+        text-align: center
+        background-color: $color3
+        border: 1px solid $color4
+        border-radius: 5px
+        padding: 14px 20px
+        margin-left: 20px
+        color: $color5
+        h1
+          font-size: 22px
+          font-weight: 600
+        p
+          font-size: 12px
+          letter-spacing: 1px
+        p , h1
+          padding: 0
+          margin: 0
+    .links
+      margin-top: 80px
+      margin-bottom: 60px
+      border-top: 1px solid $color4
+      border-bottom: 1px solid $color4
+      padding: 20px 0
+      .btn
+        color: $color5
+        text-decoration: none
+        &:hover
+          color: $color1
+        .fa
+          font-size: 12px
+      .active
+        color: $color1
+  .userInfo
+    .personal
+      border-radius: 5px
+      border: 1px solid $color4
+      padding: 30px
+      margin-bottom: 60px
+      p
+        opacity: 1
+        color: $color5
+        font-size: 18px
+      input
+        border: 1px solid $color4
+        border-radius: 5px
+        padding: 10px 20px
+        width: 100%
+        color: $color1
+        margin-bottom: 30px
+        transition: all 0.3s
+        &::placeholder
+          color: $color5
+          text-transform: capitalize
+          letter-spacing: 2px
+        &:hover , &:active , &:focus
+          border: 1px solid $color1
+      .btn
+        &:hover
+          background-color: $color1
+          border: 1px solid $color1

@@ -1,0 +1,144 @@
+// vars
+$color1:  #4fd6a7
+$color2:  #7b01e9
+$color3:  #f6f9fc
+$color4:  #e3eaf1
+$color5:  #8da2b7
+// end vars
+// prefix
+body
+  padding: 0
+::selection
+  background-color: $color2
+  color: #fff
+.text-primary
+  color: $color1 !important
+.text-info
+  color: $color2 !important
+p , h1 , h2 , h3, h4,h5
+  font-family: 'Nunito'
+  text-transform: capitalize
+code
+  background-color: $color3
+  border: 1px solid $color4
+  font-size: 12px
+  letter-spacing: 2px
+  color: $color2
+h1.title
+  font-size: 23px
+  font-weight: 600
+  color: $color5
+  letter-spacing: 1px
+p.paragraph
+  font-size: 14px
+  letter-spacing: 1px
+  color: $color5
+  opacity: 0.5
+.container
+  width: 1300px
+  @media (max-width: 576px)
+    width: auto
+.navbar-toggler
+  cursor: pointer
+.dropdown-menu
+  left: auto
+input
+  outline: 0
+  box-shadow: 0 0 0
+  border: 0
+input.inputDefault
+  padding: 8px 180px 8px 20px
+  margin-right: 20px
+  border-radius: 5px
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04)
+  color: $color5
+  font-size: 12px
+  &::placeholder
+    font-size: 12px
+    color: $color5
+    letter-spacing: 1px
+    text-transform: capitalize
+.line-black
+  width: 100%
+  height: 1px
+  background-image: -webkit-linear-gradient( 0deg, rgba(123,1,233,0.3) 0%, rgba(96,131,193,0) 100%)
+// end prfix
+// start btns
+a
+  text-decoration: none
+  &:hover , &:active , &:focus
+    text-decoration: none
+.btn
+  cursor: pointer
+  outline: 0
+  font-family: 'Nunito'
+  text-transform: capitalize
+  letter-spacing: 1px
+  &:hover , &:active , &:focus
+    outline: 0
+    box-shadow: 0 0 0
+
+.btn-primary
+  background-color: rgb(174, 85, 255)
+  box-shadow: 0px 4px 5px 0px rgba(174, 85, 255, 0.43)
+  border: 0
+  &:hover , &:active , &:focus
+    background-color: rgb(174, 85, 255)
+
+.btn-success
+  background-color: #c5f1e2
+  color: $color1
+  border: 1px solid $color1
+  &:hover , &:active , &:focus
+    background-color: #c5f1e2
+    color: $color1
+    border: 1px solid $color1
+    opacity: 0.8
+.btn-info , .dropdown-toggle
+  background-color: $color3 !important
+  border: 1px solid $color4 !important
+  color: $color5 !important
+  &:hover , &:active , &:focus
+    background-color: rgb(174, 85, 255) !important
+    border: 1px solid rgb(174, 85, 255) !important
+    color: #fff !important
+// end btns
+
+// start vars
+@mixin sh1
+  box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.04)
+@mixin g1
+  background-image: -webkit-linear-gradient( 0deg, rgb(79,214,167) 0%, rgb(123,1,233) 100%)
+// start class
+.card , .widget
+  border: 1px solid $color4
+  padding: 25px
+  background-color: #fff
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.04)
+  margin-bottom: 30px
+  .head
+    font-size: 16px !important
+    font-weight: 600
+    letter-spacing: 1px
+  .card-primary
+    .card-header
+      background-color: $color2
+      color: #fff
+  .card-info
+    .card-header
+      background-color: $color1
+      color: #fff
+  .card-success
+    .card-header
+      background-color: #8CD790
+      color: #fff
+  .card-warning
+    .card-header
+      background-color: #FFEB6C
+      color: #fff
+  .card-danger
+    .card-header
+      background-color: #FF2E63
+      color: #fff
+
+// end class

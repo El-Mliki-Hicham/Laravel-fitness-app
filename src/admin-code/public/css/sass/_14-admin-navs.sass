@@ -1,0 +1,339 @@
+#admin
+  position: relative
+  display: flex
+  flex-direction: row
+  &:before
+    content: ''
+    position: absolute
+    z-index: 1
+    width: 100%
+    height: 3px
+    top: 0
+    left: 0
+    background-image: -webkit-linear-gradient( 0deg, rgb(79,214,167) 0%, rgb(123,1,233) 100%)
+  .hide
+    display: none
+  .sidebarOff
+    width: 0 !important
+  .contentOn
+    margin-left: 0 !important
+  .sidebar
+    width: 230px
+    height: 100vh
+    position: fixed
+    overflow: scroll
+    border-right: 1px solid $color4
+    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.09)
+    .head
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding: 50px 0
+      .logo
+        height: 60px
+        width: 60px
+        img
+          height: 100%
+      .btn
+        margin-top: 30px
+        font-size: 12px
+        background-image: -webkit-linear-gradient( 0deg, rgb(123,1,233) 0%, rgb(79,214,167) 100%)
+        box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.1)
+        border: 0
+        text-transform: uppercase
+        transition: all 0.4s
+        &:hover
+          box-shadow: 0 0 0
+        &:active , &:focus
+          color: #fff
+    #list
+      .nav
+        .nav-item , .sub
+          .nav-link
+            text-transform: capitalize
+            font-weight: 600
+            font-size: 14px
+            color: $color5
+            border-bottom: 1px solid $color3
+            padding: 14px 30px
+            letter-spacing: 1px
+            transition: all 0.4s
+            &:hover
+              color: $color2
+              &:before
+                background-color: $color2
+            .fa
+              font-size: 14px
+              margin-right: 4px
+          .active
+            color: $color2
+        .sub
+          background-color: $color3
+          .nav-link
+            margin-left: 40px
+            position: relative
+            font-weight: 300
+            &:before
+              content: ''
+              position: absolute
+              transition: all 0.4s
+              width: 8px
+              height: 8px
+              left: 10px
+              top: 40%
+              border-radius: 100px
+              background-color: $color5
+            &:first-of-type
+              padding-top: 30px
+              &:before
+                top: 55%
+            &:last-of-type
+              padding-bottom: 30px
+              &:before
+                top: 32%
+        .sub-ico
+          position: absolute
+          right: 20px
+  .content
+    background-color: #fcfcfc
+    margin-left: 230px
+    width: 100%
+    .top
+      padding: 30px
+      box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.02)
+      border-bottom: 1px solid $color4
+      width: 100%
+      display: flex
+      .left
+        flex: 1
+      .right
+        display: flex
+        .dropdown-menu
+          right: 0
+          top: 60px
+          border-radius: 0
+          border: 1px solid $color4
+          margin: 0
+          padding: 0
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1)
+          a
+            color: $color5
+            border-top: 1px solid #fff
+            border-bottom: 1px solid $color4
+            padding: 15px 30px
+            transition: all 0.3s
+            &:last-of-type
+              border-bottom: 1px solid #fff
+            &:hover
+              border-top: 1px solid $color4
+              border-bottom: 1px solid $color4
+              background-color: $color3
+              color: $color2
+      .btn
+        margin-right: 10px
+        &:hover
+          background-color: $color1
+          border: 1px solid $color1
+      .fa-home
+        margin-right: 6px
+      .fa-arrow-down
+        margin-left: 4px
+        font-size: 12px
+    .bottom
+      padding: 30px
+      box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.02)
+      border-bottom: 1px solid $color4
+      width: 100%
+      display: flex
+      .left
+        flex: 1
+        h1
+          font-size: 22px
+          font-weight: 600
+          color: $color2
+      .right
+        display: flex
+        margin-top: 5px
+        h1
+          font-size: 16px
+          color: $color5
+        a
+          text-transform: capitalize
+          line-height: 0
+          margin-left: 4px
+          margin-top: 6px
+          color: $color5
+    #real
+      padding: 30px
+      h1.head
+        color: $color5
+        font-size: 22px
+      .activeMode
+        .card
+          display: flex
+          flex-direction: row
+          h1
+            font-size: 15px
+            font-weight: 600
+            color: $color5
+            margin-top: 10px
+            flex: 1
+      .regsterUsers
+        .card
+          background-image: -webkit-linear-gradient( 0deg, rgb(123,1,233) 0%, rgb(174,85,255) 100%)
+          border: 0
+          color: #fff
+          padding: 30px 40px
+          .card-top
+            display: flex
+            h1
+              flex-grow: 1
+              font-weight: 800
+              font-size: 42px
+            .fa
+              font-size: 32px
+          .card-bottom
+            margin-top: 10px
+            p
+              font-size: 20px
+              font-weight: 600
+      .analytics
+        .card
+          display: flex
+          flex-direction: row
+          .icon
+            .fa , .fab
+              font-size: 23px
+              margin-right: 20px
+              color: $color1
+          .text
+            flex: 1
+            width: 100%
+            color: $color5
+            h1
+              font-size: 18px
+              font-weight: 700
+              color: $color5
+            p
+              font-size: 15px
+              letter-spacing: 1px
+      .users
+        .user
+          display: flex
+          margin: 15px 0 15px 0
+          padding-bottom: 20px
+          border-bottom: 1px solid $color3
+          &:first-of-type
+            margin-top: 30px
+          &:last-of-type
+            margin-bottom: 0
+            padding-bottom: 0
+            border: 0
+          .uImg
+            border-radius: 100px
+            width: 40px
+            height: 40px
+            overflow: hidden
+            img
+              width: 100%
+          .info
+            margin-left: 30px
+            margin-top: 5px
+            flex: 1
+            h1
+              font-size: 17px
+              color: $color5
+              font-weight: 600
+              margin: 0
+            p
+              margin: 0
+              padding: 0
+              color: rgba(0,0,0,0.3)
+              letter-spacing: 1.4px
+              font-size: 12px
+          .type
+            .btn
+              font-size: 14px
+              padding: 5px 10px
+    #chart
+      .highcharts-series
+        .highcharts-area
+          fill: rgba(79,214,167,0.3)
+        .highcharts-graph
+          stroke: #4fd6a7
+      .highcharts-markers , .highcharts-legend-item
+        path , rect
+          fill: #4fd6a7
+  #leads
+    .head
+      padding-bottom: 20px
+      border-bottom: 1px solid $color4
+    .table
+      tbody , thead
+        td , th
+          border: 0
+          padding-left: 0
+          text-transform: capitalize
+      thead
+        th
+          font-weight: 500
+          color: $color5
+      tbody
+        td
+          padding: 10px 0
+          color: rgba(0,0,0,0.4)
+          font-size: 14px
+          letter-spacing: 1.2px
+          .fa
+            font-size: 12px
+  #active
+    .card
+      border: 0
+      background-image: -webkit-linear-gradient( 90deg, rgb(79,214,167) 0%, rgb(123,1,233) 100%)
+      box-shadow: 0px 4px 10px rgba(79,214,167,0.8)
+    p
+      color: #fff
+      letter-spacing: 1px
+      font-size: 14px !important
+      font-weight: 300
+    .head
+      padding-bottom: 10px
+      margin-bottom: 10px
+      border-bottom: 1px solid rgba(0,0,0,0.1)
+    .aria
+      margin-top: 16px
+    .info
+      display: flex
+      h1
+        margin-top: 20px
+        color: #fff
+        font-weight: 800
+        font-size: 50px !important
+        letter-spacing: 4px
+      p
+        font-size: 20px !important
+        margin-bottom: 30px
+  #questions
+    .head
+      margin-bottom: 20px
+    .pro
+      margin-bottom: 15px
+      &:last-of-type
+        margin-bottom: 0
+      .proTop
+        display: flex
+        .left
+          flex: 1
+        p
+          font-size: 13px
+          font-weight: 600
+          color: $color5
+          padding: 0
+          margin: 0
+          margin-bottom: 6px
+      .progress
+        height: 10px
+        background-color: $color4
+        .progress-bar
+          background-color: $color5
