@@ -7,8 +7,9 @@
   <!-- start linking  -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="{{url('assets/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url('assets/css/app.css')}}">
+ 
   <!-- icon -->
   <link rel="icon" href="img/log.png">
   <!-- end linking -->
@@ -80,6 +81,13 @@
       <!-- end head bottom -->
     </div>
     <!-- end content head -->
-<body>
+
   @yield('content')
-</body>
+
+
+<script src="{{url('assets/js/jquery.min.js')}}"></script>
+<script src="{{url('assets/js/tether.min.js')}}"></script>
+<script src="{{url('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{url('assets/js/highcharts.js')}}"></script>
+<script src="{{url('assets/js/chart.js')}}"></script>
+<script src="{{url('assets/js/app.js')}}"></script>

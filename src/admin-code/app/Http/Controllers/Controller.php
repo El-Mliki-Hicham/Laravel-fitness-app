@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Controller 
 {
@@ -13,7 +14,8 @@ class Controller
      */
     public function index()
     {
-        return view("admin.index");
+     
+      
     }
 
     /**
@@ -23,7 +25,7 @@ class Controller
      */
     public function create()
     {
-        //
+        return view("admin.create");
     }
 
     /**

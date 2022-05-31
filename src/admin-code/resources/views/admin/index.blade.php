@@ -158,10 +158,13 @@
             <div class="card">
               <h1 class="head">Categories</h1>
               <!-- start row -->
+              @forelse ($categories as $value)
+                  
+             
               <div class="user">
                 <div class="uImg"><img src="img/act/1.jpg" alt=""></div>
                 <div class="info">
-                  <h1>Josephine Walker</h1>
+                  <h1>{{$value->name_categorie}}</h1>
                   <p>Apple Iwork 08 Review</p>
                 </div>
                 <div class="item-actions" >
@@ -170,7 +173,9 @@
                 </div>
               </div>
               <!-- end row -->
+              @empty
                   
+              @endforelse
             </div>
           </div>
         
@@ -206,22 +211,8 @@
         </div>
         <!-- end task card -->
 
-        <!-- start Questions per Product -->
-        <div class="col-lg-4">
-          <div id="questions">
-            <div class="card">
-              <h1 class="head">Questions per Product</h1>
+        
 
-              <div class="pro">
-                <!-- start top -->
-                <div class="proTop">
-                  <div class="left">
-                    <p>apple store</p>
-                  </div>
-                  <div class="right">
-                    <p>29215 Tickets / 1041 Pending</p>
-                  </div>
-                </div>
                 <!-- end top -->
 
                 <!-- start bottom -->
@@ -231,11 +222,6 @@
                 <!-- end bottom -->
               </div>
               <div class="pro">
-                <!-- start top -->
-                <div class="proTop">
-                  <div class="left">
-                    <p>google play</p>
-                  </div>
                   <div class="right">
                     <p>9271 Tickets / 1220 Pending</p>
                   </div>
@@ -349,7 +335,8 @@
 </section>
 <!-- end admin -->
 
-</body>
-@include("layouts.footer")
 </html>
+
+
+
 
