@@ -23,6 +23,6 @@ Route::get('/', function () {
 
 
 route::resource("admin",Controller::class);
-route::resource("/admin-categorie",CategoriesController::class);
-route::resource("/admin-exercice",ExercicesController::class);
-route::resource("/admin-jour",JoursController::class);
+route::resource("categorie",CategoriesController::class);
+route::resource("exercice",ExercicesController::class);
+route::resource("jour",JoursController::class);

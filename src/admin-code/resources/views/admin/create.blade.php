@@ -15,17 +15,18 @@
 
                     </div>
                     <div class="col-lg-12">
-                        <form action="#" class="form-horizontal">
+                        <form action="{{route("categorie.store")}}" method="post" class="form-horizontal">
+                            @csrf   
                             <div class="form-group">
                                 <label for="control-demo-1" class="col-sm-3">Nom categorie</label>
                                 <div class="col-sm-12">
-                                    <input type="text" id="control-demo-1" class="form-control">
+                                    <input type="text"  name="name_categorie" id="control-demo-1" class="form-control">
                                 </div>
                             </div><!-- .form-group -->
                             <div class="form-group">
                                 <label for="control-demo-2" class="col-sm-3">Description</label>
                                 <div class="col-sm-12">
-                                    <input type="email" id="control-demo-2" class="form-control">
+                                    <input type="text" name="description_categorie" id="control-demo-2" class="form-control">
                                 </div>
                             </div><!-- .form-group -->
                             <div class="form-group">
@@ -33,13 +34,6 @@
                                     <button>modifier</button>
                                 </div>
                             </div><!-- .form-group -->
-
-
-
-
-
-
-
                         </form>
                     </div>
                 </div><!-- END row -->

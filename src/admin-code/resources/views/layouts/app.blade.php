@@ -15,7 +15,7 @@
   <!-- end linking -->
   <title>NutFlix - admin</title>
 </head>
-<body>
+
 <!-- start admin -->
 <section id="admin">
   <!-- start sidebar -->

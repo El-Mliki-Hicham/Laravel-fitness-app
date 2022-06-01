@@ -14,7 +14,26 @@ class Controller
      */
     public function index()
     {
-     
+     //aficher categories
+        $categories= DB::table("categories")
+        ->select("*")
+        ->get();
+
+      //aficher exercices 
+
+      $exercices= DB::table("exercices")
+        ->select("*")
+        ->get();
+      //aficher jours
+
+    //   $exercices= DB::table("jours")
+    //     ->select("*")
+    //     ->join('categories', 'jours.id_categories', '=', 'categories.id')
+    //     ->join('exercices', 'jours.id_exercice', '=', 'exercices.id')
+    //     ->get();
+
+
+         return view('admin.index',compact("categories","exercices"));
       
     }
 
