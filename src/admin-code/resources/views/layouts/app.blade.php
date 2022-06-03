@@ -86,7 +86,7 @@
 
 
 <script src="{{url('assets/js/jquery.min.js')}}"></script>
-<script src="{{url('assets/js/tether.min.js')}}"></script>
+<script src="{{url('ass                     ets/js/tether.min.js')}}"></script>
 <script src="{{url('assets/js/bootstrap.min.js')}}"></script>
 <script src="{{url('assets/js/highcharts.js')}}"></script>
 <script src="{{url('assets/js/chart.js')}}"></script>

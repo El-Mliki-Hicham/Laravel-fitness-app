@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- start linking  -->
+  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+  <link href="css2/styles.css" rel="stylesheet" />
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -33,23 +36,16 @@
         <li class="nav-item"><a href="index.html" class="nav-link active" ><i class="fa fa-adjust"></i>Dashboard</a></li>
         <!-- end user interface submenu -->
         <!-- start with charts -->
-        <li class="nav-item"><a href="#menu2" class="nav-link collapsed" data-toggle="collapse"><i class="fa fa-fire"></i>Tables<span class="sub-ico"><i class="fa fa-angle-down"></i></span></a></li>
-        <!-- start charts submenue -->
-        <li class="sub collapse" id="menu2">
-            <a href="tableau-exercice.html" class="nav-link" data-parent="#menu3">tableau-exercice</a>
-            <a href="tableau-categorie.html" class="nav-link" data-parent="#menu3">tableau-categorie</a>
-         
-        </li>
-        <li class="nav-item"><a href="#menu3" class="nav-link collapsed" data-toggle="collapse"><i class="fa fa-fire"></i>Insérer<span class="sub-ico"><i class="fa fa-angle-down"></i></span></a></li>
+        <li class="nav-item"><a href="#menu3" class="nav-link collapsed" data-toggle="collapse"><i class="fa fa-fire"></i>tables<span class="sub-ico"><i class="fa fa-angle-down"></i></span></a></li>
         <!-- start charts submenue -->
         <li class="sub collapse" id="menu3">
-            <a href="price.html" class="nav-link" data-parent="#menu3">Ajouter exercice</a>
-            <a href="profile.html" class="nav-link" data-parent="#menu3">Ajouter categorie</a>
-            
+            <a href="tableau-exercice.html" class="nav-link" data-parent="#menu3">tableau exercice</a>
+            <a href="tableau-categorie.html" class="nav-link" data-parent="#menu3">tableau categorie</a>
+           
         </li>
         <!-- end charts submenue -->
         <!-- end with charts -->
-        
+       
       </ul>
     </div>
     <!-- end the list -->
@@ -60,26 +56,7 @@
     <!-- start content head -->
     <div class="head">
       <!-- head top -->
-      <div class="top">
-        <div class="left">
-          <button id="on" class="btn btn-info"><i class="fa fa-bars"></i></button>
-          <button id="off" class="btn btn-info hide"><i class="fa fa-align-left"></i></button>
-          <button class="btn btn-info hidden-xs-down"><i class="fa fa-expand-arrows-alt"></i></button>
-          <button class="btn btn-info hidden-xs-down"><i class="fa fa-home"></i>Back Home</button>
-        </div>
-        <div class="right">
-          <button class="btn btn-info hidden-xs-down"><i class="fa fa-bell"></i></button>
-          <button class="btn btn-info hidden-xs-down"><i class="fa fa-envelope"></i></button>
-          <div class="dropdown">
-            <button class="btn btn-info dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">mohamed</button>
-            <div class="dropdown-menu" aria-labelledby="userDropdown">
-             <a class="dropdown-item" href="#">profile</a>
-             <a class="dropdown-item" href="#">sitting</a>
-             <a class="dropdown-item" href="#">log out</a>
-           </div>
-          </div>
-        </div>
-      </div>
+      
       <!-- end head top -->
       <!-- start head bottom -->
       <div class="bottom">
@@ -97,7 +74,46 @@
     <!-- start with the real content -->
     <div id="real">
       <!-- start content here -->
+      <div class="wrap btns-section">
+		<main>
+			<div class="container-fluid px-4">
+				<h1 class="mt-4">Tableau des categorie</h1>
+				<ol class="breadcrumb mb-4">
+					<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+					<li class="breadcrumb-item active">Tables</li>
+				</ol>
+				
+				<div class="card mb-4">
+					<div class="card-header">
+						<i class="fas fa-table me-1"></i>
+						DataTable Example
+					</div>
+					<div class="card-body">
+						<table id="datatablesSimple">
+							<thead>
+								<tr>
+									<th>PHOTO</th>
+									<th>ID</th>
+									<th>NAME</th>
+									<th>ACTION</th>
+								</tr>
+							</thead>
 
+							<tbody>
+								<tr>
+									<td>Tiger Nixon</td>
+									<td>System Architect</td>
+									<td>Edinburgh</td>
+									<td>$320,800</td>
+								</tr>
+							   
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</main><!-- .app-content -->
+      </div><!-- .wrap -->
       <!-- end content -->
     </div>
     <!-- end the real content -->
@@ -106,12 +122,17 @@
 </section>
 <!-- end admin -->
 <!-- start screpting -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="js2/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+<script src="js2/datatables-simple-demo.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/tether.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/highcharts.js"></script>
 <script src="js/chart.js"></script>
 <script src="js/app.js"></script>
+
 <!-- end screpting -->
 </body>
 </html>
