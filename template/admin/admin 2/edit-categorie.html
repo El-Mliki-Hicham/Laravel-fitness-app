@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- start linking  -->
+  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+  <link href="css2/styles.css" rel="stylesheet" />
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <!-- icon -->
+  <link rel="icon" href="img/log.png">
+  <!-- end linking -->
+  <title>NutFlix - admin</title>
+</head>
+<body>
+<!-- start admin -->
+<section id="admin">
+  <!-- start sidebar -->
+  <div class="sidebar">
+    <!-- start with head -->
+    <div class="head">
+      <div class="logo">
+        <img src="img/logo-admin.png" alt="">
+      </div>
+      <a href="#" class="btn btn-danger">SUBMIT new MOVIE</a>
+    </div>
+    <!-- end with head -->
+    <!-- start the list -->
+    <div id="list">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a href="index.html" class="nav-link active" ><i class="fa fa-adjust"></i>Dashboard</a></li>
+        <!-- end user interface submenu -->
+        <!-- start with charts -->
+        <li class="nav-item"><a href="#menu2" class="nav-link collapsed" data-toggle="collapse"><i class="fa fa-fire"></i>tables<span class="sub-ico"><i class="fa fa-angle-down"></i></span></a></li>
+        <!-- start charts submenue -->
+        <li class="sub collapse" id="menu2">
+            <a href="tableau-exercice.html" class="nav-link" data-parent="#menu3">tableau exercice</a>
+            <a href="tableau-categorie.html" class="nav-link" data-parent="#menu3">tableau categorie</a>
+           
+        </li>
+        <li class="nav-item"><a href="#menu3" class="nav-link collapsed" data-toggle="collapse"><i class="fa fa-fire"></i>Insérer<span class="sub-ico"><i class="fa fa-angle-down"></i></span></a></li>
+        <!-- start charts submenue -->
+        <li class="sub collapse" id="menu3">
+            <a href="inserte-exercice.html" class="nav-link" data-parent="#menu3">Ajouter exercice</a>
+            <a href="inserte-categorie .html" class="nav-link" data-parent="#menu3">Ajouter categorie</a>
+            
+        </li>
+        <!-- end charts submenue -->
+        <!-- end with charts -->
+       
+      </ul>
+    </div>
+    <!-- end the list -->
+  </div>
+  <!-- end sidebar -->
+  <!-- start content -->
+  <div class="content">
+    <!-- start content head -->
+    <div class="head">
+      <!-- head top -->
+      
+      <!-- end head top -->
+      <!-- start head bottom -->
+      <div class="bottom">
+        <div class="left">
+          <h1>dashboard</h1>
+        </div>
+        <div class="right">
+          <h1>dashboard /</h1>
+          <a href="#">page name</a>
+        </div>
+      </div>
+      <!-- end head bottom -->
+    </div>
+    <!-- end content head -->
+    <!-- start with the real content -->
+    <div id="real">
+      <!-- start content here -->
+      <div class="wrap btns-section">
+        <main>
+
+          <!-- PAGE CONTAINER-->
+
+          <!-- HEADER DESKTOP-->
+
+
+          <!-- MAIN CONTENT-->
+          <div class="main-content">
+              <h1 class="titre text-center ">
+                  <strong>MODIFIER LE PRODUIT</strong>
+              </h1>
+              <div class="section__content section__content--p30">
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-lg-12">
+                              <div class="card">
+
+                                  <!-- form -->
+                                  <div class="card-header">Modifier</div>
+                                  <div class="card-body ">
+                                      <div class="row tm-edit-product-row  ">
+                                          <div class="col-xl-6 col-lg-12 col-md-12">
+
+                                              <!-- start modifier -->
+
+                                              <form method="POST" enctype='multipart/form-data'
+                                                  class="tm-edit-product-form">
+                                                  <div class="form-group mb-3">
+                                                      <input type="hidden" name="id" value="">
+                                                      <label for="name">Name
+                                                      </label>
+                                                      <input id="name" name="nom_produit" type="text"
+                                                          class="form-control validate" required
+                                                          value="<?php echo $value->getNom_Produit() ?>">
+                                                  </div>
+                                                  
+                                                  <div class="form-group mb-3">
+                                                      <label for="description">Description</label>
+                                                      <input class="form-control validate" rows="3" required
+                                                          name="description" value="">
+                                                  </div>
+                                                  
+                                                  
+
+                                          </div>
+                                          <div class="col-xl-6 col-lg-6 col-md-12 ">
+                                              <div class=" mx-auto">
+                                                  <img src="img/Skin Fetish  Divine Powder Blush.png"
+                                                      class="tm-product-img-dummy mx-auto" alt="">
+                                              </div>
+                                              <div class="custom-file mt-3 mb-3">
+
+                                                  <input class="btn btn-primary btn-block mx-auto col-lg-6"
+                                                      value="UPLOAD PRODUCT IMAGE" type="file" name="image" />
+                                              </div>
+                                          </div>
+                                          <div class="col-12">
+                                              <button type="submit"
+                                                  class="btn btn-primary btn-block text-uppercase">Ajouter</button>
+                                          </div>
+                                          </form>
+                                      </div>
+                                  </div>
+
+
+
+
+
+                              </div>
+
+                          </div>
+                      </div>
+                      <!-- fin -->
+                      <div class="col-md-12">
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+      </main>  </div><!-- .wrap -->
+      <!-- end content -->
+    </div>
+    <!-- end the real content -->
+  </div>
+  <!-- end content -->
+</section>
+<!-- end admin -->
+<!-- start screpting -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="js2/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+<script src="js2/datatables-simple-demo.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/app.js"></script>
+
+<!-- end screpting -->
+</body>
+</html>
