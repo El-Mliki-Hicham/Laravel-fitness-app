@@ -25,24 +25,21 @@ class PublicController extends Controller
     ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
     ->groupBy("exercices_de_jours.id_jour")
     ->get();
-    
     return view('pagess.jours',compact("jours"));
-
-
     }
-
-    function afficher_exercices_id($id){
-
-    $jours = DB::table('exercices_de_jours')
+    
+    
+    function afficher_exercices_id($id,$id_c){
+    $exercices = DB::table('exercices_de_jours')
     ->select('*')
-    ->where("id_jour",$id)
+    ->where("exercices_de_jours.id_jour",$id)
+    ->where("exercices_de_jours.categorie_id",$id_c)
     ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
     ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
     ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
-    ->groupBy("exercices_de_jours.id_jour")
+    // ->groupBy("exercices_de_jours.id_jour")
     ->get();
-    
-    return view('pagess.jours',compact("jours"));
+    return view('pagess.exercices',compact("exercices"));
 
 
     }

@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/index',[PublicController::class,'afficher_categories'] );
 Route::get('/jour/{id}',[PublicController::class,'afficher_jours_id'] );
+Route::get('/exercices/{id}/{id_c}',[PublicController::class,'afficher_exercices_id'] );
 // Route::get('/jourss',[PublicController::class,'afficher_categorie_id']);
 // Route::post('/modifierr',[CrudLaravelController::class,"modifier"])->name("modifier");
 
