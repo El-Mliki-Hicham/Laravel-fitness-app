@@ -24,7 +24,7 @@ return new class extends Migration
         Schema::create('exercices', function (Blueprint $table) {
             $table->increments("id_exercice")->nullable();
             $table->string('nom_exercice')->nullable();
-            $table->string('numero')->nullable();
+            $table->string('type_exercice')->nullable();
             $table->string('description_exercice')->nullable();
             $table->string('photo_exercice')->nullable();
             $table->timestamps();

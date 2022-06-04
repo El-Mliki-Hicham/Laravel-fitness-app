@@ -127,11 +127,11 @@
             <div class="col-md-4 club-card-col">
                 <div class="club-card-item" style="background-image: url(assets/img/bg-price-1.svg);">
                     <div class="price-cover">
-                        <div class="price"><span>$</span>220</div>
+                        <div class="price"><span>$</span><img src="{{asset('assets/img/categories')}}/{{$value->photo_categorie}}" alt=""></div>
                         <div class="date">{{$value->nom_categorie}}</div>
                     </div>
-                    <div class="club-card-text">Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolortin lorem ut.</div>
-                    <a href="program.html" class="btn">order now</a>
+                    <div class="club-card-text">{{$value->description_categorie}}</div>
+                    <a href="program.html" class="btn">Afficher </a>
                 </div>
             </div>
 			@empty
@@ -155,8 +155,8 @@
                 <div class="fitness-program-item">
                     <div class="fitness-program-item-front" style="background-image: url(assets/img/home2-program-1.jpg);">
                         <div class="fitness-program-item-inner">
-                            <div class="date">{{$value->nom_exercice}}</div>
-                            <h3>cardio training</h3>
+                            <div class="date">{{$value->type_exercice}}</div>
+                            <h3>{{$value->nom_exercice}}</h3>
                         </div>
                     </div>
                     <div class="fitness-program-item-back" style="background-image: url(assets/img/home2-program-1.jpg);">
@@ -176,7 +176,7 @@
             
            
         </div>
-        <a href="program.html" class="btn">view more</a>
+        <a href="program.html" class="btn">Voir plus</a>
     </div>
 </section>
 <!-- ========= FITNESS-OUR-PROGRAM END ========= -->
