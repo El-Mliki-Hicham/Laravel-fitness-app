@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/index',[PublicController::class,'afficher_categories'] );
+Route::get('/categorie/{id}',[PublicController::class,'afficher_categorie_id'] );
+
+
