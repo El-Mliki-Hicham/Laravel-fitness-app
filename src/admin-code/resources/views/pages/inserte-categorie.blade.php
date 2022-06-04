@@ -14,9 +14,11 @@
                                       <div class="card-header">Ajouter categorie</div>
                                       <div class="card-body">
                                           
-                                         <form action="" method="POST">
+                                        
                                           <form action="" method="POST" novalidate="novalidate">
-                                          <div class="row">
+                                        
+                                        
+                                            <div class="row">
                           
                                                </div>
                                                <div class="row">
@@ -63,7 +65,7 @@
                                               </div>
                                            </div>
                                           </form>
-                                          </form>
+                                        
                                       </div>
                                   </div>
                                   <!-- fin -->                        
