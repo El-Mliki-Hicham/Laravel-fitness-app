@@ -12,7 +12,7 @@ class PublicController extends Controller
       $categories=  DB::table('categories')
         ->select("*")
         ->get();
-        return view("pages.index",compact("categories"));
+        return view("pages.indexx",compact("categories"));
     }
 
     function afficher_categorie_id($id){
