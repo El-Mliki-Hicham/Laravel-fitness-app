@@ -117,7 +117,24 @@ class ProgrammeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+    
+        $exercice =$request->input('exercice');
+        $categorie=$request->input('categorie');
+        $jour=$request->input('jour');
+
+
+
+        $edit = DB::table('exercices_de_jours')
+        ->select('*')
+        ->where('id_programme',$id)
+        ->update([
+            'exercice_id'=>$exercice ,
+            'categorie_id'=>$categorie,
+            'id_jour'=>$jour
+            ]);
+       if($edit){
+        return redirect('afficher-programme');
+       }
     }
 
     /**
@@ -128,6 +145,13 @@ class ProgrammeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $programme=DB::table('exercices_de_jours')
+        ->select('*')
+        ->where('id_programme',$id)
+        ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
+        ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
+        ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
+        ->delete();
+        return redirect('afficher-programme');
     }
 }
