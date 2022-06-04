@@ -39,7 +39,7 @@ return new class extends Migration
             $table->foreign('id_categories')
             ->references('id')
             ->on('categories')
-            ->onDelete('cascade');;
+            ->onDelete('cascade');
             $table->foreign('id_exercice')
             ->references('id')
             ->on('exercices')
