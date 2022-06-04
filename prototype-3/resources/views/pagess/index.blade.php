@@ -12,7 +12,7 @@
     <div class="card-body">
       <h5 class="card-title">{{$value->nom_categorie}}</h5>
     
-      <a href="/categorie/{{$value->id_categorie}}"  class="btn btn-primary">Go somewhere</a>
+      <a href="/jours/{{$value->id_categorie}}"  class="btn btn-primary">Go somewhere</a>
     </div>
     <div class="card-footer text-muted">
      
