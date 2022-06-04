@@ -85,7 +85,27 @@ class ProgrammeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categorie =DB::table('categories')
+        ->select('*')
+        ->get();
+
+        $exercice = DB::table('exercices')
+        ->select("*")
+        ->get();
+
+        $jour = DB::table('jours')
+        ->select("*")
+        ->get();
+
+
+        $programme=DB::table('exercices_de_jours')
+        ->select('*')
+        ->where('id_categorie',$id)
+        ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
+        ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
+        ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
+        ->get();
+        return view('pages.edit-programme',compact('categorie','exercice','jour',"programme"));
     }
 
     /**

@@ -17,7 +17,7 @@
                             
                                 
                                 @forelse ($programme as $programme)
-                                <form action="{{route('afficher-programme.update',$id_programme)}}"  method="POST" novalidate="novalidate"   enctype="multipart/form-data">
+                                <form action="{{route('afficher-programme.update',$id_categorie)}}"  method="POST" novalidate="novalidate"   enctype="multipart/form-data">
                                 
                                 @csrf 
                                    <div class="row">
@@ -28,10 +28,9 @@
                                             <div class="form-group ">
                                                 <label for="cc-exp" class="control-label mb-1">categories</label>
                                             <select name="categorie"  class="form-control cc-exp">
-                                                <option value="{{$programme²->id_categorie}}" selected>{{$programme->nom_categorie}} selected></option>
+                                                <option value="{{$programme->id_categorie}}" selected>{{$programme->nom_categorie}} selected></option>
                                                 @forelse ($categorie as $value)
-
-                                                <option value="{{$value->id_categorie}}">{{$value->nom_categorie}}</option>
+                                               <option value="{{$value->id_categorie}}">{{$value->nom_categorie}}</option>
                                             </select>
                                             @empty
                                             @endforelse
@@ -43,7 +42,7 @@
                                                 <label for="cc-exp" class="control-label mb-1">exercices</label>
                                                 
                                                 <select name="exercice"  class="form-control cc-exp">
-                                                    <option value="" selected>select exercice</option>
+                                                    <option value="{{$programme->id_exercice}}" selected>{{$programme->nom_exercice}} selected></option>
                                                     @forelse ($exercice as $value)
                                                 <option value="{{$value->id_exercice}}">{{$value->nom_exercice}}</option>
                                                 @empty
@@ -58,7 +57,7 @@
                                                 <label for="cc-exp" class="control-label mb-1">jour</label>
                                                 
                                                 <select name="jour"  class="form-control cc-exp">
-                                                    <option  selected>select jours</option>
+                                                    <option value="{{$programme->id_jour}}" selected>{{$programme->jour}} selected></option>
                                                     @forelse ($jour as $value)
                                                 <option value="{{$value->id_jour}}">{{$value->jour}}</option>
                                                 

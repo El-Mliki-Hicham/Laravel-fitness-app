@@ -44,11 +44,11 @@
 										<td>{{$value->nom_exercice}}</td>
 										<td style="width: 6%">
 				
-											<a href="{{route('afficher-programme.edit',$value->id_programme)}}"><i
+											<a href="{{route('afficher-programme.edit',$value->id_categorie)}}"><i
 													class="item-action fa fa-edit" data-toggle="modal"
 													data-target="#labelModal"></i></a>
 				
-											<form action="{{route('afficher-programme.destroy',$value->id_programme)}}" method="POST">
+											<form action="{{route('afficher-programme.destroy',$value->id_categorie)}}" method="POST">
 												@csrf
 												@method("DELETE")
 												<button> <i class="item-action fa fa-trash" data-toggle="modal"
