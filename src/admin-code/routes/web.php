@@ -17,12 +17,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+ 
+// Route::get('/inserte-exercice ', function () {
+//     return view('pages.inserte-exercice');
+// });
+// Route::get('/inserte-categorie ', function () {
+//     return view('pages.inserte-categorie');
+// });
+// Route::get('/edit-exercice ', function () {
+//     return view('pages.edit-exercice');
+// });
+// Route::get('/edit-categorie ', function () {
+//     return view('pages.edit-categorie');
+// });
+// Route::get('/tableau-exercice ', function () {
+//     return view('pages.tableau-exercice');
+// });
+// Route::get('/tableau-categorie ', function () {
+//     return view('pages.tableau-categorie');
+// });
 
-
-route::resource("admin",Controller::class);
-route::resource("categorie",CategoriesController::class);
-route::resource("exercice",ExercicesController::class);
-route::resource("jour",JoursController::class);
+// route::resource("admin",Controller::class);
+ route::resource("afficher-categorie",CategoriesController::class);
+// route::resource("exercice",ExercicesController::class);
+// route::resource("jour",JoursController::class);

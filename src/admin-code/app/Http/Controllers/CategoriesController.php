@@ -15,7 +15,10 @@ class CategoriesController extends Controller
     public function index()
     {
     
-
+     $categorie =DB::table('categories')
+     ->select('*')
+     ->get();
+      return view('pages.tableau-categorie', compact('categorie'));
        
     }
 
@@ -26,7 +29,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.inserte-categorie');
     }
 
     /**
@@ -38,14 +41,7 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         
-        $categorie = $request->input("name_categorie");
-        $description = $request->input("description_categorie");
-
-        $insert = DB::insert('insert into categories (name_categorie,description_categorie) values(?,?)',
-            [$categorie,$description]);
-
-        if($insert){
-            return redirect('admin');}
+       
     }
 
     /**
@@ -90,9 +86,6 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-      $query= DB::table("categories")->select("*")->where("id_categorie",$id)->delete();
-        if($query){
-            return redirect('admin');
-        }
+      
     }
 }
