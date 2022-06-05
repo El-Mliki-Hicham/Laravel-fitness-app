@@ -25,7 +25,7 @@
                                                   <div class="col-6">
                                                       <div class="form-group ">
                                                           <label for="cc-exp" class="control-label mb-1">Name</label>
-                                                          <input id="cc-exp" name="nom_produit" type="text" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                          <input id="cc-exp" name="nom_categorie" type="text" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
                                                               data-val-cc-exp="Please enter a valid month and year"
                                                               autocomplete="cc-exp">
                                                           <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>

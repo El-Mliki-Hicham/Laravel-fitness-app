@@ -29,9 +29,9 @@
 
 							<tbody>
 								<tr>
-									<td>photo</td>
+									<td style="width: 20%"><div class="uImg"><img src="img/{{$value ->photo_categorie}}" alt="" style="width: 100px"></div></td>
 									<td>{{$value->id_categorie}}</td>
-									<td>{{$value->name_categorie}}</td>
+									<td>{{$value->nom_categorie}}</td>
 									<td>{{$value->description_categorie}}</td>
 									<td style="width: 6%">
                     

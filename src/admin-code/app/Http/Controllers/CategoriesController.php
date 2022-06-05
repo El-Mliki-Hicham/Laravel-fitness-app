@@ -41,6 +41,20 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         
+       $name=$request->input('nom_categorie');
+       $description=$request->input('description_categorie');
+       if($request->hasfile('photo_categorie'))
+        {
+            $file = $request->file('photo_categorie');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('img', $filename);
+           $photo = $filename;
+        }
+        $insert=DB::insert('insert into categories (nom_categorie , description_categorie , photo_categorie) value(?,?,?)',[$name ,$description, $photo]);
+        if ($insert) {
+            return redirect('afficher-categorie');
+        }
        
     }
 
