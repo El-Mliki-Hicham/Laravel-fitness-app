@@ -42,5 +42,5 @@ use Illuminate\Support\Facades\Route;
 
 // route::resource("admin",Controller::class);
  route::resource("afficher-categorie",CategoriesController::class);
-// route::resource("exercice",ExercicesController::class);
+route::resource("afficher-exercice",ExercicesController::class);
 // route::resource("jour",JoursController::class);

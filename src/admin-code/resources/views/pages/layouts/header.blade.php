@@ -4,7 +4,7 @@
       <!-- start with head -->
       <div class="head">
         <div class="logo">
-          <img src="img/logo-admin.png" alt="">
+          <img src="img/logo-admin.png  " alt="">
         </div>
         <a href="#" class="btn btn-danger">SUBMIT new MOVIE</a>
       </div>
@@ -18,14 +18,14 @@
           <li class="nav-item"><a href="#menu2" class="nav-link collapsed" data-toggle="collapse"><i class="fa fa-fire"></i>tables<span class="sub-ico"><i class="fa fa-angle-down"></i></span></a></li>
           <!-- start charts submenue -->
           <li class="sub collapse" id="menu2">
-              <a href="tableau-exercice" class="nav-link" data-parent="#menu3">tableau excerice</a>
-              <a href="tableau-categorie" class="nav-link" data-parent="#menu3">tableau-categorie</a>
+              <a href="{{route('afficher-exercice.index')}}" class="nav-link" data-parent="#menu3">tableau excerice</a>
+              <a href="{{route('afficher-categorie.index')}}" class="nav-link" data-parent="#menu3">tableau-categorie</a>
              
           </li>
           <li class="nav-item"><a href="#menu3" class="nav-link collapsed" data-toggle="collapse"><i class="fa fa-fire"></i>Insérer<span class="sub-ico"><i class="fa fa-angle-down"></i></span></a></li>
           <!-- start charts submenue -->
           <li class="sub collapse" id="menu3">
-            <a href="inserte-exercice" class="nav-link" data-parent="#menu3">Ajouter exercice</a>
+            <a href="{{route('afficher-exercice.create')}}" class="nav-link" data-parent="#menu3">Ajouter exercice</a>
             <a href="{{route('afficher-categorie.create')}}" class="nav-link" data-parent="#menu3">Ajouter categorie</a>
               
           </li>

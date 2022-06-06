@@ -48,7 +48,7 @@ class CategoriesController extends Controller
             $file = $request->file('photo_categorie');
             $extenstion = $file->getClientOriginalExtension();
             $filename = time().'.'.$extenstion;
-            $file->move('img', $filename);
+            $file->move('img/categories', $filename);
            $photo = $filename;
         }
         $insert=DB::insert('insert into categories (nom_categorie , description_categorie , photo_categorie) value(?,?,?)',[$name ,$description, $photo]);
@@ -77,7 +77,12 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $edit = DB::table('categories')
+        ->select('*')
+        ->where('id_categorie',$id)
+        ->get();
+        
+        return view('pages.edit-categorie', compact('edit'));
     }
 
     /**
@@ -89,7 +94,30 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $name=$request->input('nom_categorie');
+        $description=$request->input('description_categorie');
+
+
+        if ( $request->hasFile('photo_categorie')) {
+         $file = $request->file('photo_categorie');
+             $extenstion = $file->getClientOriginalExtension();
+             $filename = time().'.'.$extenstion;
+             $file->move('img/categories', $filename);
+             $image = $filename;
+          }
+        else{
+            $image= $request->input("img");
+       } 
+       
+       DB::table('categories')
+       ->where('id_categorie',$id)
+       ->update(['nom_categorie'=>$name, 
+       'photo_categorie'=>$image,
+       "description_categorie"=>$description
+    ]);
+       
+       return redirect('afficher-categorie');
+ 
     }
 
     /**
@@ -100,6 +128,10 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-      
+      DB::table('categories')
+      ->where('id_categorie',$id)
+      ->select('*')
+      ->delete();
+      return redirect('afficher-categorie');
     }
 }

@@ -17,30 +17,52 @@
 						</div>
 						<div class="card-body">
 							<table id="datatablesSimple">
+								
+									
+								
 								<thead>
 									<tr>
 										<th>PHOTO</th>
 										<th>ID</th>
 										<th>NAME</th>
-										<th>TEMPERATURE</th>
-										<th>CATEGORIE</th>
+										<th>numero</th>
 										<th>DESCRIPTION</th>
 										<th>ACTION</th>
 									</tr>
 								</thead>
 	
 								<tbody>
+									@forelse ($exercice as $value)
 									<tr>
-										<td>Tiger Nixon</td>
-										<td>System Architect</td>
-										<td>Edinburgh</td>
-										<td>61</td>
-										<td>2011/04/25</td>
-										<td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt esse modi delectus quis? Repudiandae, cumque, ad incidunt commodi quidem </td>
-										<td>$320,800</td>
+										<td style="width: 20%">
+											<div class="uImg"><img src="img/exercices/{{$value->photo_exercice}}" alt=""
+													style="width: 100px"></div>
+										</td>
+										<td>{{$value->id_exercice}}</td>
+										<td>{{$value->nom_exercice}}</td>
+										<td>{{$value->description_exercice}}</td>
+										<td>{{$value->numero}}</td>
+										<td style="width: 6%">
+				
+											<a href="{{route('afficher-exercice.edit',$value->id_exercice)}}"><i
+													class="item-action fa fa-edit" data-toggle="modal"
+													data-target="#labelModal"></i></a>
+				
+											<form action="{{route('afficher-exercice.destroy',$value->id_exercice)}}" method="POST">
+												@csrf
+												@method("DELETE")
+												<button> <i class="item-action fa fa-trash" data-toggle="modal"
+														data-target="#deleteItemModal"></i></button>
+				
+											</form>
+				
+										</td>
 									</tr>
-								   
+									@empty
+									
+									@endforelse
 								</tbody>
+								
 							</table>
 						</div>
 					</div>

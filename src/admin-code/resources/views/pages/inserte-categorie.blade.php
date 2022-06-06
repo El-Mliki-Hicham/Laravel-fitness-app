@@ -15,9 +15,9 @@
                                       <div class="card-body">
                                           
                                         
-                                          <form action="" method="POST" novalidate="novalidate">
-                                        
-                                        
+                                          <form action="{{route('afficher-categorie.store')}}" method="POST" novalidate="novalidate" enctype="multipart/form-data">
+                                    
+                                        @csrf
                                             <div class="row">
                           
                                                </div>
@@ -52,8 +52,8 @@
                     >                                         </i>
                                                       <div class="input-group">
                                       
-                                                          <input id="x_card_code"  value="UPLOAD PRODUCT IMAGE"
-                                                                       type="file" name="image">
+                                                          <input id="x_card_code"  value=""
+                                                                       type="file" name="photo_categorie">
   
                                                       </div>
                                                   </div>   
