@@ -12,7 +12,7 @@ class PublicController extends Controller
       $categories=  DB::table('categories')
         ->select("*")
         ->get();
-        return view("pagess.index",compact("categories"));
+        return view("pages.index",compact("categories"));
     }
 
     function afficher_jours_id($id){
@@ -25,7 +25,7 @@ class PublicController extends Controller
     ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
     ->groupBy("exercices_de_jours.id_jour")
     ->get();
-    return view('pagess.jours',compact("jours"));
+    return view('pages.jours',compact("jours"));
     }
     
     
@@ -39,7 +39,7 @@ class PublicController extends Controller
     ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
     // ->groupBy("exercices_de_jours.id_jour")
     ->get();
-    return view('pagess.exercices',compact("exercices"));
+    return view('pages.exercices',compact("exercices"));
 
 
     }
