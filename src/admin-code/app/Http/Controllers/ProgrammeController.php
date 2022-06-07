@@ -14,7 +14,7 @@ class ProgrammeController extends Controller
      */
     public function index()
     {
-        $programme =DB::table('exercices_de_jours')
+        $programme=DB::table('exercices_de_jours')
     ->select('*')
     ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
     ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")

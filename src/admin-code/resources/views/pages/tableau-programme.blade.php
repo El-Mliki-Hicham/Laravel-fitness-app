@@ -29,6 +29,8 @@
 										<th>ACTION</th>
 									</tr>
 								</thead>
+							
+		
 	
 								<tbody>
 									@forelse ($programme as $value)
@@ -56,11 +58,11 @@
 				
 										</td>
 									</tr>
+
 									@empty
 									
 									@endforelse
 								</tbody>
-								
 							</table>
 						</div>
 					</div>
