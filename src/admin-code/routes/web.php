@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\exercices_par_jourController;
 use App\Http\Controllers\ExercicesController;
 use App\Http\Controllers\JoursController;
+use App\Http\Controllers\ProgrammeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,4 +46,4 @@ use Illuminate\Support\Facades\Route;
 route::resource("afficher-categorie",CategoriesController::class);
 route::resource("afficher-exercice",ExercicesController::class);
 route::resource("afficher-jour",JoursController::class);
-route::resource("afficher-exercice-par-jour",exercices_par_jourController::class);
+route::resource("afficher-programme",ProgrammeController::class);

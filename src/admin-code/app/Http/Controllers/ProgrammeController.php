@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class exercices_par_jourController extends Controller
+class ProgrammeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,13 @@ class exercices_par_jourController extends Controller
      */
     public function index()
     {
-        //
+        $programme =DB::table('exercices_de_jours')
+    ->select('*')
+    ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
+    ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
+    ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
+    ->get();
+    return view('pages.tableau-programme',compact("programme"));
     }
 
     /**

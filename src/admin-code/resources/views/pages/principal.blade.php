@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('pages.layouts.head')
+@include('layouts.head')
 <body>
 <!-- start admin -->
-@include('pages.layouts.header')
+@include('layouts.header')
 			<main>
 				@yield('content')
 			</main>
@@ -11,7 +11,7 @@
 		</div>
       <!-- end content -->
     </div>
-    <!-- end the real content -->
+    <!-- end the rearl content -->
   </div>
   <!-- end content -->
 </section>
