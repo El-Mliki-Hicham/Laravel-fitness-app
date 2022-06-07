@@ -36,7 +36,7 @@
 									@forelse ($programme as $value)
 									<tr>
 										<td style="width: 20%">
-											<div class="uImg"><img src="img/exercices/{{$value->photo_categorie}}" alt=""
+											<div class="uImg"><img src="img/categories/{{$value->photo_categorie}}" alt=""
 													style="width: 100px"></div>
 										</td>
 										<td>{{$value->nom_categorie}}</td>
@@ -44,11 +44,11 @@
 										<td>{{$value->nom_exercice}}</td>
 										<td style="width: 6%">
 				
-											<a href="{{route('afficher-programme.edit',$value->id_exercice)}}"><i
+											<a href="{{route('afficher-programme.edit',$value->id_programme)}}"><i
 													class="item-action fa fa-edit" data-toggle="modal"
 													data-target="#labelModal"></i></a>
 				
-											<form action="{{route('afficher-programme.destroy',$value->id_exercice)}}" method="POST">
+											<form action="{{route('afficher-programme.destroy',$value->id_programme)}}" method="POST">
 												@csrf
 												@method("DELETE")
 												<button> <i class="item-action fa fa-trash" data-toggle="modal"

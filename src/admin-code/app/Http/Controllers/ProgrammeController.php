@@ -30,7 +30,20 @@ class ProgrammeController extends Controller
      */
     public function create()
     {
-        //
+        $categorie =DB::table('categories')
+        ->select('*')
+        ->get();
+
+        $exercice = DB::table('exercices')
+        ->select("*")
+        ->get();
+
+        $jour = DB::table('jours')
+        ->select("*")
+        ->get();
+    
+          
+        return view("pages.inserte-programme",compact('categorie','exercice','jour'));
     }
 
     /**
@@ -41,7 +54,16 @@ class ProgrammeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        $exercice =$request->input('exercice');
+        $categorie=$request->input('categorie');
+        $jour=$request->input('jour');
+       
+
+        $inserte =DB::insert('insert into exercices_de_jours(exercice_id,categorie_id,id_jour) value(?,?,?)',[$exercice,$categorie,$jour]);
+        if ($inserte) {
+            return redirect('afficher-programme');
+        }
     }
 
     /**

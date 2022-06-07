@@ -21,6 +21,7 @@
               <a href="{{route('afficher-exercice.index')}}" class="nav-link" data-parent="#menu3">tableau excerice</a>
               <a href="{{route('afficher-categorie.index')}}" class="nav-link" data-parent="#menu3">tableau-categorie</a>
               <a href="{{route('afficher-jour.index')}}" class="nav-link" data-parent="#menu3">tableau-jour</a>
+              <a href="{{route('afficher-programme.index')}}" class="nav-link" data-parent="#menu3">tableau-programme</a>
              
           </li>
           <li class="nav-item"><a href="#menu3" class="nav-link collapsed" data-toggle="collapse"><i class="fa fa-fire"></i>Insérer<span class="sub-ico"><i class="fa fa-angle-down"></i></span></a></li>
@@ -29,6 +30,7 @@
             <a href="{{route('afficher-exercice.create')}}" class="nav-link" data-parent="#menu3">Ajouter exercice</a>
             <a href="{{route('afficher-categorie.create')}}" class="nav-link" data-parent="#menu3">Ajouter categorie</a>
             <a href="{{route('afficher-jour.create')}}" class="nav-link" data-parent="#menu3">Ajouter jour</a>
+            <a href="{{route('afficher-programme.create')}}" class="nav-link" data-parent="#menu3">Ajouter programme</a>
               
           </li>
           <!-- end charts submenue -->

@@ -40,6 +40,7 @@ return new class extends Migration
 
         });
         Schema::create('exercices_de_jours', function (Blueprint $table) {
+            $table->string('id_programme')->nullable();        
             $table->unsignedInteger("categorie_id")->nullable();     
             $table->unsignedInteger("id_jour")->nullable();
             $table->unsignedInteger("exercice_id")->nullable();
