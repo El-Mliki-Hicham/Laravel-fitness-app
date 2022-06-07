@@ -42,7 +42,7 @@
                                                          
                                                       </div>
                                                       <label for="cc-payment" class="control-label mb-1">Description</label>
-                                                      <textarea id="cc-pament" name="description" type="text "class="form-control" aria-required="true" aria-invalid="false" value="100.00"> </textarea>
+                                                      <textarea id="cc-pament" name="description_categorie" type="text "class="form-control" aria-required="true" aria-invalid="false" value="100.00"> </textarea>
                                                     </div>
                               
                                                   <div class="col-6">

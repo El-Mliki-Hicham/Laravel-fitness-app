@@ -48,7 +48,7 @@ class ExercicesController extends Controller
             $file = $request->file('photo_exercice');
             $extenstion = $file->getClientOriginalExtension();
             $filename = time().'.'.$extenstion;
-            $file->move('img/exerice', $filename);
+            $file->move('img/exercices', $filename);
             $photo = $filename;
         }
 
@@ -94,22 +94,34 @@ class ExercicesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $nom = $request->input('name_categorie');
+        $nom = $request->input('nom_exercice');
+        $numero = $request->input('numero');
+        $description = $request->input('description_exercice');
       
       
-        if($request->hasfile('photo_categorie'))
+        if($request->hasfile('photo_exercice'))
          {
-             $file = $request->file('photo_categorie');
+             $file = $request->file('photo_exercice');
              $extenstion = $file->getClientOriginalExtension();
              $filename = time().'.'.$extenstion;
-             $file->move('img', $filename);
+             $file->move('img/exercices', $filename);
             $photo = $filename;
          }
+        else{
+        $photo = $request->input('img');
+    }
         
-     //    $photo = $request->input('photo_categorie');
-        $inserte = DB::insert('insert into categories(name_categorie,photo_categorie) value(?,?)',[$nom,$photo]);
-       if($inserte){
-        return redirect('afficher-categorie');
+        $edit = DB::table('exercices')
+        ->select('*')
+        ->where('id_exercice',$id)
+        ->update([
+                'nom_exercice'=>$nom,
+                'numero'=>$numero,
+                'description_exercice'=>$description,
+                'photo_exercice'=>$photo 
+            ]);
+       if($edit){
+        return redirect('afficher-exercice');
         
      }
     }

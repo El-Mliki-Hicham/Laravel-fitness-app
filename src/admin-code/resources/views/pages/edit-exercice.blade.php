@@ -42,16 +42,19 @@
                                             </div>
                                             <div class="form-group mb-3">
                                                 
+                                                <label for="">numero d'exercice</label>
+                                                <input id="name" name="numero" type="text"
+                                                    class="form-control validate" required
+                                                    value="{{$value->numero}}">
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                
                                                 <label for="">Description</label>
                                                 <input id="name" name="description_exercice" type="text"
                                                     class="form-control validate" required
                                                     value="{{$value->description_exercice}}">
                                             </div>
-                                           
             
-                                            
-                                            
-
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-12 ">
                                         <div class=" mx-auto">
@@ -61,7 +64,7 @@
                                         <div class="custom-file mt-3 mb-3">
                                             <input type="hidden"name="img"  value="{{$value->photo_exercice}}">
                                             <input class="btn btn-primary btn-block mx-auto col-lg-6"
-                                                value="" type="file" name= "photo_categorie" />
+                                                value="" type="file" name= "photo_exercice" />
                                         </div>
                                     </div>
                                     <div class="col-12">

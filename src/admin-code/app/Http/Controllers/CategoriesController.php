@@ -51,7 +51,10 @@ class CategoriesController extends Controller
             $file->move('img/categories', $filename);
            $photo = $filename;
         }
-        $insert=DB::insert('insert into categories (nom_categorie , description_categorie , photo_categorie) value(?,?,?)',[$name ,$description, $photo]);
+        else{
+            $photo = null;
+        }
+        $insert=DB::insert('insert into categories (nom_categorie ,description_categorie ,photo_categorie) value(?,?,?)',[$name ,$description, $photo]);
         if ($insert) {
             return redirect('afficher-categorie');
         }

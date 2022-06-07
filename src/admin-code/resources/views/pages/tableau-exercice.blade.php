@@ -4,7 +4,7 @@
           
     
       <div class="container-fluid px-4">
-					<h1 class="mt-4">Tableau des endroit</h1>
+					<h1 class="mt-4">Tableau des exercices</h1>
 					<ol class="breadcrumb mb-4">
 						<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
 						<li class="breadcrumb-item active">Tables</li>
@@ -24,8 +24,8 @@
 									<tr>
 										<th>PHOTO</th>
 										<th>ID</th>
-										<th>NAME</th>
-										<th>numero</th>
+										<th>NOM EXERCICE</th>
+										<th>NUMERO</th>
 										<th>DESCRIPTION</th>
 										<th>ACTION</th>
 									</tr>
@@ -40,8 +40,8 @@
 										</td>
 										<td>{{$value->id_exercice}}</td>
 										<td>{{$value->nom_exercice}}</td>
-										<td>{{$value->description_exercice}}</td>
 										<td>{{$value->numero}}</td>
+										<td>{{$value->description_exercice}}</td>
 										<td style="width: 6%">
 				
 											<a href="{{route('afficher-exercice.edit',$value->id_exercice)}}"><i
