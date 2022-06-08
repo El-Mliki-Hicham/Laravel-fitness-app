@@ -121,36 +121,22 @@
         <h2 class="title-decor">Programme <span> Sportif</span></h2>
         <p class="slogan">Sélectionnez votre Programme Sportif	.</p>
         <div class="row">
+			@forelse ($categories as $value)
+				
+			
             <div class="col-md-4 club-card-col">
                 <div class="club-card-item" style="background-image: url(assets/img/bg-price-1.svg);">
                     <div class="price-cover">
                         <div class="price"><span>$</span>220</div>
-                        <div class="date">3 months</div>
+                        <div class="date">{{$value->nom_categorie}}</div>
                     </div>
                     <div class="club-card-text">Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolortin lorem ut.</div>
                     <a href="program.html" class="btn">order now</a>
                 </div>
             </div>
-            <div class="col-md-4 club-card-col">
-                <div class="club-card-item" style="background-image: url(assets/img/bg-price-2.svg);">
-                    <div class="price-cover">
-                        <div class="price"><span>$</span>320</div>
-                        <div class="date">6 months</div>
-                    </div>
-                    <div class="club-card-text">Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolortin lorem ut.</div>
-                    <a href="program.html" class="btn">order now</a>
-                </div>
-            </div>
-            <div class="col-md-4 club-card-col">
-                <div class="club-card-item" style="background-image: url(assets/img/bg-price-3.svg);">
-                    <div class="price-cover">
-                        <div class="price"><span>$</span>360</div>
-                        <div class="date">12 months</div>
-                    </div>
-                    <div class="club-card-text">Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolortin lorem ut.</div>
-                    <a href="program.html" class="btn">order now</a>
-                </div>
-            </div>
+			@empty
+				
+			@endforelse
         </div>
     </div>
 
@@ -164,11 +150,12 @@
         <h2 class="title-decor">Tous <span>les exercices</span></h2>
         <p class="slogan">Tous les exercices disponibles dans nos site web.</p>
         <div class="row">
+			@forelse ($exercices as $value)
             <div class="col-sm-4 fitness-program-col">
                 <div class="fitness-program-item">
                     <div class="fitness-program-item-front" style="background-image: url(assets/img/home2-program-1.jpg);">
                         <div class="fitness-program-item-inner">
-                            <div class="date">monday 11:00AM</div>
+                            <div class="date">{{$value->nom_exercice}}</div>
                             <h3>cardio training</h3>
                         </div>
                     </div>
@@ -180,86 +167,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 fitness-program-col">
-                <div class="fitness-program-item">
-                    <div class="fitness-program-item-front" style="background-image: url(assets/img/home2-program-2.jpg);">
-                        <div class="fitness-program-item-inner">
-                            <div class="date">monday 11:00AM</div>
-                            <h3>Open Training</h3>
-                        </div>
-                    </div>
-                    <div class="fitness-program-item-back" style="background-image: url(assets/img/home2-program-2.jpg);">
-                        <a href="program.html" class="fitness-program-item-inner">
-                            <div class="date">monday 11:00AM</div>
-                            <h3>Open Training</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 fitness-program-col">
-                <div class="fitness-program-item">
-                    <div class="fitness-program-item-front" style="background-image: url(assets/img/home2-program-3.jpg);">
-                        <div class="fitness-program-item-inner">
-                            <div class="date">monday 11:00AM</div>
-                            <h3>running</h3>
-                        </div>
-                    </div>
-                    <div class="fitness-program-item-back" style="background-image: url(assets/img/home2-program-3.jpg);">
-                        <a href="program.html" class="fitness-program-item-inner">
-                            <div class="date">monday 11:00AM</div>
-                            <h3>running</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 fitness-program-col">
-                <div class="fitness-program-item">
-                    <div class="fitness-program-item-front" style="background-image: url(assets/img/home2-program-4.jpg);">
-                        <div class="fitness-program-item-inner">
-                            <div class="date">monday 11:00AM</div>
-                            <h3>group workouts</h3>
-                        </div>
-                    </div>
-                    <div class="fitness-program-item-back" style="background-image: url(assets/img/home2-program-4.jpg);">
-                        <a href="program.html" class="fitness-program-item-inner">
-                            <div class="date">monday 11:00AM</div>
-                            <h3>group workouts</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 fitness-program-col">
-                <div class="fitness-program-item">
-                    <div class="fitness-program-item-front" style="background-image: url(assets/img/home2-program-5.jpg);">
-                        <div class="fitness-program-item-inner">
-                            <div class="date">monday 11:00AM</div>
-                            <h3>press</h3>
-                        </div>
-                    </div>
-                    <div class="fitness-program-item-back" style="background-image: url(assets/img/home2-program-5.jpg);">
-                        <a href="program.html" class="fitness-program-item-inner">
-                            <div class="date">monday 11:00AM</div>
-                            <h3>press</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 fitness-program-col">
-                <div class="fitness-program-item">
-                    <div class="fitness-program-item-front" style="background-image: url(assets/img/home2-program-6.jpg);">
-                        <div class="fitness-program-item-inner">
-                            <div class="date">monday 11:00AM</div>
-                            <h3>yoga</h3>
-                        </div>
-                    </div>
-                    <div class="fitness-program-item-back" style="background-image: url(assets/img/home2-program-6.jpg);">
-                        <a href="program.html" class="fitness-program-item-inner">
-                            <div class="date">monday 11:00AM</div>
-                            <h3>yoga</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
+			@empty
+				
+			@endforelse
+           
+            
+			
+            
+           
         </div>
         <a href="program.html" class="btn">view more</a>
     </div>
@@ -337,7 +252,7 @@
 <section class="s-testimonials testimonials-border s-fitness-testimonials" style="background-image: url(assets/img/bg-testimonials.jpg);">
     <div class="mask"></div>
     <img class="testimonials-effect" src="assets/img/bg-testi-2.svg" alt="effect">
-	
+
     <div class="container">
         <div class="testimonials-slider">
             <div class="testimonial-slide">
