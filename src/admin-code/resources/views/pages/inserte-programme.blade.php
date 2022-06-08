@@ -2,7 +2,7 @@
 @section('content')
 <div class="main-content">
     <h1 class="titre text-center ">
-   <strong>Ajouter les endroits</strong>
+   <strong>Ajouter un  Programme</strong>
    </h1>
         <div class="section__content section__content--p30">
             <div class="container-fluid">
@@ -11,7 +11,7 @@
                         <div class="card">
 
                             <!-- form -->
-                            <div class="card-header">Ajouter l'endroit</div>
+                            <div class="card-header">Ajouter un  Programme</div>
                             <div class="card-body">
                                 
                             
@@ -25,16 +25,15 @@
                                         <div class="col-6">
                                             <div class="form-group ">
                                                 <label for="cc-exp" class="control-label mb-1">categories</label>
+                                                
+                                                <select name="categorie"  class="form-control cc-exp">
                                                 @forelse ($categorie as $value)
-                                        
-                                            <select name="categorie"  class="form-control cc-exp">
-                                                <option value="" selected>select categorie</option>
                                                 <option value="{{$value->id_categorie}}">{{$value->nom_categorie}}</option>
+                                                
+                                                @empty
+                                                
+                                                @endforelse
                                             </select>
-                                            
-                                            @empty
-                                                    
-                                            @endforelse
                                             </div>
                                         </div>
                                         <div class="col-6">

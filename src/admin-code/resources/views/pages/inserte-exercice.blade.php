@@ -2,7 +2,7 @@
 @section('content')
 <div class="main-content">
     <h1 class="titre text-center ">
-   <strong>Ajouter les endroits</strong>
+   <strong>Ajouter exercices</strong>
    </h1>
         <div class="section__content section__content--p30">
             <div class="container-fluid">
@@ -11,7 +11,7 @@
                         <div class="card">
 
                             <!-- form -->
-                            <div class="card-header">Ajouter l'endroit</div>
+                            <div class="card-header">Ajouter exercices</div>
                             <div class="card-body">
                                 
                             
