@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-	<meta charset="UTF-8">
-	<title>Fitmax - About</title>
-	<!-- =================== META =================== -->
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="shortcut icon" href="assets/img/favicon.png">
-	<!-- =================== STYLE =================== -->
-	<link rel="stylesheet" href="assets/css/slick.min.css">
-	<link rel="stylesheet" href="assets/css/bootstrap-grid.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-</head>
 
-<body id="home" class="page-about">
+
+	<!DOCTYPE html>
+<html lang="zxx">
+@include('layouts.head')
+
+<body id="home" class="page-fitness">
 	<!--================ PRELOADER ================-->
 	<div class="preloader-cover">
 		<div id="cube-loader">
@@ -30,6 +18,10 @@
 			</div>
 		</div>
 	</div>
+	<!--============== PRELOADER END ==============-->
+	
+	<!-- ================= HEADER ================= -->
+	@include('layouts.header')
 	<!--============== PRELOADER END ==============-->
 	
 	<!-- ================= HEADER ================= -->
@@ -116,11 +108,13 @@
 			<h2 class="title-decor">jours <span></span></h2>
 			<p class="slogan">Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.</p>
 			<div class="row">
+				
+			@forelse ($jours as $value)
 				<div class="col-md-6 out-trainer-col">
 					<div class="out-trainer-item">
 						<a href="trainer.html" class="out-trainer-img"><img src="assets/img/trainer-1.jpg" alt="img"></a>
 						<div class="out-trainer-info">
-							<h3><a href="trainer.html">Sam piters</a></h3>
+							<h3><a href="trainer.html">{{$value->jour}}</a></h3>
 							<div class="prof">Weightlifting</div>
 							<p>Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.</p>
 							<ul class="social-list">
@@ -132,54 +126,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 out-trainer-col">
-					<div class="out-trainer-item">
-						<a href="trainer.html" class="out-trainer-img"><img src="assets/img/trainer-2.jpg" alt="img"></a>
-						<div class="out-trainer-info">
-							<h3><a href="trainer.html">kim piters</a></h3>
-							<div class="prof">Weightlifting</div>
-							<p>Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.</p>
-							<ul class="social-list">
-								<li><a target="_blank" href="https://www.facebook.com/rovadex"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a target="_blank" href="https://twitter.com/RovadexStudio"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a target="_blank" href="https://www.youtube.com"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-								<li><a target="_blank" href="https://www.instagram.com/rovadex"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 out-trainer-col">
-					<div class="out-trainer-item">
-						<a href="trainer.html" class="out-trainer-img"><img src="assets/img/trainer-3.jpg" alt="img"></a>
-						<div class="out-trainer-info">
-							<h3><a href="trainer.html">Samanta piters</a></h3>
-							<div class="prof">Weightlifting</div>
-							<p>Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.</p>
-							<ul class="social-list">
-								<li><a target="_blank" href="https://www.facebook.com/rovadex"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a target="_blank" href="https://twitter.com/RovadexStudio"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a target="_blank" href="https://www.youtube.com"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-								<li><a target="_blank" href="https://www.instagram.com/rovadex"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 out-trainer-col">
-					<div class="out-trainer-item">
-						<a href="trainer.html" class="out-trainer-img"><img src="assets/img/trainer-4.jpg" alt="img"></a>
-						<div class="out-trainer-info">
-							<h3><a href="trainer.html">artur piters</a></h3>
-							<div class="prof">Weightlifting</div>
-							<p>Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.</p>
-							<ul class="social-list">
-								<li><a target="_blank" href="https://www.facebook.com/rovadex"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a target="_blank" href="https://twitter.com/RovadexStudio"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a target="_blank" href="https://www.youtube.com"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-								<li><a target="_blank" href="https://www.instagram.com/rovadex"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
+				
+				@empty
+     
+				@endforelse
 			</div>
 		</div>
 	</section>
@@ -217,10 +167,26 @@
 	<!--================== S-CLIENTS ==================-->
 	
 	<!--================= TO TOP END =================-->
+	<!-- ================== FOOTER ================== -->
+	@include('layouts.footer')
+	<!-- ================ FOOTER END ================ -->
+
+	<!--=================== TO TOP ===================-->
+	<a class="to-top" href="#home">
+		<i class="fa fa-chevron-up" aria-hidden="true"></i>
+	</a>
+	<!--================= TO TOP END =================-->
 
 	<!--=================== SCRIPT	===================-->
 	<script src="assets/js/jquery-2.2.4.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/isotope.pkgd.js"></script>
+	<script src="assets/js/jquery.fancybox.js"></script>
+	<script src="assets/js/rx-lazy.js"></script>
+	<script src="assets/js/parallax.min.js"></script>
+
 	<script src="assets/js/scripts.js"></script>
 </body>
+</html>
+
 </html>

@@ -131,7 +131,7 @@
                         <div class="date">{{$value->nom_categorie}}</div>
                     </div>
                     <div class="club-card-text">{{$value->description_categorie}}</div>
-                    <a href="program.html" class="btn">Afficher </a>
+                    <a href="/jours/{{$value->id_categorie}}" class="btn">Afficher </a>
                 </div>
             </div>
 			@empty
