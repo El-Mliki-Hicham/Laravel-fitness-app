@@ -17,15 +17,16 @@ class PublicController extends Controller
 
     function afficher_jours_id($id){
 
-    $jours = DB::table('exercices_de_jours')
-    ->select('*')
-    ->where("id_categorie",$id)
-    ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
-    ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
-    ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
-    ->groupBy("exercices_de_jours.id_jour")
-    ->get();
-    return view('pages.jours',compact("jours"));
+      $jours = DB::table('exercices_de_jours')
+      ->select('*')
+      ->where("id_categorie",$id)
+      ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
+      ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
+      ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
+      ->groupBy("exercices_de_jours.id_jour")
+      ->get();
+      return view('pages.categorie',compact("jours"));
+      
     }
     
     
