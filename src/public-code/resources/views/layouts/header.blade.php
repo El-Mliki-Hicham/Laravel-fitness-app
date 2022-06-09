@@ -16,7 +16,7 @@
                         <a href="#">Home <i class=""></i></a>
                         
                     </li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="#a-propos">About</a></li>
                     <li><a href="services.html">Exercices</a></li>
                     <li class="dropdown">
                         <a href="#">Programmes <i class="fa fa-caret-down"></i></a>

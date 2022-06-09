@@ -116,7 +116,7 @@
 
 <!-- ============== S-CLUB-CARDS ============== -->
 <section class="s-club-cards club-cards-lite club-cards-fitness">
-    <span class="section-title-bg">Programme Sportif </span>
+    <span class="section-title-bg" >Programme Sportif </span>
     <div class="container">
         <h2 class="title-decor">Programme <span> Sportif</span></h2>
         <p class="slogan">Sélectionnez votre Programme Sportif	.</p>
@@ -125,9 +125,9 @@
 				
 			
             <div class="col-md-4 club-card-col">
-                <div class="club-card-item" style="background-image: url(assets/img/bg-price-1.svg);">
+                <div class="club-card-item" style="background-image: url(assets/img/bg-price-1.svg); ">
                     <div class="price-cover">
-                        <div class="price"><span>$</span><img src="{{asset('assets/img/categories')}}/{{$value->photo_categorie}}" alt=""></div>
+                        <div class="price"><span></span><img style="width: 250px;" src="{{asset('assets/img/categories')}}/{{$value->photo_categorie}}" alt=""></div>
                         <div class="date">{{$value->nom_categorie}}</div>
                     </div>
                     <div class="club-card-text">{{$value->description_categorie}}</div>
@@ -142,10 +142,35 @@
 
 </section>
 <!-- ============ S-CLUB-CARDS END ============ -->
+<section class="s-about-information counter-animate counter-active" style="background-image: url(assets/img/bg-2.jpg);">
+	<div class="mask"></div>
+	<img class="trainer-awards-effect" src="assets/img/bg-competitions.svg" alt="effect">
+	<div class="container">
+		<div class="about-info-row">
+			<div class="about-info-col">
+				
+			</div>
+			<div class="about-info-col">
+				<div class="number" data-number="7">0</div>
+				<h3>jours</h3>
+			</div>
+			<div class="about-info-col">
+				<div class="number" data-number="3">0</div>
+				<h3>categories</h3>
+			</div>
+			<div class="about-info-col">
+				<div class="number" data-number="30">0</div>
+				<h3>exercices</h3>
+			</div>
+			<div class="about-info-col">
+				
+			</div>
+		</div>
+	</div>
+</section>
 
 <!-- =========== FITNESS-OUR-PROGRAM =========== -->
 <section class="fitness-our-program" style="background-image: url(assets/img/bg-best.svg);">
-    <span class="section-title-bg">Tous les exercices</span>
     <div class="container">
         <h2 class="title-decor">Tous <span>les exercices</span></h2>
         <p class="slogan">Tous les exercices disponibles dans nos site web.</p>
@@ -183,53 +208,13 @@
 
 <!-- ============== S-BEST-TRAINER ============== -->
 <section class="s-best-trainer fitness-best-trainer">
-    <span class="section-title-bg">Best Trainer</span>
+    <span class="section-title-bg" id="a-propos">À propos</span>
     <div class="container">
-        <h2 class="title-decor">Best <span>Trainer</span></h2>
-        <p class="slogan">Maecenas consequat ex id lobortis venenatis. Mauris id erat enim.</p>
+        <h2 class="title-decor">À propos <span></span></h2>
+        <p class="slogan">
+			</p>
     </div>
-    <div class="best-trainer-slider">
-        <a href="trainer.html" class="best-trainer-slide">
-            <div class="best-trainer-img">
-                <img src="assets/img/single-1.jpg" alt="img">
-            </div>
-            <h3 class="name">Samanta</h3>
-            <h3 class="surname">Piters</h3>
-            <div class="prof">weightlifting</div>
-        </a>
-        <a href="trainer.html" class="best-trainer-slide">
-            <div class="best-trainer-img">
-                <img src="assets/img/single-2.jpg" alt="img">
-            </div>
-            <h3 class="name">Artur</h3>
-            <h3 class="surname">Piters</h3>
-            <div class="prof">weightlifting</div>
-        </a>
-        <a href="trainer.html" class="best-trainer-slide">
-            <div class="best-trainer-img">
-                <img src="assets/img/single-3.jpg" alt="img">
-            </div>
-            <h3 class="name">Kim</h3>
-            <h3 class="surname">Piters</h3>
-            <div class="prof">weightlifting</div>
-        </a>
-        <a href="trainer.html" class="best-trainer-slide">
-            <div class="best-trainer-img">
-                <img src="assets/img/single-4.jpg" alt="img">
-            </div>
-            <h3 class="name">Sam</h3>
-            <h3 class="surname">Piters</h3>
-            <div class="prof">weightlifting</div>
-        </a>
-        <a href="trainer.html" class="best-trainer-slide">
-            <div class="best-trainer-img">
-                <img src="assets/img/single-5.jpg" alt="img">
-            </div>
-            <h3 class="name">Anna</h3>
-            <h3 class="surname">Piters</h3>
-            <div class="prof">weightlifting</div>
-        </a>
-    </div>
+   
 </section>
 <!-- ============ S-BEST-TRAINER END ============ -->
 
@@ -240,8 +225,10 @@
         <div class="fitness-banner-row">
             <div class="fitness-banner-left" style="background-image: url(assets/img/best-1.jpg);"></div>
             <div class="fitness-banner-right">
-                <h2>the best <span>trainers</span> are here</h2>
-                <p>are you a trainer? <a href="trainer.html">check this out.</a></p>
+                <h2>SPARTEL <span></span>GYM</h2>
+                <p>Get the body shape you've always wanted. The Gym WP has everything you need to get incredible results in the gym in short time. 
+
+					With this app you have access to several gym routines to improve your results. <a href="trainer.html">check this out.</a></p>
             </div>
         </div>
     </div>

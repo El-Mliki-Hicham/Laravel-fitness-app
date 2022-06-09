@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 footer-item-logo">
-                <a href="index.html" class="logo-footer"><img src="assets/img/logo-spartel-gym.png" alt="logo"></a>
+                <a href="index.html" class="logo-footer"><img src="{{asset('assets/img/logo-spartel-gym.png')}}" alt="logo"></a>
             </div>
         
             <div class="col-md-3 footer-item footer-item-link">
