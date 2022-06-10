@@ -30,12 +30,16 @@ class PublicController extends Controller
       $categories=  DB::table('categories')
         ->select("*")
         ->get();
-        $exercices = DB::table('exercices')
+       
+       $exercices =DB::table( "categories_exerices")
         ->select('*')
-        ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice")
-
-        ->take(6)
         ->get();
+        // $exercices = DB::table('exercices')
+        // ->select('*')
+        // ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice")
+
+        // ->take(6)
+        // ->get();
         return view("pages.home",compact("categories","exercices"));
     }
 
