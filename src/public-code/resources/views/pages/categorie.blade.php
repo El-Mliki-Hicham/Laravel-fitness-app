@@ -6,7 +6,7 @@
 
 <body id="home" class="page-fitness">
 	<!--================ PRELOADER ================-->
-	<div class="preloader-cover">
+	{{-- <div class="preloader-cover">
 		<div id="cube-loader">
 			<div class="caption">
 				<div class="cube-loader">
@@ -17,7 +17,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --}}
 	<!--============== PRELOADER END ==============-->
 	
 	<!-- ================= HEADER ================= -->
@@ -29,7 +29,7 @@
 	<!-- =============== HEADER END =============== -->
 
 	<!-- =============== HEADER-TITLE =============== -->
-	<section class="s-header-title" style="background-image: url(assets/img/bg-1-min.png);">
+	<section class="s-header-title" style="background-image: url({{asset('assets/img/bg-1-min.png')}});">
 		<div class="container">
 			<h1 class="title">Programme de Basket-ball</h1>
 			<ul class="breadcrambs">
@@ -43,17 +43,17 @@
 	<!-- ============== S-ABOUT-PROGRAM ============== -->
 	<section class="s-about">
 		<div class="container">
-			<img class="about-effect-tringle" src="assets/img/tringle-about-top.svg" alt="img">
+			<img class="about-effect-tringle" src="{{asset('assets/img/tringle-about-top.svg')}}" alt="img">
 			<div class="row about-row">
 				<div class="col-md-5 about-img-col">
 					<div class="about-img-cover">
 						<div class="about-img-1">
-							<img class="about-img-effect-1" src="assets/img/" alt="img">
-							<img class="about-img-effect-2" src="assets/img/group-circle-2.svg" alt="img">
-							<img src="assets/img/about-top-1.jpg" alt="img">
+							<img class="about-img-effect-1" src="{{asset('assets/img/')}}" alt="img">
+							<img class="about-img-effect-2" src="{{asset('assets/img/group-circle-2.svg')}}" alt="img">
+							<img src="{{asset('assets/img/about-top-1.jpg')}}" alt="img">
 						</div>
 						<div class="about-img-2">
-							<img src="assets/img/about-top-2.jpg" alt="img">
+							<img src="{{asset('assets/img/about-top-2.jpg')}}" alt="img">
 						</div>
 					</div>
 				</div>
@@ -103,7 +103,7 @@
 	<!-- =========== S-TRAINER-AWARDS END =========== -->
 
 	<!-- =============== S-OUT-TRAINER =============== -->
-	<section class="s-out-trainer" style="background-image: url(assets/img/bg-contacts.svg);">
+	<section class="s-out-trainer" style="background-image: url({{asset('assets/img/bg-contacts.svg')}});">
 		<div class="container">
 			<h2 class="title-decor">jours <span></span></h2>
 			<p class="slogan">Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.</p>
@@ -112,7 +112,7 @@
 			@forelse ($jours as $value)
 				<div class="col-md-6 out-trainer-col">
 					<div class="out-trainer-item">
-						<a href="trainer.html" class="out-trainer-img"><img src="assets/img/trainer-1.jpg" alt="img"></a>
+						<a href="trainer.html" class="out-trainer-img"><img src="{{asset('assets/img/trainer-1.jpg')}}" alt="img"></a>
 						<div class="out-trainer-info">
 							<h3><a href="trainer.html">{{$value->jour}}</a></h3>
 							<div class="prof">Weightlifting</div>
@@ -136,26 +136,26 @@
 	<!-- ============= S-OUT-TRAINER END ============= -->
 
 	<!-- ============== S-TESTIMONIALS ============== -->
-	<section class="s-testimonials" style="background-image: url(assets/img/bg-testimonials.jpg);">
+	<section class="s-testimonials" style="background-image: url({{asset('assets/img/bg-testimonials.jpg')}});">
 		<div class="mask"></div>
-		<img class="testimonials-effect" src="assets/img/bg-testimonials.svg" alt="effect">
+		<img class="testimonials-effect" src="{{asset('assets/img/bg-testimonials.svg')}}" alt="effect">
 		<div class="container">
 			<div class="testimonials-slider">
 				<div class="testimonial-slide">
 					<p>“Phasellus vestibulum nec dolor quis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida magna sit amet euismod lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit”</p>
-					<img src="assets/img/testimonials-1.png" alt="img">
+					<img src="{{asset('assets/img/testimonials-1.png')}}" alt="img">
 					<h3 class="name">Anna Piters</h3>
 					<div class="prof">our client</div>
 				</div>
 				<div class="testimonial-slide">
 					<p>“Phasellus vestibulum nec dolor quis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida magna sit amet euismod lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit”</p>
-					<img src="assets/img/testimonials-2.png" alt="img">
+					<img src="{{asset('assets/img/testimonials-2.png')}}" alt="img">
 					<h3 class="name">Mark Klark</h3>
 					<div class="prof">our client</div>
 				</div>
 				<div class="testimonial-slide">
 					<p>“Phasellus vestibulum nec dolor quis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida magna sit amet euismod lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit”</p>
-					<img src="assets/img/testimonials-3.png" alt="img">
+					<img src="{{asset('assets/img/testimonials-3.png')}}" alt="img">
 					<h3 class="name">Kat Smith</h3>
 					<div class="prof">our client</div>
 				</div>
@@ -178,15 +178,14 @@
 	<!--================= TO TOP END =================-->
 
 	<!--=================== SCRIPT	===================-->
-	<script src="assets/js/jquery-2.2.4.min.js"></script>
-	<script src="assets/js/slick.min.js"></script>
-	<script src="assets/js/isotope.pkgd.js"></script>
-	<script src="assets/js/jquery.fancybox.js"></script>
-	<script src="assets/js/rx-lazy.js"></script>
-	<script src="assets/js/parallax.min.js"></script>
+	<script src="{{asset('assets/js/jquery-2.2.4.min.js')}}"></script>
+	<script src="{{asset('assets/js/slick.min.js')}}"></script>
+	<script src="{{asset('assets/js/isotope.pkgd.js')}}"></script>
+	<script src="{{asset('assets/js/jquery.fancybox.js')}}"></script>
+	<script src="{{asset('assets/js/rx-lazy.js')}}"></script>
+	<script src="{{asset('assets/js/parallax.min.js')}}"></script>
 
-	<script src="assets/js/scripts.js"></script>
+	<script src="{{asset('assets/js/scripts.js')}}"></script>
 </body>
 </html>
 
-</html>
