@@ -21,12 +21,24 @@ return new class extends Migration
             $table->timestamps();
 
         });
+        Schema::create('categories_exerices', function (Blueprint $table) {
+            $table->increments("id_categorie_exercice");
+            $table->string('nom_categorie_exercice')->nullable();
+            $table->string('photo_categorie_exercice')->nullable();
+            $table->timestamps();
+
+        });
         Schema::create('exercices', function (Blueprint $table) {
             $table->increments("id_exercice")->nullable();
             $table->string('nom_exercice')->nullable();
-            $table->string('type_exercice')->nullable();
+            $table->unsignedInteger('categorie_exercice')->nullable();
             $table->string('description_exercice')->nullable();
+            $table->string('repetition_exercice')->nullable();
             $table->string('photo_exercice')->nullable();
+            $table->foreign('categorie_exercice')
+            ->references('id_categorie_exercice')
+            ->on('categories_exerices')
+            ->onDelete('cascade');
             $table->timestamps();
 
         });
@@ -34,6 +46,7 @@ return new class extends Migration
         Schema::create('jours', function (Blueprint $table) {
             $table->increments("id_jour")->nullable();
             $table->string('jour')->nullable();        
+            $table->string('description_jour')->nullable();        
             $table->timestamps();
            
            
@@ -42,14 +55,14 @@ return new class extends Migration
         Schema::create('exercices_de_jours', function (Blueprint $table) {
             $table->string('id_programme')->nullable();        
             $table->unsignedInteger("categorie_id")->nullable();     
-            $table->unsignedInteger("id_jour")->nullable();
+            $table->unsignedInteger("jour_id")->nullable();
             $table->unsignedInteger("exercice_id")->nullable();
             $table->timestamps();
             $table->foreign('categorie_id')
             ->references('id_categorie')
             ->on('categories')
             ->onDelete('cascade');
-            $table->foreign('id_jour')
+            $table->foreign('jour_id')
             ->references('id_jour')
             ->on('jours')
             ->onDelete('cascade');
