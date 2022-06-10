@@ -2,7 +2,7 @@
 @section('content')
 <div class="main-content">
     <h1 class="titre text-center ">
-   <strong>Ajouter les endroits</strong>
+   <strong>modifier le programme</strong>
    </h1>
         <div class="section__content section__content--p30">
             <div class="container-fluid">
@@ -70,7 +70,7 @@
                                     </div>
 
                                     <div class="">
-                                        <button class="btn btn-info au-btn--block " type="submit"> Ajouter </button>
+                                        <button class="btn btn-info au-btn--block " style="background-color: #f23849 !important" type="submit"> Ajouter </button>
 
                                     </div>
                                  </div>

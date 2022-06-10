@@ -37,7 +37,7 @@
                                     </div>
                                 </div>
                                 <div class="">
-                                    <button class="btn btn-info au-btn--block " type="submit"> Ajouter </button>
+                                    <button class="btn btn-info au-btn--block " style="background-color: #f23849 !important" type="submit"> Ajouter </button>
                                     
                                     
                                 </div>

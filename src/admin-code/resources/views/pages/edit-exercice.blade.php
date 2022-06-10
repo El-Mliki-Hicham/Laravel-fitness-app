@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="col-12">
                                         <button type="submit"
-                                            class="btn btn-primary btn-block text-uppercase">modifier</button>
+                                            class="btn btn-primary btn-block text-uppercase" style="background-color: #f23849 !important">modifier</button>
                                     </div>
                                     @empty
                                                 
