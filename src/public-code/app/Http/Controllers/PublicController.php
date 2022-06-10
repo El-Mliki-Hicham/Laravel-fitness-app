@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\DB;
             
 class PublicController extends Controller
 {
-    function afficher_categories(){
+    function index(){
 
       $categories=  DB::table('categories')
         ->select("*")

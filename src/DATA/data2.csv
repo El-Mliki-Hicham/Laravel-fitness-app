@@ -33,3 +33,26 @@
 .;cable pushdowns;6;tirer le cable vers le sol dâ€™une main;3 series of 12;triceps6.gif
 .;bar pushdowns;6;tirer la barre vers le sol a deux mains;3 series of 12;triceps7.gif
 .;lying dumbell pushup;6;pousser les halteres vers le haut en se couchant sur un banc;3 series of 12;triceps8.gif
+.;;;;;
+.;inverted thigh press;Cuisses;push the weight to the side using the machine;3 series of 12;1-cuisses.gif
+.;hamstring curl;Cuisses;curl the weight up towards your body using the machine;3 series of 12;2-cuisses.gif
+.;sitting calves extension;Cuisses;extend your calves upwards while sitting;3 series of 12;3-cuisses.gif
+.;standing calves extension;Cuisses;extend your calves upwards while standing;3 series of 12;4-cuisses.gif
+.;hyperextension;Cuisses;extend your legs forward;3 series of 12;5-cuisses.gif
+.;dumbell squat;Cuisses;squat down using dumbbells;3 series of 12;6-cuisses.gif
+.;standing sumo squat;Cuisses;squat down while holding the barbell on your shoulders;3 series of 12;7-cuisses.gif
+.;leg extension;Cuisses;push the weight up with your legs using the machine;3 series of 12;8-cuisses.gif
+.;one legged squat ;Cuisses;squat only using on leg on the ground and the other one on a bench with dumbbells;3 series of 12;9-cuisses.gif
+.;dumbell standing squat;Cuisses;squat using dumbbells;3 series of 12;10-cuisses.gif
+.;deadlift squat;Cuisses;pull the bar up on your shoulders then push up;3 series of 12;11-cuisses.gif
+;;;…..;;
+.;incline bench lateral raise;epaules;push the weight to the side while sitting on an inclined bench;3 series of 12;1 epaules.gif
+.;standing dumbbell raise;epaules;pull the weight to the side to your shoulder level;3 series of 12;2 epaules.gif
+.;front delt raise;epaules;pull the dumbbells straight up and down;3 series of 12;3 epaules.gif
+.;sitting lateral raise;epaules;pull the weight to the side while sitting down;3 series of 12;4 epaules.gif
+.;barbell shoulder raise;epaules;pull the weight with your shoulders only;3 series of 12;5 epaules.gif
+.;shoulder raise;epaules;push the weight up towards the sky;3 series of 12;6 epaules.gif
+.;one handed shoulder raise;epaules;pull the weight up on top of your shoulders only using one hand;3 series of 12;7 epaules.gif
+.;front shoulder raise;epaules;pull the weight up using cable;3 series of 12;8 epaules.gif
+.;barbell shoulder raise;epaules;push the weight up using a barbell;3 series of 12;9 epaules.gif
+.;sitting lateral raise with machine;epaules;pull the weight up using the machine;3 series of 12;10 epaules.gif
