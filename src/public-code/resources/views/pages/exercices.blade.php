@@ -14,7 +14,7 @@
             @php
 				 foreach ($exercices as $valuee) {}
 			 @endphp
-            <h1 class="title"> les exercices de {{$valuee->jour}} </h1>
+            <h1 class="title"> les exercices de {{$valuee->nom_categorie_exercice}} </h1>
             <ul class="breadcrambs">
                 <li><a href="{{route('home')}}">ACCUEIL</a></li>
                 <li>CATEGORIE </li>
