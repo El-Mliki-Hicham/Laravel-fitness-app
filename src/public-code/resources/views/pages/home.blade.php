@@ -16,15 +16,13 @@
 			</div>
 		</div>
 	</div>
-	<!--============== PRELOADER END ==============-->
+	
 	
 	<!-- ================= HEADER ================= -->
 	@include('layouts.header')
 	<!-- =============== HEADER END =============== -->
 
-	<!-- ============ S-FITNESS-SLIDER ============ -->
-	
-	<!-- ============ S-TESTIMONIALS END ============ -->
+
 	<section class="s-fitness-slider">
     <div class="slider-navigation">
         <div class="container">
@@ -92,27 +90,7 @@
     </div>
     
 </section>
-<!-- ========== S-FITNESS-SLIDER END ========== -->
 
-<!-- ============ S-WELCOME-FITNESS ============
-<section class="s-welcome-fitness">
-    <div class="container">
-        <div class="welcome-fitness-row">
-            <div class="welcome-fitness-img">
-                <img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home2-about.jpg" alt="img">
-            </div>
-            <div class="welcome-fitness-item">
-                <div class="welcome-fitness-info">
-                    <h2 class="title-decor">Welcome To <span>Fitness</span></h2>
-                    <p>Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus mi. Nunc venenatis sollicitudin nisl vel auctor.</p>
-                    <a href="#" class="btn">read more</a>
-                </div>
-                <img class="fitness-img rx-lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home2-about-2.jpg" alt="img">
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- ========== S-WELCOME-FITNESS END ========== -->
 
 <!-- ============== S-CLUB-CARDS ============== -->
 <section class="s-club-cards club-cards-lite club-cards-fitness" id="programmes">
@@ -173,7 +151,7 @@
 <!-- =========== FITNESS-OUR-PROGRAM =========== -->
 <section class="fitness-our-program" style="background-image: url(assets/img/bg-best.svg);" id="exercices">
     <div class="container">
-        .
+        <br>
         <h2 class="title-decor">Programme <span>Préféré</span></h2>
         <div class="row">
 			@forelse ($exercices as $value)
@@ -196,11 +174,7 @@
 			@empty
 				
 			@endforelse
-           
-            
-			
-            
-           
+          
         </div>
         <a href="program.html" class="btn">Voir plus</a>
     </div>
@@ -232,38 +206,11 @@
         </div>
     </div>
 </section>
-<!-- =========== S-FITNESS-BANNER END =========== -->
+<!-- =========== S-FITN =ESS-BANNER END =========== -->
 
-{{-- <!-- ============== S-TESTIMONIALS ============== -->
-<section class="s-testimonials testimonials-border s-fitness-testimonials" style="background-image: url(assets/img/bg-testimonials.jpg);">
-    <div class="mask"></div>
-    <img class="testimonials-effect" src="assets/img/bg-testi-2.svg" alt="effect">
 
-    <div class="container">
-        <div class="testimonials-slider">
-            <div class="testimonial-slide">
-                <img src="assets/img/testimonials-1.png" alt="img">
-                <h3 class="name">Anna Piters</h3>
-                <div class="prof">our client</div>
-                <p>“Phasellus vestibulum nec dolor quis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida magna sit amet euismod lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit”</p>
-            </div>
-            <div class="testimonial-slide">
-                <img src="assets/img/testimonials-2.png" alt="img">
-                <h3 class="name">Mark Klark</h3>
-                <div class="prof">our client</div>
-                <p>“Phasellus vestibulum nec dolor quis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida magna sit amet euismod lacinia.”</p>
-            </div>
-            <div class="testimonial-slide">
-                <img src="assets/img/testimonials-3.png" alt="img">
-                <h3 class="name">Kat Smith</h3>
-                <div class="prof">our client</div>
-                <p>“Phasellus vestibulum nec dolor quis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida magna sit amet euismod lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit”</p>
-            </div>
-        </div>
-    </div>
-</section> --}}
 	
-	<!-- ============= S-FITNESS-POSTS ============= -->
+	
 	
 	<!-- ================== FOOTER ================== -->
 	@include('layouts.footer')
