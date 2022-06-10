@@ -75,8 +75,7 @@
                                  </div>
                                 
                                 </form>
-                            </div>
-                        </div>
+                            </div>                        </div>
                         <!-- fin -->                        
                     <div class="col-md-12">
                         
