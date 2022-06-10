@@ -77,11 +77,17 @@ class PublicController extends Controller
 
     }
     
-    function afficher_exercices(){
-   
+    function categorie_exercice($id){
+    $exercices = DB::table('exercices')
+        ->select('*')
+        ->where('categorie_exercice',$id)
+        ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice")
+
+        // ->take(6)
+        ->get();
     
 
-    // return view('pages.home',compact("exercices"));
+    return view('pages.exercices',compact("exercices"));
 
 
     }

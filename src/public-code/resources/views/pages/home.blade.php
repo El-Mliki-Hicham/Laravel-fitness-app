@@ -152,24 +152,24 @@
 <section class="fitness-our-program" style="background-image: url(assets/img/bg-best.svg);" id="exercices">
     <div class="container">
         <br>
-        <h2 class="title-decor">Programme <span>Préféré</span></h2>
+        <h2 class="title-decor">les catégories  <span>des exercices</span></h2>
         <div class="row">
 			@forelse ($exercices as $value)
             <div class="col-sm-4 fitness-program-col">
-                <div class="fitness-program-item">
-                    <div class="fitness-program-item-front" style="background-image: url('assets/img/exercices/{{$value->photo_exercice}}');">
+                <a href="/exercice-categorie/{{$value->id_categorie_exercice}}">  <div class="fitness-program-item">
+                    <div class="fitness-program-item-front" style="background-image: url('assets/img/exercices/{{$value->photo_categorie_exercice}}');">
                         <div class="fitness-program-item-inner">
                             <div class="date">{{$value->nom_categorie_exercice}}</div>
-                            <h3>{{$value->nom_exercice}}</h3>
+                            <h3>{{$value->nom_categorie_exercice}}</h3>
                         </div>
                     </div>
-                    <div class="fitness-program-item-back" style="background-image: url(assets/img/{{$value->photo_exercice}});">
+                    {{-- <div class="fitness-program-item-back" style="background-image: url(assets/img/{{$value->photo_exercice}});">
                         <a href="program.html" class="fitness-program-item-inner">
                             <h3>Description</h3>
                             <div class="date">{{$value->description_exercice}}</div>
                         </a>
-                    </div>
-                </div>
+                    </div> --}}
+                </div></a>
             </div>
 			@empty
 				
