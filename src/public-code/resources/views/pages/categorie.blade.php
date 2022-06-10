@@ -31,10 +31,14 @@
 	<!-- =============== HEADER-TITLE =============== -->
 	<section class="s-header-title" style="background-image: url({{asset('assets/img/bg-1-min.png')}});">
 		<div class="container">
-			<h1 class="title">Programme de Basket-ball</h1>
+
+			@php foreach  ($jours as $valuee) {} @endphp
+		<h1 class="title"> Programme de {{$valuee->nom_categorie}}  </h1>
+				
+
 			<ul class="breadcrambs">
-				<li><a href="index.html">Accuil</a></li>
-				<li>Categorie</li>
+				<li><a href="{{route('home')}}">ACCUEIL</a></li>
+				<li>CATEGORIE </li>
 			</ul>
 		</div>
 	</section>
@@ -102,6 +106,7 @@
 	
 	<!-- =========== S-TRAINER-AWARDS END =========== -->
 
+	
 	<!-- =============== S-OUT-TRAINER =============== -->
 	<section class="s-out-trainer" style="background-image: url({{asset('assets/img/bg-contacts.svg')}});">
 		<div class="container">
@@ -117,12 +122,11 @@
 							<h3><a href="trainer.html">{{$value->jour}}</a></h3>
 							<div class="prof">Weightlifting</div>
 							<p>Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.</p>
-							<ul class="social-list">
-								<li><a target="_blank" href="https://www.facebook.com/rovadex"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a target="_blank" href="https://twitter.com/RovadexStudio"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a target="_blank" href="https://www.youtube.com"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-								<li><a target="_blank" href="https://www.instagram.com/rovadex"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							</ul>
+							
+								
+								
+								<a href="/exercices/{{$value->id_jour}}/{{$value->categorie_id}}" class="btn">Afficher </a>
+							
 						</div>
 					</div>
 				</div>
@@ -136,32 +140,131 @@
 	<!-- ============= S-OUT-TRAINER END ============= -->
 
 	<!-- ============== S-TESTIMONIALS ============== -->
-	<section class="s-testimonials" style="background-image: url({{asset('assets/img/bg-testimonials.jpg')}});">
-		<div class="mask"></div>
-		<img class="testimonials-effect" src="{{asset('assets/img/bg-testimonials.svg')}}" alt="effect">
+	<section class="s-training-schedule" style="background-image: url(assets/img/bg-table-1.svg);">
 		<div class="container">
-			<div class="testimonials-slider">
-				<div class="testimonial-slide">
-					<p>“Phasellus vestibulum nec dolor quis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida magna sit amet euismod lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit”</p>
-					<img src="{{asset('assets/img/testimonials-1.png')}}" alt="img">
-					<h3 class="name">Anna Piters</h3>
-					<div class="prof">our client</div>
-				</div>
-				<div class="testimonial-slide">
-					<p>“Phasellus vestibulum nec dolor quis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida magna sit amet euismod lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit”</p>
-					<img src="{{asset('assets/img/testimonials-2.png')}}" alt="img">
-					<h3 class="name">Mark Klark</h3>
-					<div class="prof">our client</div>
-				</div>
-				<div class="testimonial-slide">
-					<p>“Phasellus vestibulum nec dolor quis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida magna sit amet euismod lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit”</p>
-					<img src="{{asset('assets/img/testimonials-3.png')}}" alt="img">
-					<h3 class="name">Kat Smith</h3>
-					<div class="prof">our client</div>
+			<h2 class="title-decor">Training <span>Schedule</span></h2>
+			<p class="slogan">Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.</p>
+			<div class="training-schedule-cover">
+				<h3 class="training-schedule-top">1-7 APRIL, 2019</h3>
+				<div class="training-schedule-table">
+					<table>
+						<thead>
+							<th></th>
+							<th>monday</th>
+							<th>tuesday</th>
+							<th>wednesday</th>
+							<th>thursday</th>
+							<th>friday</th>
+							<th>saturday</th>
+							<th>sunday</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>9-00</td>
+								<td>
+									<h4>body bulding</h4>
+									<div class="date">9-00 – 11:00</div>
+									<div class="name">Mark Klark</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td>
+									<h4>boxing</h4>
+									<div class="date">9-00 – 11:00</div>
+									<div class="name">Mark Klark</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td>
+									<h4>boxing</h4>
+									<div class="date">9-00 – 11:00</div>
+									<div class="name">Mark Klark</div>
+								</td>
+							</tr>
+							<tr>
+								<td>10-00</td>
+								<td></td>
+								<td>
+									<h4>yoga</h4>
+									<div class="date">10-00 – 12:00</div>
+									<div class="name">Mark Klark</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td>
+									<h4>body bulding</h4>
+									<div class="date">10-00 – 12:00</div>
+									<div class="name">Mark Klark</div>
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>11-00</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>
+									<h4>body bulding</h4>
+									<div class="date">11-00 – 12:00</div>
+									<div class="name">Mark Klark</div>
+								</td>
+								<td></td>
+								<td>
+									<h4>body bulding</h4>
+									<div class="date">11-00 – 12:00</div>
+									<div class="name">Mark Klark</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>12-00</td>
+								<td>
+									<h4>body bulding</h4>
+									<div class="date">12-00 – 13:00</div>
+									<div class="name">Mark Klark</div>
+								</td>
+								<td></td>
+								<td>
+									<h4>karate</h4>
+									<div class="date">12-00 – 13:00</div>
+									<div class="name">Mark Klark</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>
+									<h4>karate</h4>
+									<div class="date">12-00 – 13:00</div>
+									<div class="name">Mark Klark</div>
+								</td>
+							</tr>
+							<tr>
+								<td>13-00</td>
+								<td></td>
+								<td>
+									<h4>body bulding</h4>
+									<div class="date">13-00 – 14:00</div>
+									<div class="name">Mark Klark</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td>
+									<h4>body bulding</h4>
+									<div class="date">13-00 – 14:00</div>
+									<div class="name">Mark Klark</div>
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
 	</section>
+	<!-- ========= S-TRAINING-SCHEDULE END ========= -->
+
 	<!-- ============ S-TESTIMONIALS END ============ -->
 
 	<!--================== S-CLIENTS ==================-->

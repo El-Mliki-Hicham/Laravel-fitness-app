@@ -115,7 +115,7 @@
 <!-- ========== S-WELCOME-FITNESS END ========== -->
 
 <!-- ============== S-CLUB-CARDS ============== -->
-<section class="s-club-cards club-cards-lite club-cards-fitness">
+<section class="s-club-cards club-cards-lite club-cards-fitness" id="programmes">
     <span class="section-title-bg" >Programme Sportif </span>
     <div class="container">
         <h2 class="title-decor">Programme <span> Sportif</span></h2>
@@ -170,7 +170,7 @@
 </section>
 
 <!-- =========== FITNESS-OUR-PROGRAM =========== -->
-<section class="fitness-our-program" style="background-image: url(assets/img/bg-best.svg);">
+<section class="fitness-our-program" style="background-image: url(assets/img/bg-best.svg);" id="exercices">
     <div class="container">
         <h2 class="title-decor">Tous <span>les exercices</span></h2>
         <p class="slogan">Tous les exercices disponibles dans nos site web.</p>

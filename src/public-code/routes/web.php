@@ -15,13 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', function () {
-       return view('pages.categorie');
+       return view('pages.exercices');
 });
 
 
 
 
 
-Route::get('/index',[PublicController::class,'afficher_categories'] );
-Route::get('/jours/{id}',[PublicController::class,'afficher_jours_id'] );
+Route::get('/index',[PublicController::class,'afficher_categories'] )->name('home');
+Route::get('/jours/{id}',[PublicController::class,'afficher_jours_id'] )->name('jour');
 Route::get('/exercices/{id}/{id_c}',[PublicController::class,'afficher_exercices_id'] );

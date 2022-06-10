@@ -68,7 +68,9 @@ class PublicController extends Controller
     
     function afficher_exercices(){
    
-    return view('pages.home',compact("exercices"));
+    
+
+    // return view('pages.home',compact("exercices"));
 
 
     }

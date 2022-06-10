@@ -13,17 +13,18 @@
             <nav class="nav-menu">
                 <ul class="nav-list">
                     <li class="dropdown">
-                        <a href="#">Home <i class=""></i></a>
+                        <a href="{{route('home')}}">ACCUEIL<i class=""></i></a>
                         
                     </li>
-                    <li><a href="#a-propos">About</a></li>
-                    <li><a href="services.html">Exercices</a></li>
-                    <li class="dropdown">
-                        <a href="#">Programmes <i class="fa fa-caret-down"></i></a>
-                        <ul>
+                    <li><a href="#a-propos">À propos</a></li>
+                    <li><a href="#exercices">Exercices</a></li>
+                    <li><a href="#programmes">Programmes</a></li>
+                    {{-- <li class="dropdown"> --}}
+                        {{-- <a href="#programmes">Programmes <i class="fa fa-caret-down"></i></a> --}}
+                        {{-- <ul>
                             <li><a href="program.html">volly-ball</a></li>
                             <li><a href="trainer.html">Basket-ball</a></li>
-                        </ul>
+                        </ul> --}}
                     </li>
                     
                     <li><a href="contacts.html">Contacts</a></li>
