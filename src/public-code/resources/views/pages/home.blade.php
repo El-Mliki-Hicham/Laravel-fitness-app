@@ -119,7 +119,7 @@
     <span class="section-title-bg" >Programme Sportif </span>
     <div class="container">
         <h2 class="title-decor">Programme <span> Sportif</span></h2>
-        <p class="slogan">Sélectionnez votre Programme Sportif	.</p>
+        <p class="slogan">sélectionner le programme de votre choix.</p>
         <div class="row">
 			@forelse ($categories as $value)
 				
@@ -151,8 +151,9 @@
 				
 			</div>
 			<div class="about-info-col">
-				<div class="number" data-number="7">0</div>
-				<h3>jours</h3>
+				
+                <h1 class="title-decor"> <span> 1-3mois</h1>
+                <h3>Dureé</h3>
 			</div>
 			<div class="about-info-col">
 				<div class="number" data-number="3">0</div>
@@ -172,15 +173,15 @@
 <!-- =========== FITNESS-OUR-PROGRAM =========== -->
 <section class="fitness-our-program" style="background-image: url(assets/img/bg-best.svg);" id="exercices">
     <div class="container">
-        <h2 class="title-decor">Tous <span>les exercices</span></h2>
-        <p class="slogan">Tous les exercices disponibles dans nos site web.</p>
+        .
+        <h2 class="title-decor">Programme <span>Préféré</span></h2>
         <div class="row">
 			@forelse ($exercices as $value)
             <div class="col-sm-4 fitness-program-col">
                 <div class="fitness-program-item">
-                    <div class="fitness-program-item-front" style="background-image: url(assets/img/home2-program-1.jpg);">
+                    <div class="fitness-program-item-front" style="background-image: url({{asset('assets/img/exercices/{{$value->photo_exercice}}')}});">
                         <div class="fitness-program-item-inner">
-                            <div class="date">{{$value->type_exercice}}</div>
+                            <div class="date"></div>
                             <h3>{{$value->nom_exercice}}</h3>
                         </div>
                     </div>
@@ -223,19 +224,17 @@
     <div class="fitness-banner-effect" style="background-image: url(assets/img/bg-best.svg);"></div>
     <div class="container">
         <div class="fitness-banner-row">
-            <div class="fitness-banner-left" style="background-image: url(assets/img/best-1.jpg);"></div>
+            <div class="fitness-banner-left" style="background-image: url(assets/img/trainer-3 (1).jpg);"></div>
             <div class="fitness-banner-right">
                 <h2>SPARTEL <span></span>GYM</h2>
-                <p>Get the body shape you've always wanted. The Gym WP has everything you need to get incredible results in the gym in short time. 
-
-					With this app you have access to several gym routines to improve your results. <a href="trainer.html">check this out.</a></p>
+                <p>Nos programmes <a href="#">SPARTEL</a> fournissent une variété d’exercices qui vous aideront à améliorer vos compétences et tout autour du physique dans presque tous les sports disponibles </p>
             </div>
         </div>
     </div>
 </section>
 <!-- =========== S-FITNESS-BANNER END =========== -->
 
-<!-- ============== S-TESTIMONIALS ============== -->
+{{-- <!-- ============== S-TESTIMONIALS ============== -->
 <section class="s-testimonials testimonials-border s-fitness-testimonials" style="background-image: url(assets/img/bg-testimonials.jpg);">
     <div class="mask"></div>
     <img class="testimonials-effect" src="assets/img/bg-testi-2.svg" alt="effect">
@@ -262,7 +261,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 	
 	<!-- ============= S-FITNESS-POSTS ============= -->
 	
