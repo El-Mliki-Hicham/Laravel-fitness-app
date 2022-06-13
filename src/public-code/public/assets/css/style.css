@@ -3261,7 +3261,7 @@ blockquote:before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); }
+    background-color: rgba(0 0 0 / 18%); }
   .fitness-program-item-front .fitness-program-item-inner {
     position: relative;
     z-index: 1;

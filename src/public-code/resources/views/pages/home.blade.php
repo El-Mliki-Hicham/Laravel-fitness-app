@@ -142,7 +142,7 @@
 
 </section>
 <!-- ============ S-CLUB-CARDS END ============ -->
-<section class="s-about-information counter-animate counter-active" style="background-image: url(assets/img/bg-2.jpg);">
+<section class="s-about-information counter-animate counter-active" style="background-image: url(assets/img/slide-2.jpg);">
 	<div class="mask"></div>
 	<img class="trainer-awards-effect" src="assets/img/bg-competitions.svg" alt="effect">
 	<div class="container">
@@ -179,16 +179,16 @@
 			@forelse ($exercices as $value)
             <div class="col-sm-4 fitness-program-col">
                 <div class="fitness-program-item">
-                    <div class="fitness-program-item-front" style="background-image: url({{asset('assets/img/exercices/{{$value->photo_exercice}}')}});">
+                    <div class="fitness-program-item-front" style="background-image: url('assets/img/exercices/{{$value->photo_exercice}}');">
                         <div class="fitness-program-item-inner">
-                            <div class="date"></div>
+                            <div class="date">{{$value->nom_categorie_exercice}}</div>
                             <h3>{{$value->nom_exercice}}</h3>
                         </div>
                     </div>
-                    <div class="fitness-program-item-back" style="background-image: url(assets/img/home2-program-1.jpg);">
+                    <div class="fitness-program-item-back" style="background-image: url(assets/img/{{$value->photo_exercice}});">
                         <a href="program.html" class="fitness-program-item-inner">
-                            <div class="date">monday 11:00AM</div>
-                            <h3>cardio training</h3>
+                            <h3>Description</h3>
+                            <div class="date">{{$value->description_exercice}}</div>
                         </a>
                     </div>
                 </div>
@@ -224,7 +224,7 @@
     <div class="fitness-banner-effect" style="background-image: url(assets/img/bg-best.svg);"></div>
     <div class="container">
         <div class="fitness-banner-row">
-            <div class="fitness-banner-left" style="background-image: url(assets/img/trainer-3 (1).jpg);"></div>
+            <div class="fitness-banner-left" style="background-image: url(assets/img/trainer-6.png;"></div>
             <div class="fitness-banner-right">
                 <h2>SPARTEL <span></span>GYM</h2>
                 <p>Nos programmes <a href="#">SPARTEL</a> fournissent une variété d’exercices qui vous aideront à améliorer vos compétences et tout autour du physique dans presque tous les sports disponibles </p>

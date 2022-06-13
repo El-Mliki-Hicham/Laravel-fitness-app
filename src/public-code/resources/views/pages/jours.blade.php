@@ -32,9 +32,17 @@
 	<section class="s-header-title" style="background-image: url({{asset('assets/img/bg-1-min.png')}});">
 		<div class="container">
 
-			@php foreach  ($jours as $valuee) {} @endphp
-		<h1 class="title"> Programme de {{$valuee->nom_categorie}}  </h1>
-				
+			@php
+		
+			
+	
+				 foreach  ($jours as $valuee) {};		
+	
+				 
+				 @endphp
+		<h1 class="title"> Programme de {{$valuee->nom_categorie}} 	 </h1>
+									
+			
 
 			<ul class="breadcrambs">
 				<li><a href="{{route('home')}}">ACCUEIL</a></li>
@@ -139,130 +147,6 @@
 	</section>
 	<!-- ============= S-OUT-TRAINER END ============= -->
 
-	<!-- ============== S-TESTIMONIALS ============== -->
-	<section class="s-training-schedule" style="background-image: url(assets/img/bg-table-1.svg);">
-		<div class="container">
-			<h2 class="title-decor">Training <span>Schedule</span></h2>
-			<p class="slogan">Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.</p>
-			<div class="training-schedule-cover">
-				<h3 class="training-schedule-top">1-7 APRIL, 2019</h3>
-				<div class="training-schedule-table">
-					<table>
-						<thead>
-							<th></th>
-							<th>monday</th>
-							<th>tuesday</th>
-							<th>wednesday</th>
-							<th>thursday</th>
-							<th>friday</th>
-							<th>saturday</th>
-							<th>sunday</th>
-						</thead>
-						<tbody>
-							<tr>
-								<td>9-00</td>
-								<td>
-									<h4>body bulding</h4>
-									<div class="date">9-00 – 11:00</div>
-									<div class="name">Mark Klark</div>
-								</td>
-								<td></td>
-								<td></td>
-								<td>
-									<h4>boxing</h4>
-									<div class="date">9-00 – 11:00</div>
-									<div class="name">Mark Klark</div>
-								</td>
-								<td></td>
-								<td></td>
-								<td>
-									<h4>boxing</h4>
-									<div class="date">9-00 – 11:00</div>
-									<div class="name">Mark Klark</div>
-								</td>
-							</tr>
-							<tr>
-								<td>10-00</td>
-								<td></td>
-								<td>
-									<h4>yoga</h4>
-									<div class="date">10-00 – 12:00</div>
-									<div class="name">Mark Klark</div>
-								</td>
-								<td></td>
-								<td></td>
-								<td>
-									<h4>body bulding</h4>
-									<div class="date">10-00 – 12:00</div>
-									<div class="name">Mark Klark</div>
-								</td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>11-00</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>
-									<h4>body bulding</h4>
-									<div class="date">11-00 – 12:00</div>
-									<div class="name">Mark Klark</div>
-								</td>
-								<td></td>
-								<td>
-									<h4>body bulding</h4>
-									<div class="date">11-00 – 12:00</div>
-									<div class="name">Mark Klark</div>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>12-00</td>
-								<td>
-									<h4>body bulding</h4>
-									<div class="date">12-00 – 13:00</div>
-									<div class="name">Mark Klark</div>
-								</td>
-								<td></td>
-								<td>
-									<h4>karate</h4>
-									<div class="date">12-00 – 13:00</div>
-									<div class="name">Mark Klark</div>
-								</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>
-									<h4>karate</h4>
-									<div class="date">12-00 – 13:00</div>
-									<div class="name">Mark Klark</div>
-								</td>
-							</tr>
-							<tr>
-								<td>13-00</td>
-								<td></td>
-								<td>
-									<h4>body bulding</h4>
-									<div class="date">13-00 – 14:00</div>
-									<div class="name">Mark Klark</div>
-								</td>
-								<td></td>
-								<td></td>
-								<td>
-									<h4>body bulding</h4>
-									<div class="date">13-00 – 14:00</div>
-									<div class="name">Mark Klark</div>
-								</td>
-								<td></td>
-								<td></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</section>
 	<!-- ========= S-TRAINING-SCHEDULE END ========= -->
 
 	<!-- ============ S-TESTIMONIALS END ============ -->

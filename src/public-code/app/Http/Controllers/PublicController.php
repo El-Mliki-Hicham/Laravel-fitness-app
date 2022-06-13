@@ -32,6 +32,8 @@ class PublicController extends Controller
         ->get();
         $exercices = DB::table('exercices')
         ->select('*')
+        ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice")
+
         ->take(6)
         ->get();
         return view("pages.home",compact("categories","exercices"));
@@ -44,24 +46,29 @@ class PublicController extends Controller
     ->where("id_categorie",$id)
     ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
     ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
-    ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
+    ->join("jours","exercices_de_jours.jour_id",'=',"jours.id_jour")
+    // ->join("categories_exercices","exercices.categorie_exercice",'=',"categories_exercices.id_categorie_exercice")
     ->groupBy("jour_id")
     ->get();
-    return view('pages.categorie',compact("jours"));
+    return view('pages.jours',compact("jours"));
     }
     
     
     function afficher_exercices_id($id,$id_c){
     $exercices = DB::table('exercices_de_jours')
     ->select('*')
-    ->where("exercices_de_jours.id_jour",$id)
+    ->where("id_jour",$id)
     ->where("exercices_de_jours.categorie_id",$id_c)
     ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
     ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
-    ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
-    // ->groupBy("exercices_de_jours.id_jour")
+    ->join("jours","exercices_de_jours.jour_id",'=',"jours.id_jour")
     ->get();
-    return view('pages.exercices',compact("exercices"));
+
+    $categorie_exercice = DB::table('exercices')
+    ->select('*')
+    ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice")
+    ->get();
+    return view('pages.exercices-de-jour',compact("exercices","categorie_exercice"));
 
 
     }

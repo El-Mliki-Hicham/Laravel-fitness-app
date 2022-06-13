@@ -25,46 +25,55 @@
 		</div>
 	</section>
 
-.
+<br>
+<br>
 
 
 	<section class="s-related-posts">
 		<div class="container">
 			<h2 class="title-decor">les exercices de  <span>News</span></h2>
-			<p class="slogan">Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor,
-				auctor tincidunt lorem ut, venenatis dapibus miq.</p>
+			<br>
 			<div class="row">
+				
 				@forelse ($exercices as $value)
-
   
 
 				<div class="col-md-4 related-post-col">
 					<div class="post-item-cover">
 						<div class="post-header">
-							<div class="related-post-categ">fitness</div>
+
+
+							@php
+		
+			
+	
+							foreach  ($categorie_exercice as $valuee) {};		
+			   
+							
+							@endphp
+							<div class="related-post-categ " style="color: white">{{$valuee->nom_categorie_exercice}}</div>
 							<div class="post-thumbnail">
-								<a href="single-blog.html"><img class="rx-lazy" src="assets/img/placeholder-all.png"
-										data-src="assets/img/blog-4.jpg" alt="img"></a>
+								<a href="single-blog.html"><img class="rx-lazy" src="{{asset('assets/img/exercices')}}/{{$value->photo_exercice}}"
+										data-src="{{asset('assets/img/exercices')}}/{{$value->photo_exercice}}" alt="img"></a>
 							</div>
 						</div>
-						<div class="post-content">
+					
+						<div class="post-content  ">
 							<div class="meta">
-								<span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i>{{$value->nom_exercice}}</span>
 							</div>
-							<h3 class="title"><a href="single-blog.html">Sed ut perspiciatis unde omnis</a></h3>
+							<h3 class="title"><a href="single-blog.html">repetition : </a></h3>
+							<div class="post-footer">
+								<div class="meta">
+									<span class="post-by name text-dark	">
+										{{$value->repetition_exercice}}</span>
+							
+								</div>
+								<a href="single-blog.html" class="btn"><span>{{$value->nom_exercice}}</span></a>
+							</div>
 							<div class="text">
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-									laudantium, totam rem...</p>
+								<br>
+								<p>{{$value->description_exercice}}</p>
 							</div>
-						</div>
-						<div class="post-footer">
-							<div class="meta">
-								<span class="post-by"><i class="fa fa-user" aria-hidden="true"></i><a href="#">By
-										Rovadex</a></span>
-								<span class="post-comment"><i class="fa fa-comment" aria-hidden="true"></i><a href="#">2
-										Comments(s)</a></span>
-							</div>
-							<a href="single-blog.html" class="btn"><span>read more</span></a>
 						</div>
 					</div>
 				</div>
