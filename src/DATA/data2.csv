@@ -1,0 +1,35 @@
+.;seated dumbell bicep curl;1;courbez l'haltere en vous asseyant avec une seule main;3 series of 12;biceps1.gif
+.;seated dumbell preacher curl;1;Curl biceps a deux mains en position assise;3 series of 12;biceps2.gif
+.;standing cable bicep curl;1;courbez vos bras vers le haut vers votre tete en vous levant;3 series of 12;biceps3.gif
+.;cable bicep curl ;1;enrouler le cable d'une main;3 series of 12;biceps4.gif
+.;standing dumbell biceps curl;1;curl l'haltere en position debout;3 series of 12;biceps5.gif
+.;standing barbell biceps curl;1;bouclez la barre avec les deux mains en vous levant;3 series of 12;biceps6.gif
+.;seated bicep curl ;1;asseyez-vous a un angle de 90 degres et courbez l'haltere avec un bras;3 series of 12;biceps1.gif
+.;;;;;
+.;negative barbell bench press;5;soulevez la barre d’haltere sur la poitrine en position couchee à un angle de 45 degres;3 series of 12;pectoraux1.gif
+.;chest dips;5;accrochez-vous a la machine et tirez ur bpdy en utilisant ur bras uniquement;3 series of 12;pectoraux2.gif
+.;barbell bench press;5;appuyer sur la barre d’haltere droite vers le haut et vers le bas tout en controlant le mouvement;3 series of 12;pectoraux3.gif
+.;cable fly;5;tirez les mains de la machine vers le corps de ur puis tirez vers l’arriere;6 series of 12;pectoraux4.gif
+.;dumbell bench press;5;presser les clochettes vers le haut et vers le bas;7 series of 12;pectoraux5.gif
+.;incline bench press;5;presser les halteres vers le haut et vers le bas sur un banc incline;8 series of 12;pectoraux6.gif
+.;chest fly;5;appuyer sur la barre d’haltere droite vers le haut et vers le bas tout en controlant le mouvement;9 series of 12;pectoraux7.gif
+.;;;;;
+.;reverse butterfly;3;tirer le poids de la machine jusqu’a u atteindre le niveau des epaules;3 series of 12;dos1.gif
+.;seated shrug;3;relever les epaules;3 series of 12;dos2.gif
+.;dumbell standing row;3;tirer les sonnettes vers le dos en se levant;3 series of 12;dos3.gif
+.;incline back row;3;tirer les halteres vers le dos tout en se couchant sur un banc incline;3 series of 12;dos4.gif
+.;dumbell row;3;tirer les sonnettes a votre corps à l’aide de la machine;3 series of 12;dos5.gif
+.;wide grip pulldown;3;tirer la barre vers le bas vers votre poitrine;3 series of 12;dos6.gif
+.;one handed cable pulldown;3;tirer le cable vers l’arriere;3 series of 12;dos7.gif
+.;machine row ;3;tirer le poids de la machine jusqu’a u atteindre le niveau des epaule;3 series of 12;dos8.gif
+.;vertical row;3;tirer le poids vers le bas sur la poitrine;3 series of 12;dos9.gif
+.;closed grip pulldown;3;tirer la barre vers le bas vers votre poitrine;3 series of 12;dos10.gif
+.;;;;;
+.;dumbell one handed press up;6;"pousser la sonnette vers le ciel; puis vers le bas";3 series of 12;triceps1.gif
+.;cable side raises;6;tirer les cables des deux cotes du corps jusqu’a atteindre le niveau des epaules;3 series of 12;triceps2.gif
+.;lying triceps extensions;6;pousser les haltères vers le haut en se couchant sur un banc;3 series of 12;triceps3.gif
+.;lying one handed extensions;6;pousser une sonnette vers le haut en se couchant sur le banc;3 series of 12;triceps4.gif
+.;overhead triceps extensions;6;mettre le poids sur la tete et le dos;3 series of 12;triceps5.gif
+.;cable pushdowns;6;tirer le cable vers le sol d’une main;3 series of 12;triceps6.gif
+.;bar pushdowns;6;tirer la barre vers le sol a deux mains;3 series of 12;triceps7.gif
+.;lying dumbell pushup;6;pousser les halteres vers le haut en se couchant sur un banc;3 series of 12;triceps8.gif
