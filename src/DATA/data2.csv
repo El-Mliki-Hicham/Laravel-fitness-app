@@ -1,58 +1,59 @@
-.;seated dumbell bicep curl;1;courbez l'haltere en vous asseyant avec une seule main;3 series of 12;biceps1.gif
-.;seated dumbell preacher curl;1;Curl biceps a deux mains en position assise;3 series of 12;biceps2.gif
-.;standing cable bicep curl;1;courbez vos bras vers le haut vers votre tete en vous levant;3 series of 12;biceps3.gif
-.;cable bicep curl ;1;enrouler le cable d'une main;3 series of 12;biceps4.gif
-.;standing dumbell biceps curl;1;curl l'haltere en position debout;3 series of 12;biceps5.gif
-.;standing barbell biceps curl;1;bouclez la barre avec les deux mains en vous levant;3 series of 12;biceps6.gif
-.;seated bicep curl ;1;asseyez-vous a un angle de 90 degres et courbez l'haltere avec un bras;3 series of 12;biceps1.gif
-.;;;;;
-.;negative barbell bench press;5;soulevez la barre d’haltere sur la poitrine en position couchee à un angle de 45 degres;3 series of 12;pectoraux1.gif
-.;chest dips;5;accrochez-vous a la machine et tirez ur bpdy en utilisant ur bras uniquement;3 series of 12;pectoraux2.gif
-.;barbell bench press;5;appuyer sur la barre d’haltere droite vers le haut et vers le bas tout en controlant le mouvement;3 series of 12;pectoraux3.gif
-.;cable fly;5;tirez les mains de la machine vers le corps de ur puis tirez vers l’arriere;6 series of 12;pectoraux4.gif
-.;dumbell bench press;5;presser les clochettes vers le haut et vers le bas;7 series of 12;pectoraux5.gif
-.;incline bench press;5;presser les halteres vers le haut et vers le bas sur un banc incline;8 series of 12;pectoraux6.gif
-.;chest fly;5;appuyer sur la barre d’haltere droite vers le haut et vers le bas tout en controlant le mouvement;9 series of 12;pectoraux7.gif
-.;;;;;
-.;reverse butterfly;3;tirer le poids de la machine jusqu’a u atteindre le niveau des epaules;3 series of 12;dos1.gif
-.;seated shrug;3;relever les epaules;3 series of 12;dos2.gif
-.;dumbell standing row;3;tirer les sonnettes vers le dos en se levant;3 series of 12;dos3.gif
-.;incline back row;3;tirer les halteres vers le dos tout en se couchant sur un banc incline;3 series of 12;dos4.gif
-.;dumbell row;3;tirer les sonnettes a votre corps à l’aide de la machine;3 series of 12;dos5.gif
-.;wide grip pulldown;3;tirer la barre vers le bas vers votre poitrine;3 series of 12;dos6.gif
-.;one handed cable pulldown;3;tirer le cable vers l’arriere;3 series of 12;dos7.gif
-.;machine row ;3;tirer le poids de la machine jusqu’a u atteindre le niveau des epaule;3 series of 12;dos8.gif
-.;vertical row;3;tirer le poids vers le bas sur la poitrine;3 series of 12;dos9.gif
-.;closed grip pulldown;3;tirer la barre vers le bas vers votre poitrine;3 series of 12;dos10.gif
-.;;;;;
-.;dumbell one handed press up;6;"pousser la sonnette vers le ciel; puis vers le bas";3 series of 12;triceps1.gif
-.;cable side raises;6;tirer les cables des deux cotes du corps jusqu’a atteindre le niveau des epaules;3 series of 12;triceps2.gif
-.;lying triceps extensions;6;pousser les haltères vers le haut en se couchant sur un banc;3 series of 12;triceps3.gif
-.;lying one handed extensions;6;pousser une sonnette vers le haut en se couchant sur le banc;3 series of 12;triceps4.gif
-.;overhead triceps extensions;6;mettre le poids sur la tete et le dos;3 series of 12;triceps5.gif
-.;cable pushdowns;6;tirer le cable vers le sol d’une main;3 series of 12;triceps6.gif
-.;bar pushdowns;6;tirer la barre vers le sol a deux mains;3 series of 12;triceps7.gif
-.;lying dumbell pushup;6;pousser les halteres vers le haut en se couchant sur un banc;3 series of 12;triceps8.gif
-.;;;;;
-.;inverted thigh press;2;push the weight to the side using the machine;3 series of 12;1-cuisses.gif
-.;hamstring curl;2;curl the weight up towards your body using the machine;3 series of 12;2-cuisses.gif
-.;sitting calves extension;2;extend your calves upwards while sitting;3 series of 12;3-cuisses.gif
-.;standing calves extension;2;extend your calves upwards while standing;3 series of 12;4-cuisses.gif
-.;hyperextension;2;extend your legs forward;3 series of 12;5-cuisses.gif
-.;dumbell squat;2;squat down using dumbbells;3 series of 12;6-cuisses.gif
-.;standing sumo squat;2;squat down while holding the barbell on your shoulders;3 series of 12;7-cuisses.gif
-.;leg extension;2;push the weight up with your legs using the machine;3 series of 12;8-cuisses.gif
-.;one legged squat ;2;squat only using on leg on the ground and the other one on a bench with dumbbells;3 series of 12;9-cuisses.gif
-.;dumbell standing squat;2;squat using dumbbells;3 series of 12;10-cuisses.gif
-.;deadlift squat;2;pull the bar up on your shoulders then push up;3 series of 12;11-cuisses.gif
-;;;�..;;
-.;incline bench lateral raise;4;push the weight to the side while sitting on an inclined bench;3 series of 12;1 epaules.gif
-.;standing dumbbell raise;4;pull the weight to the side to your shoulder level;3 series of 12;2 epaules.gif
-.;front delt raise;4;pull the dumbbells straight up and down;3 series of 12;3 epaules.gif
-.;sitting lateral raise;4;pull the weight to the side while sitting down;3 series of 12;4 epaules.gif
-.;barbell shoulder raise;4;pull the weight with your shoulders only;3 series of 12;5 epaules.gif
-.;shoulder raise;4;push the weight up towards the sky;3 series of 12;6 epaules.gif
-.;one handed shoulder raise;4;pull the weight up on top of your shoulders only using one hand;3 series of 12;7 epaules.gif
-.;front shoulder raise;4;pull the weight up using cable;3 series of 12;8 epaules.gif
-.;barbell shoulder raise;4;push the weight up using a barbell;3 series of 12;9 epaules.gif
-.;sitting lateral raise with machine;4;pull the weight up using the machine;3 series of 12;10 epaules.gif
+;;;;;;jour1;jour2;jour3;jour 4;;jour1;jour2;jour3;jour 4
+.;seated dumbell bicep curl;1;courbez l'haltere en vous asseyant avec une seule main;3 series of 12;biceps1.gif;;;;;;;;;
+.;seated dumbell preacher curl;1;Curl biceps a deux mains en position assise;3 series of 12;biceps2.gif;;;;;;;;;
+.;standing cable bicep curl;1;courbez vos bras vers le haut vers votre tete en vous levant;3 series of 12;biceps3.gif;;;;;;;;;
+.;cable bicep curl ;1;enrouler le cable d'une main;3 series of 12;biceps4.gif;;;;;;;;;
+.;standing dumbell biceps curl;1;curl l'haltere en position debout;3 series of 12;biceps5.gif;;;;;;;;;
+.;standing barbell biceps curl;1;bouclez la barre avec les deux mains en vous levant;3 series of 12;biceps6.gif;;;;;;;;;
+.;seated bicep curl ;1;asseyez-vous a un angle de 90 degres et courbez l'haltere avec un bras;3 series of 12;biceps1.gif;;;;;;;;;
+.;;;;;;;;;;;;;;
+.;negative barbell bench press;5;soulevez la barre d’haltere sur la poitrine en position couchee à un angle de 45 degres;3 series of 12;pectoraux1.gif;;;;;;;;;
+.;chest dips;5;accrochez-vous a la machine et tirez ur bpdy en utilisant ur bras uniquement;3 series of 12;pectoraux2.gif;;;;;;;;;
+.;barbell bench press;5;appuyer sur la barre d’haltere droite vers le haut et vers le bas tout en controlant le mouvement;3 series of 12;pectoraux3.gif;;;;;;;;;
+.;cable fly;5;tirez les mains de la machine vers le corps de ur puis tirez vers l’arriere;6 series of 12;pectoraux4.gif;;;;;;;;;
+.;dumbell bench press;5;presser les clochettes vers le haut et vers le bas;7 series of 12;pectoraux5.gif;;;;;;;;;
+.;incline bench press;5;presser les halteres vers le haut et vers le bas sur un banc incline;8 series of 12;pectoraux6.gif;;;;;;;;;
+.;chest fly;5;appuyer sur la barre d’haltere droite vers le haut et vers le bas tout en controlant le mouvement;9 series of 12;pectoraux7.gif;;;;;;;;;
+.;;;;;;;;;;;;;;
+.;reverse butterfly;3;tirer le poids de la machine jusqu’a u atteindre le niveau des epaules;3 series of 12;dos1.gif;;;;;;;;;
+.;seated shrug;3;relever les epaules;3 series of 12;dos2.gif;;;;;;;;;
+.;dumbell standing row;3;tirer les sonnettes vers le dos en se levant;3 series of 12;dos3.gif;;;;;;;;;
+.;incline back row;3;tirer les halteres vers le dos tout en se couchant sur un banc incline;3 series of 12;dos4.gif;;;;;;;;;
+.;dumbell row;3;tirer les sonnettes a votre corps à l’aide de la machine;3 series of 12;dos5.gif;;;;;;;;;
+.;wide grip pulldown;3;tirer la barre vers le bas vers votre poitrine;3 series of 12;dos6.gif;;;;;;;;;
+.;one handed cable pulldown;3;tirer le cable vers l’arriere;3 series of 12;dos7.gif;;;;;;;;;
+.;machine row ;3;tirer le poids de la machine jusqu’a u atteindre le niveau des epaule;3 series of 12;dos8.gif;;;;;;;;;
+.;vertical row;3;tirer le poids vers le bas sur la poitrine;3 series of 12;dos9.gif;;;;;;;;;
+.;closed grip pulldown;3;tirer la barre vers le bas vers votre poitrine;3 series of 12;dos10.gif;;;;;;;;;
+.;;;;;;;;;;;;;;
+.;dumbell one handed press up;6;"pousser la sonnette vers le ciel; puis vers le bas";3 series of 12;triceps1.gif;;;;;;;;;
+.;cable side raises;6;tirer les cables des deux cotes du corps jusqu’a atteindre le niveau des epaules;3 series of 12;triceps2.gif;;;;;;;;;
+.;lying triceps extensions;6;pousser les haltères vers le haut en se couchant sur un banc;3 series of 12;triceps3.gif;;;;;;;;;
+.;lying one handed extensions;6;pousser une sonnette vers le haut en se couchant sur le banc;3 series of 12;triceps4.gif;;;;;;;;;
+.;overhead triceps extensions;6;mettre le poids sur la tete et le dos;3 series of 12;triceps5.gif;;;;;;;;;
+.;cable pushdowns;6;tirer le cable vers le sol d’une main;3 series of 12;triceps6.gif;;;;;;;;;
+.;bar pushdowns;6;tirer la barre vers le sol a deux mains;3 series of 12;triceps7.gif;;;;;;;;;
+.;lying dumbell pushup;6;pousser les halteres vers le haut en se couchant sur un banc;3 series of 12;triceps8.gif;;;;;;;;;
+.;;;;;;;;;;;;;;
+.;inverted thigh press;2;push the weight to the side using the machine;3 series of 12;1-cuisses.gif;;;;;;;;;
+.;hamstring curl;2;curl the weight up towards your body using the machine;3 series of 12;2-cuisses.gif;;;;;;;;;
+.;sitting calves extension;2;extend your calves upwards while sitting;3 series of 12;3-cuisses.gif;;;;;;;;;
+.;standing calves extension;2;extend your calves upwards while standing;3 series of 12;4-cuisses.gif;;;;;;;;;
+.;hyperextension;2;extend your legs forward;3 series of 12;5-cuisses.gif;;;;;;;;;
+.;dumbell squat;2;squat down using dumbbells;3 series of 12;6-cuisses.gif;;;;;;;;;
+.;standing sumo squat;2;squat down while holding the barbell on your shoulders;3 series of 12;7-cuisses.gif;;;;;;;;;
+.;leg extension;2;push the weight up with your legs using the machine;3 series of 12;8-cuisses.gif;;;;;;;;;
+.;one legged squat ;2;squat only using on leg on the ground and the other one on a bench with dumbbells;3 series of 12;9-cuisses.gif;;;;;;;;;
+.;dumbell standing squat;2;squat using dumbbells;3 series of 12;10-cuisses.gif;;;;;;;;;
+.;deadlift squat;2;pull the bar up on your shoulders then push up;3 series of 12;11-cuisses.gif;;;;;;;;;
+;;;�..;;;;;;;;;;;
+.;incline bench lateral raise;4;push the weight to the side while sitting on an inclined bench;3 series of 12;1 epaules.gif;;;;;;;;;
+.;standing dumbbell raise;4;pull the weight to the side to your shoulder level;3 series of 12;2 epaules.gif;;;;;;;;;
+.;front delt raise;4;pull the dumbbells straight up and down;3 series of 12;3 epaules.gif;;;;;;;;;
+.;sitting lateral raise;4;pull the weight to the side while sitting down;3 series of 12;4 epaules.gif;;;;;;;;;
+.;barbell shoulder raise;4;pull the weight with your shoulders only;3 series of 12;5 epaules.gif;;;;;;;;;
+.;shoulder raise;4;push the weight up towards the sky;3 series of 12;6 epaules.gif;;;;;;;;;
+.;one handed shoulder raise;4;pull the weight up on top of your shoulders only using one hand;3 series of 12;7 epaules.gif;;;;;;;;;
+.;front shoulder raise;4;pull the weight up using cable;3 series of 12;8 epaules.gif;;;;;;;;;
+.;barbell shoulder raise;4;push the weight up using a barbell;3 series of 12;9 epaules.gif;;;;;;;;;
+.;sitting lateral raise with machine;4;pull the weight up using the machine;3 series of 12;10 epaules.gif;;;;;;;;;
