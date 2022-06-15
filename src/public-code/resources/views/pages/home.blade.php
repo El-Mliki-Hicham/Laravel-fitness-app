@@ -163,12 +163,12 @@
                             <h3>{{$value->nom_categorie_exercice}}</h3>
                         </div>
                     </div>
-                    {{-- <div class="fitness-program-item-back" style="background-image: url(assets/img/{{$value->photo_exercice}});">
-                        <a href="program.html" class="fitness-program-item-inner">
+                    <div class="fitness-program-item-back" style="background-image: url(assets/img/);">
+                        
                             <h3>Description</h3>
-                            <div class="date">{{$value->description_exercice}}</div>
-                        </a>
-                    </div> --}}
+                            <div class="date"></div>
+                       
+                    </div>
                 </div></a>
             </div>
 			@empty

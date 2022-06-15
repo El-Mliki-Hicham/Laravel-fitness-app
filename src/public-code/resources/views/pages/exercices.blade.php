@@ -12,7 +12,7 @@
     <section class="s-header-title" style="background-image: url({{asset('assets/img/bg-1-min.png')}});">
         <div class="container">
             @php
-				 foreach ($exercices as $valuee) {}
+				 foreach ($categorie_exercice as $valuee) {}
 			 @endphp
             <h1 class="title"> les exercices de {{$valuee->nom_categorie_exercice}} </h1>
             <ul class="breadcrambs">
@@ -28,7 +28,7 @@
             <h2 class="title-decor">les exercices de <span>News</span></h2>
             <br>
             <div class="row">
-                @forelse ($exercices as $value)
+                @forelse ($categorie_exercice as $value)
                 <div class="col-md-4 related-post-col">
                     <div class="post-item-cover">
                         <div class="post-header">

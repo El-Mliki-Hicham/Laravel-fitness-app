@@ -78,7 +78,7 @@ class PublicController extends Controller
     }
     
     function categorie_exercice($id){
-    $exercices = DB::table('exercices')
+    $categorie_exercice = DB::table('exercices')
         ->select('*')
         ->where('categorie_exercice',$id)
         ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice")
@@ -87,7 +87,7 @@ class PublicController extends Controller
         ->get();
     
 
-    return view('pages.exercices',compact("exercices"));
+    return view('pages.exercices',compact("categorie_exercice"));
 
 
     }
