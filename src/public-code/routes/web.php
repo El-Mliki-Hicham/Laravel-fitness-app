@@ -23,6 +23,6 @@ Route::get('/home', function () {
 
 
 Route::get('/index',[PublicController::class,'index'] )->name('home');
-Route::get('/jours/{id}',[PublicController::class,'afficher_jours_id'] )->name('jour');
+Route::get('/jours/{id}',[PublicController::class,'afficher_jours_id'] );
 Route::get('/exercice-categorie/{id}',[PublicController::class,'categorie_exercice'] );
 Route::get('/exercices/{id}/{id_c}',[PublicController::class,'afficher_exercices_id'] );
