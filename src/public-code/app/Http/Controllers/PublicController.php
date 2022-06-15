@@ -92,4 +92,26 @@ class PublicController extends Controller
 
     }
 
+
+
+
+    function count_id(){
+
+
+      // $exercices =DB::table('exercices')
+      // ->select("*")
+      // ->count()
+      // ->get();
+
+      // $categor = DB::table('categories')
+      // ->select("*")
+      // ->count()
+      // ->get();
+      // $exercices = DB::table('categories')
+      // ->select("*")
+      // ->count()
+      // ->get();
+    // }
+
   }
+}
