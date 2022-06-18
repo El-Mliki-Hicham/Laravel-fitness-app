@@ -134,11 +134,11 @@
                 <h3>Dureé</h3>
 			</div>
 			<div class="about-info-col">
-				<div class="number" data-number="3">0</div>
+				<div class="number" data-number="{{$categorie_count}}"></div>
 				<h3>categories</h3>
 			</div>
 			<div class="about-info-col">
-				<div class="number" data-number="30">0</div>
+				<div class="number" data-number="{{$exercices_count}}"></div>
 				<h3>exercices</h3>
 			</div>
 			<div class="about-info-col">

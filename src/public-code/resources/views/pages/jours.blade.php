@@ -66,7 +66,7 @@
                 <div class="col-md-6">
                     <div class="about-bottom-item">
                         <div class="date-cover">
-                            <div class="date">10</div>
+                            <div class="date">{{$number_jours}}</div>
                             <h4>jours</h4>
                         </div>
                         <div class="about-bottom-info">Facilis voluptas harum natus enim dolorum dolores</div>
@@ -75,7 +75,7 @@
                 <div class="col-md-6">
                     <div class="about-bottom-item">
                         <div class="date-cover">
-                            <div class="date">27</div>
+                            <div class="date">{{$exercices}}</div>
                             <h4>exercices</h4>
                         </div>
                         <div class="about-bottom-info">But I must explain to you all this mistaken idea of</div>

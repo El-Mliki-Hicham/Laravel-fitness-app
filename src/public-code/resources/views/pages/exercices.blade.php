@@ -77,8 +77,8 @@
             <div class="container">
                 <div class="testimonials-slider">
                     <div class="testimonial-slide">
-                        <h3 class="name text-dark">Kat Smith</h3>
-                        <div class="title-decor">ur client</div>
+                        <h3 class="name text-dark">{{$number_categorie_exercices}}</h3>
+                        <div class="title-decor">Exercices</div>
                     </div>
                 </div>
             </div>
