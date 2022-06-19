@@ -32,11 +32,11 @@
                 <div class="col-md-4 related-post-col">
                     <div class="post-item-cover">
                         <div class="post-header">
-                            @php
+                            {{-- @php
                             foreach ($categorie_exercice as $valuee) {};
-                            @endphp
-                            <div class="related-post-categ " style="color: white">{{$valuee->nom_categorie_exercice}}
-                            </div>
+                            @endphp --}}
+                            {{-- <div class="related-post-categ " style="color: white">{{$value->nom_categorie_exercice}} --}}
+                            {{-- </div> --}}
                             <div class="post-thumbnail">
                                 <a href="single-blog.html"><img class="rx-lazy"
                                         src="{{asset('assets/img/exercices')}}/{{$value->photo_exercice}}"

@@ -5,26 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-
-// @forelse ($exercices as $value)
-//             <div class="col-sm-4 fitness-program-col">
-//                 <div class="fitness-program-item">
-//                     <div class="fitness-program-item-front" style="background-image: url(assets/img/home2-program-2.jpg);">
-//                         <div class="fitness-program-item-inner">
-//                             <div class="date">{{$value->nom_exercice}}</div>
-//                             <h3>Open Training</h3>
-//                         </div>
-//                     </div>
-                   
-//                 </div>
-//             </div>
-// 			@empty
-		
-// 			@endforelse
-            
             
 class PublicController extends Controller
 {
+
+  //page index
     function index(){
 
       $categories=  DB::table('categories')
@@ -41,15 +26,11 @@ class PublicController extends Controller
        $categorie_count =DB::table( "categories")
         ->select('*')->count();
 
-        // $exercices = DB::table('exercices')
-        // ->select('*')
-        // ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice")
-
-        // ->take(6)
-        // ->get();
         return view("pages.home",compact("categories","exercices","exercices_count","categorie_count"));
     }
 
+    
+//page jour
     function afficher_jours_id($id){
 
     $jours = DB::table('exercices_de_jours')
@@ -58,7 +39,6 @@ class PublicController extends Controller
     ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
     ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
     ->join("jours","exercices_de_jours.jour_id",'=',"jours.id_jour")
-    // ->join("categories_exercices","exercices.categorie_exercice",'=',"categories_exercices.id_categorie_exercice")
     ->groupBy("jour_id")
     ->get();
 
@@ -83,7 +63,7 @@ class PublicController extends Controller
     return view('pages.jours',compact("jours","exercices","number_jours"));
     }
     
-    
+    //page exercices-de-jour
     function afficher_exercices_id($id,$id_c){
     $exercices = DB::table('exercices_de_jours')
     ->select('*')
@@ -105,13 +85,14 @@ class PublicController extends Controller
 
     }
     
+
+    //page exercices
     function categorie_exercice($id){
     $categorie_exercice = DB::table('exercices')
         ->select('*')
         ->where('categorie_exercice',$id)
         ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice")
 
-        // ->take(6)
         ->get();
     
         $number_categorie_exercices = DB::table('exercices')
@@ -128,23 +109,9 @@ class PublicController extends Controller
 
 
 
-    function count_id(){
-
-
-      $exercices =DB::table('exercices')->select("*")->count();
-      
-     
-    //  
-
-      $categor = DB::table('categories')
-      ->select("*")
-      
-      ->get();
-      $exercices = DB::table('categories')
-      ->select("*")
-      
-      ->get();
-    }
 
   
 }
+
+
+// test
