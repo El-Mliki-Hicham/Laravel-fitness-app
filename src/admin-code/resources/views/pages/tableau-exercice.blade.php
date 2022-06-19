@@ -25,7 +25,7 @@
 										<th>PHOTO</th>
 										<th>ID</th>
 										<th>NOM EXERCICE</th>
-										<th>NUMERO</th>
+									
 										<th>DESCRIPTION</th>
 										<th>ACTION</th>
 									</tr>
@@ -40,7 +40,7 @@
 										</td>
 										<td>{{$value->id_exercice}}</td>
 										<td>{{$value->nom_exercice}}</td>
-										<td>{{$value->numero}}</td>
+										
 										<td>{{$value->description_exercice}}</td>
 										<td style="width: 6%">
 				

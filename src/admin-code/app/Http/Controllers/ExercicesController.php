@@ -41,7 +41,7 @@ class ExercicesController extends Controller
     public function store(Request $request)
     {
         $name =$request->input('nom_exercice');
-        $numero=$request->input('numero');
+       
         $description=$request->input('description_exercice');
         if($request->hasfile('photo_exercice'))
         {
@@ -52,7 +52,7 @@ class ExercicesController extends Controller
             $photo = $filename;
         }
 
-        $inserte =DB::insert('insert into exercices (nom_exercice ,numero ,description_exercice ,photo_exercice) value(?,?,?,?)',[$name ,$numero  ,$description, $photo]);
+        $inserte =DB::insert('insert into exercices (nom_exercice  ,description_exercice ,photo_exercice) value(?,?,?,?)',[$name ,$numero  ,$description, $photo]);
         if ($inserte) {
             return redirect('afficher-exercice');
         }
@@ -95,7 +95,7 @@ class ExercicesController extends Controller
     public function update(Request $request, $id)
     {
         $nom = $request->input('nom_exercice');
-        $numero = $request->input('numero');
+        
         $description = $request->input('description_exercice');
       
       
@@ -116,7 +116,7 @@ class ExercicesController extends Controller
         ->where('id_exercice',$id)
         ->update([
                 'nom_exercice'=>$nom,
-                'numero'=>$numero,
+                
                 'description_exercice'=>$description,
                 'photo_exercice'=>$photo 
             ]);
