@@ -99,6 +99,7 @@ class PublicController extends Controller
         ->where('categorie_exercice',$id)
         ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice")
         ->select('*')
+        // d
         ->count();
 
     return view('pages.exercices',compact("categorie_exercice","number_categorie_exercices"));
