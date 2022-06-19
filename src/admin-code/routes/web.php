@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\userController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\exercices_par_jourController;
 use App\Http\Controllers\ExercicesController;
@@ -19,9 +20,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+Route::get('/', function () {
+    return view('pages.login');
+});
  
 // Route::get('/inserte-exercice ', function () {
 //     return view('pages.inserte-exercice');
@@ -41,6 +42,8 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/tableau-categorie ', function () {
 //     return view('pages.tableau-categorie');
 // });
+
+route::post('/',[userController::class,"login"]);
 
 // route::resource("admin",Controller::class);
 route::resource("afficher-categorie",CategoriesController::class);
