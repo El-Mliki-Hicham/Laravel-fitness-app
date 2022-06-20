@@ -27,7 +27,7 @@
                         </ul> --}}
                     </li>
                     
-                    <li><a href="contacts.html">Contacts</a></li>
+                   
                 </ul>
             </nav>
         </div>

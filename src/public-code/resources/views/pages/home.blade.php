@@ -163,12 +163,7 @@
                             <h3>{{$value->nom_categorie_exercice}}</h3>
                         </div>
                     </div>
-                    <div class="fitness-program-item-back" style="background-image: url(assets/img/);">
-                        
-                            <h3>Description</h3>
-                            <div class="date"></div>
-                       
-                    </div>
+                   
                 </div></a>
             </div>
 			@empty
@@ -176,7 +171,7 @@
 			@endforelse
           
         </div>
-        <a href="program.html" class="btn">Voir plus</a>
+        
     </div>
 </section>
 <!-- ========= FITNESS-OUR-PROGRAM END ========= -->
