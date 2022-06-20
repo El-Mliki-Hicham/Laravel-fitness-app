@@ -43,14 +43,9 @@
                 <div class="col-md-7 about-info-cover">
                     <h2 class="title-decor">A propos de <span> programme</span></h2>
                     <div class="text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmmpor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut <a href="contacts.html">enim ad minim</a> veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
+                        <p>Notre programme  se concentre sur l’agilité et la vitesse et votre saut vertical tout en améliorant votre 
+                            physique afin de maximiser votre performance sur le terrain sans avoir à compter sur un entraîneur.</p>
+                        
                     </div>
 
                 </div>
@@ -60,39 +55,14 @@
     <!-- ============ S-ABOUT-PROGRAM END ============ -->
 
     <!-- ============== S-ABOUT-BOTTOM ============== -->
-    <section class="s-about-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="about-bottom-item">
-                        <div class="date-cover">
-                            <div class="date">{{$number_jours}}</div>
-                            <h4>jours</h4>
-                        </div>
-                        <div class="about-bottom-info">Facilis voluptas harum natus enim dolorum dolores</div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="about-bottom-item">
-                        <div class="date-cover">
-                            <div class="date">{{$exercices}}</div>
-                            <h4>exercices</h4>
-                        </div>
-                        <div class="about-bottom-info">But I must explain to you all this mistaken idea of</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
+   
     <!-- ============ S-ABOUT-BOTTOM END ============ -->
 
     <!-- =============== S-OUT-TRAINER =============== -->
     <section class="s-out-trainer" style="background-image: url({{asset('assets/img/bg-contacts.svg')}});">
         <div class="container">
             <h2 class="title-decor">jours <span></span></h2>
-            <p class="slogan">Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor,
-                auctor tincidunt lorem ut, venenatis dapibus miq.</p>
+            
             <div class="row">
 
                 @forelse ($jours as $value)
@@ -103,8 +73,7 @@
                         <div class="out-trainer-info">
                             <h3><a href="trainer.html">{{$value->jour}}</a></h3>
                             <div class="prof">Weightlifting</div>
-                            <p>Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor,
-                                auctor tincidunt lorem ut, venenatis dapibus miq.</p>
+                            
                             <a href="/exercices/{{$value->id_jour}}/{{$value->categorie_id}}" class="btn">Afficher </a>
                         </div>
                     </div>

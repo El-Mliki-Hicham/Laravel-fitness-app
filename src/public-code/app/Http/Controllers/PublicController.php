@@ -43,24 +43,10 @@ class PublicController extends Controller
     ->get();
 
     
-    $exercices = DB::table('exercices_de_jours')
-    ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
-    ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
-    ->join("jours","exercices_de_jours.jour_id",'=',"jours.id_jour")
-    ->where("id_categorie",$id)
-    ->select("*")->count();
-
-    $number_jours = DB::table('exercices_de_jours')
-    ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
-    ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
-    ->join("jours","exercices_de_jours.jour_id",'=',"jours.id_jour")
-    ->where("id_categorie",$id)
-   
-    ->groupBy("id_jour")
-    ->count();
+    
 
 
-    return view('pages.jours',compact("jours","exercices","number_jours"));
+    return view('pages.jours',compact("jours"));
     }
     
     //page exercices-de-jour
