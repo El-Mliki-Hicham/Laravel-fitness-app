@@ -51,8 +51,11 @@ class ExercicesController extends Controller
             $file->move('img/exercices', $filename);
             $photo = $filename;
         }
+        else{
+        $photo = null;
+        }
 
-        $inserte =DB::insert('insert into exercices (nom_exercice  ,description_exercice ,photo_exercice) value(?,?,?,?)',[$name ,$numero  ,$description, $photo]);
+        $inserte =DB::insert('insert into exercices (nom_exercice  ,description_exercice ,photo_exercice) value(?,?,?)',[$name   ,$description, $photo]);
         if ($inserte) {
             return redirect('afficher-exercice');
         }

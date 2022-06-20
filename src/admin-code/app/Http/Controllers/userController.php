@@ -106,6 +106,10 @@ foreach($user as $value){};
         if($email == $value->email and $password = $value->password   ){
             return redirect('afficher-categorie');
         }
+        else{
+
+            return redirect("/");
+        }
 // if (!empty($user) {
 //     # code...
 //     return redirect('afficher-categorie');

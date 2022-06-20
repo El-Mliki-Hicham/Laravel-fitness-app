@@ -40,13 +40,7 @@
                                                     class="form-control validate" required
                                                     value="{{$value->nom_exercice}}">
                                             </div>
-                                            <div class="form-group mb-3">
-                                                
-                                                <label for="">numero d'exercice</label>
-                                                <input id="name" name="numero" type="text"
-                                                    class="form-control validate" required
-                                                    value="{{$value->numero}}">
-                                            </div>
+                                            
                                             <div class="form-group mb-3">
                                                 
                                                 <label for="">Description</label>

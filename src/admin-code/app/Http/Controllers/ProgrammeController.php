@@ -18,7 +18,7 @@ class ProgrammeController extends Controller
     ->select('*')
     ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
     ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
-    ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
+    ->join("jours","exercices_de_jours.jour_id",'=',"jours.id_jour")
     ->get();
     return view('pages.tableau-programme',compact("programme"));
     }
@@ -60,7 +60,7 @@ class ProgrammeController extends Controller
         $jour=$request->input('jour');
        
 
-        $inserte =DB::insert('insert into exercices_de_jours(exercice_id,categorie_id,id_jour) value(?,?,?)',[$exercice,$categorie,$jour]);
+        $inserte =DB::insert('insert into exercices_de_jours(exercice_id,categorie_id,jour_id) value(?,?,?)',[$exercice,$categorie,$jour]);
         if ($inserte) {
             return redirect('afficher-programme');
         }
@@ -103,7 +103,7 @@ class ProgrammeController extends Controller
         ->where('id_programme',$id)
         ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
         ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
-        ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
+        ->join("jours","exercices_de_jours.jour_id",'=',"jours.id_jour")
         ->get();
         return view('pages.edit-programme',compact('categorie','exercice','jour',"programme"));
     }
@@ -150,7 +150,7 @@ class ProgrammeController extends Controller
         ->where('id_programme',$id)
         ->join("categories","exercices_de_jours.categorie_id",'=',"categories.id_categorie")
         ->join("exercices","exercices_de_jours.exercice_id",'=',"exercices.id_exercice")
-        ->join("jours","exercices_de_jours.id_jour",'=',"jours.id_jour")
+        ->join("jours","exercices_de_jours.jour_id",'=',"jours.id_jour")
         ->delete();
         return redirect('afficher-programme');
     }
