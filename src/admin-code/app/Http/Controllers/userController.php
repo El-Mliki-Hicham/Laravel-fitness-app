@@ -89,19 +89,26 @@ class userController extends Controller
     public function login(Request $request)
     {
         $email = $request->input("email");
+        $password = $request->input("password");
 
         
         $user= DB::table('users')
         ->select("*")
+        // ->where([
+        //     ["email",'=',$email],
+        //     ["password",'=',$password]
+        //     ])
         ->get();
 
 foreach($user as $value){};
          
 
-        if($email == $value->email &){
+        if($email == $value->email and $password = $value->password   ){
             return redirect('afficher-categorie');
         }
-
-        
+// if (!empty($user) {
+//     # code...
+//     return redirect('afficher-categorie');
+// }
     }
 }
