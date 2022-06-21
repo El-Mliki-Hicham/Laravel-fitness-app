@@ -1,19 +1,22 @@
+
+
+
 <footer class="footer-fitness">
     <div class="container">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-lg-12 footer-item-logo">
-                <a href="index.html" class="logo-footer"><img src="{{asset('assets/img/logo-spartel-gym.png')}}" alt="logo"></a>
+                <a href="" class="logo-footer"><img src="{{asset('assets/img/logo-spartel-gym.png')}}" alt="logo"></a>
             </div>
         
-            <div class="footer-bottom">
+            <div class="footer-bottom  ">
 				<ul class="footer-menu">
-                    <li class="dropdown">
-                        <a href="{{route('home')}}">ACCUEIL<i class=""></i></a>
+                    <li class="dropdown title-decor">
+                        <a  href="{{route('home')}}">ACCUEIL<i class=""></i></a>
                         
                     </li>
-                    <li><a href="#a-propos">À propos</a></li>
-                    <li><a href="#exercices">Exercices</a></li>
-                    <li><a href="#programmes">Programmes</a></li>
+                    <li class="title-decor"><a href="#a-propos">À propos</a></li>
+                    <li class="title-decor"><a href="#exercices">Exercices</a></li>
+                    <li class="title-decor"><a href="#programmes">Programmes</a></li>
 				</ul>
 			</div>
 

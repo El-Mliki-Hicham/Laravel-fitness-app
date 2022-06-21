@@ -193,7 +193,7 @@
     <div class="fitness-banner-effect" style="background-image: url(assets/img/bg-best.svg);"></div>
     <div class="container">
         <div class="fitness-banner-row">
-            <div class="fitness-banner-left" style="background-image: url(assets/img/trainer-6.png;"></div>
+            <div class="fitness-banner-left" style="background-image: url('assets/img/logo  spartel gym black and red.png'); background-size: 120%"></div>
             <div class="fitness-banner-right">
                 <h2>SPARTEL <span></span>GYM</h2>
                 <p>Nos programmes <a href="#">SPARTEL</a> fournissent une variété d’exercices qui vous aideront à améliorer vos compétences et tout autour du physique dans presque tous les sports disponibles </p>
