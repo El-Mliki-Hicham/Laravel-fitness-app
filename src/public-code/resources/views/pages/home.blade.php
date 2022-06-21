@@ -45,7 +45,7 @@
                 <img class="slide-img-effect" src="{{asset('assets/img/slider-square.svg')}}" alt="img">
                 <div class="text-bg">workout</div>
                 <div class="fitness-slide-cover">
-                    <h2 class="title">push <span>yourself</span></h2>
+                    <h2 class="title">SPARTEL <span>GYM</span></h2>
                 </div>
             </div>
         </div>
@@ -62,9 +62,9 @@
             </div>
             <div class="container">
                 <img class="slide-img-effect" src="{{asset('assets/img/slider-square.svg')}}" alt="img">
-                <div class="text-bg">Yoga</div>
+                <div class="text-bg">SPARTEL</div>
                 <div class="fitness-slide-cover">
-                    <h2 class="title">push <span>yourself</span></h2>
+                    <h2 class="title">SPARTEL <span>GYM</span></h2>
                 </div>
             </div>
         </div>
@@ -83,7 +83,7 @@
                 <img class="slide-img-effect" src="assets/img/slider-square.svg" alt="img">
                 <div class="text-bg">Cardio</div>
                 <div class="fitness-slide-cover">
-                    <h2 class="title">push <span>yourself</span></h2>
+                    <h2 class="title">SPARTEL <span>GYM</span></h2>
                 </div>
             </div>
         </div>

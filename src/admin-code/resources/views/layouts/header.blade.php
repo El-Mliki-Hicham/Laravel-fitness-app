@@ -6,7 +6,7 @@
         <div class="logo">
         <img src="{{asset('img/logo  spartel gym black and red.png ')}}" alt="">
         </div>
-        <a href="#" class="btn btn-danger">SUBMIT new MOVIE</a>
+        <a href="#" class="btn btn-danger">Dashboard</a>
       </div>
       <!-- end with head -->
       <!-- start the list -->

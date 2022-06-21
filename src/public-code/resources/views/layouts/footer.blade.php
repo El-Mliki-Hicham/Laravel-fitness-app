@@ -14,9 +14,9 @@
                         <a  href="{{route('home')}}">ACCUEIL<i class=""></i></a>
                         
                     </li>
-                    <li class="title-decor"><a href="#a-propos">À propos</a></li>
-                    <li class="title-decor"><a href="#exercices">Exercices</a></li>
-                    <li class="title-decor"><a href="#programmes">Programmes</a></li>
+                    <li class="title-decor"><a href="{{route('home')}}#a-propos">À propos</a></li>
+                    <li class="title-decor"><a href="{{route('home')}}#exercices">Exercices</a></li>
+                    <li class="title-decor"><a href="{{route('home')}}#programmes">Programmes</a></li>
 				</ul>
 			</div>
 

@@ -10,7 +10,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-    <body class="bg-primary">
+    <body class="">
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
@@ -35,15 +35,13 @@
                                                 <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="password.html">Forgot Password?</a>
+                                                
                                                
                                                     <button class="btn btn-primary">login</button>
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="card-footer text-center py-3">
-                                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
-                                    </div>
+                                  
                                 </div>
                             </div>
                         </div>
