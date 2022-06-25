@@ -44,10 +44,13 @@ class PublicController extends Controller
     ->join("jours","exercices_de_jours.jour_id",'=',"jours.id_jour")
     ->get();
 
-    $categorie_exercice =exercices::all()
-    ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice");
+    // $categorie_exercice =exercices::all()
+    // ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice");
     
-    return view('pages.exercices-de-jour',compact("exercices","categorie_exercice"));
+      $categorie_exercice = new Controller;
+      $categorie_exercice->index();
+
+    return view('pages.exercices-de-jour',compact("exercices"));
 
 
     }
