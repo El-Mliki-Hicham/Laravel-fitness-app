@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-
+// public routes
 route::namespace("public")->group(function(){
 
 Route::get('/index',"PublicController@index" )->name('home');
@@ -30,8 +30,18 @@ Route::get('/exercices/{id}/{id_c}',"PublicController@afficher_exercices_id" );
 
 
 });
+
+
 Auth::routes();
 
+//home login
 Route::get('/home',"HomeController@index")->name('home');
+
+// login
+Route::get('/', function () {
+       return view('auth.login');
+});
+
+
 
 
