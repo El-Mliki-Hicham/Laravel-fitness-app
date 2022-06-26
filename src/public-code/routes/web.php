@@ -32,6 +32,6 @@ Route::get('/exercices/{id}/{id_c}',"PublicController@afficher_exercices_id" );
 });
 Auth::routes();
 
-Route::get('/home',"HomeController@index")->name('homee');
+Route::get('/home',"HomeController@index")->name('home');
 
 

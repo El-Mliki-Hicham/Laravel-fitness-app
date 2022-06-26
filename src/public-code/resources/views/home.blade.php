@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ route("home") }}
+                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>
