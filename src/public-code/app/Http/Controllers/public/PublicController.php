@@ -26,8 +26,7 @@ class PublicController extends Controller
        $exercices_count =exercices::all()->count();
        $categorie_count =categories::all()->count();
 
-       $exercices = new PublicController ;
-       $exercices->count_exercices();
+       $exercices =categories_exerices::all();
         return view("pages.home",compact("categories","exercices","exercices_count","categorie_count"));
     }
 
@@ -56,10 +55,11 @@ class PublicController extends Controller
     // $categorie_exercice =exercices::all()
     // ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice");
     
-      $categorie_exercice = new Controller;
-      $categorie_exercice->index();
+    $categorie_exercice =exercices::all()
+    ->join("categories_exerices","exercices.categorie_exercice",'=',"categories_exerices.id_categorie_exercice");
+    
 
-    return view('pages.exercices-de-jour',compact("exercices"));
+    return view('pages.exercices-de-jour',compact("exercices","categorie_exercice"));
 
 
     }

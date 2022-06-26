@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,8 @@ Route::get('/exercices/{id}/{id_c}',"PublicController@afficher_exercices_id" );
 
 
 });
+Auth::routes();
+
+Route::get('/home',"HomeController@index")->name('homee');
+
+

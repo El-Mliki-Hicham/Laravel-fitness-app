@@ -19,6 +19,7 @@
                     <li><a href="#a-propos">À propos</a></li>
                     <li><a href="#exercices">Exercices</a></li>
                     <li><a href="#programmes">Programmes</a></li>
+                   
                     {{-- <li class="dropdown"> --}}
                         {{-- <a href="#programmes">Programmes <i class="fa fa-caret-down"></i></a> --}}
                         {{-- <ul>
