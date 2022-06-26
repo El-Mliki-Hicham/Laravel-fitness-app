@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\public;
 use App\Models\exercices;
+use App\Models\categories_exerices;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -26,5 +27,12 @@ $id =3;
         ->count();
         return view('pages.exercices',compact("number_categorie_exercices"));
 
+    }
+
+    public function count_exercices(){
+
+        $exercices =categories_exerices::all();
+
+        return $exercices;
     }
 }

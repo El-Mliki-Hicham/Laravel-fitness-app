@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\public;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Models\categories;
 use App\Models\categories_exerices;
@@ -13,12 +14,20 @@ use App\Models\exercices_de_jours;
 class PublicController extends Controller
 {
 
+  public function __construct(){
+
+    $this->middleware(middleware:"auth");
+  }
+
   //page index
     function index(){  
       $categories=categories::all();    
-       $exercices =categories_exerices::all();
+       
        $exercices_count =exercices::all()->count();
        $categorie_count =categories::all()->count();
+
+       $exercices = new PublicController ;
+       $exercices->count_exercices();
         return view("pages.home",compact("categories","exercices","exercices_count","categorie_count"));
     }
 
