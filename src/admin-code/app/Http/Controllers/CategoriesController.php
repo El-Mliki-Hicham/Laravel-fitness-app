@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\categories;
+// use App\Models\categories_exerices;
+// use App\Models\exercices;
+// use App\Models\exercices_de_jours;
 
 class CategoriesController extends Controller
 {
@@ -15,9 +19,7 @@ class CategoriesController extends Controller
     public function index()
     {
     
-     $categorie =DB::table('categories')
-     ->select('*')
-     ->get();
+     $categorie =categories::all();
       return view('pages.tableau-categorie', compact('categorie'));
        
     }
@@ -41,6 +43,7 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         
+
        $name=$request->input('nom_categorie');
        $description=$request->input('description_categorie');
        if($request->hasfile('photo_categorie'))
@@ -54,7 +57,14 @@ class CategoriesController extends Controller
         else{
             $photo = null;
         }
-        $insert=DB::insert('insert into categories (nom_categorie ,description_categorie ,photo_categorie) value(?,?,?)',[$name ,$description, $photo]);
+        
+        $insert=categories::create([
+            "nom_categorie" => $name ,
+            "description_categorie" =>$description ,
+            "photo_categorie" =>$photo
+            
+        ]);
+        
         if ($insert) {
             return redirect('afficher-categorie');
         }
@@ -80,9 +90,7 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        $edit = DB::table('categories')
-        ->select('*')
-        ->where('id_categorie',$id)
+        $edit =categories::where('id_categorie',$id)
         ->get();
         
         return view('pages.edit-categorie', compact('edit'));
@@ -112,8 +120,7 @@ class CategoriesController extends Controller
             $image= $request->input("img");
        } 
        
-       DB::table('categories')
-       ->where('id_categorie',$id)
+      categories::where('id_categorie',$id)
        ->update(['nom_categorie'=>$name, 
        'photo_categorie'=>$image,
        "description_categorie"=>$description
@@ -131,9 +138,7 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-      DB::table('categories')
-      ->where('id_categorie',$id)
-      ->select('*')
+      categories::where('id_categorie',$id)
       ->delete();
       return redirect('afficher-categorie');
     }
