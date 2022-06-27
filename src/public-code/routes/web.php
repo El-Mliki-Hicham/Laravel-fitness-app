@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 // public routes
 route::namespace("public")->group(function(){
 
-Route::get('/index',"PublicController@index" )->name('home');
+Route::get('/index',"PublicController@index" )->name('index');
 Route::get('/jours/{id}',"PublicController@afficher_jours_id" );
 Route::get('/exercice-categorie/{id}',"PublicController@categorie_exercice" );
 Route::get('/exercices/{id}/{id_c}',"PublicController@afficher_exercices_id" );
@@ -39,7 +39,7 @@ Route::get('/home',"HomeController@index")->name('home');
 
 // login
 Route::get('/', function () {
-       return view('auth.login');
+       return 'home';
 });
 
 
