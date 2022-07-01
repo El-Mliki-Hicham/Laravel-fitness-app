@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\checkboxController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+
 });
+
+Route::get("/index",[checkboxController::class,"index"]);
+Route::get("/ajouter",[checkboxController::class,"ajouter"]);
