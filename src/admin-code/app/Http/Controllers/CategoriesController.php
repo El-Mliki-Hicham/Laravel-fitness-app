@@ -59,6 +59,7 @@ class CategoriesController extends Controller
         }
         
         $insert=categories::create([
+            "id_categorie"=>3,
             "nom_categorie" => $name ,
             "description_categorie" =>$description ,
             "photo_categorie" =>$photo
