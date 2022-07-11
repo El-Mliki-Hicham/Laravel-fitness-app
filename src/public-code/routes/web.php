@@ -32,15 +32,25 @@ Route::get('/exercices/{id}/{id_c}',"PublicController@afficher_exercices_id" );
 });
 
 
-Auth::routes();
 
-//home login
-Route::get('/home',"HomeController@index")->name('home');
-// Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
-// login
-Route::get('/', function () {
-       return 'home';
-});
+route::namespace("crud-public")->group(function(){
+
+       Route::get('/index',"PublicController@index")->name('home');
+      
+       
+       });
+
+
+
+// Auth::routes();
+
+// //home login
+// Route::get('/login',"HomeController@index")->name('login');
+// // Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
+// // login
+// Route::get('/', function () {
+//        return 'login';
+// });
 
 
 

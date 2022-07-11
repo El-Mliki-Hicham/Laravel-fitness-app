@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get("/index",[checkboxController::class,"index"]);
-Route::get("/ajouter",[checkboxController::class,"ajouter"]);
+Route::post("/ajouter",[checkboxController::class,"ajouter"])->name("ajouter");

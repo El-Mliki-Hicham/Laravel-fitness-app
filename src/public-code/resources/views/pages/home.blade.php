@@ -99,6 +99,18 @@
         <h2 class="title-decor">Programme <span> Sportif</span></h2>
         <p class="slogan">sélectionner le programme de votre choix.</p>
         <div class="row">
+
+            <div class="col-md-4 club-card-col">
+                <div class="club-card-item" style="background-image: url('{{asset('assets/img/categories/plus.png')}} )'">
+                    <div class="price-cover">
+                        <div class="price"><span></span><img style="width: 250px;" src="{{asset('assets/img/categories/plus.png')}}" alt=""></div>
+                        <div class="date">ajouter</div>
+                    </div>
+                    <div class="club-card-text">creat votre programmes sportif</div>
+                    <a href="/jours/" class="btn">ajouter</a>
+                </div>
+            </div>
+
 			@forelse ($categories as $value)
 				
 			

@@ -28,9 +28,20 @@ $jours = $request->input("jour");
 $exercice = $request->input("exercice");
 
 exercices_de_jours::create([
+  
+  "exercice_id"=>$exercice,
+  "categorie_id"=>1,
+  "jour_id"=>$jours
+]);
 
-    
-])
+  
+  
+
+
+if ($insert) {
+  return redirect('index');
+}
+
 
 
 

@@ -14,10 +14,10 @@ use App\Models\exercices_de_jours;
 class PublicController extends Controller
 {
 
-  public function __construct(){
+  // public function __construct(){
 
-    $this->middleware(middleware:"auth");
-  }
+  //   $this->middleware(middleware:"auth");
+  // }
 
   //page index
     function index(){  

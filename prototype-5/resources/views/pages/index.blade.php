@@ -16,6 +16,10 @@
 <div class="container">
     <h2 class="title-decor">les exercices de <span>News</span></h2>
     <br>
+
+<form action="{{route("ajouter")}}"  method="POST">
+
+    @csrf
     <div class="row">
         @forelse ($exercices as $value)
         <div class="col-md-4 related-post-col">
@@ -51,7 +55,7 @@
                         @empty
                             
                         @endforelse
-                        
+                                              
                     </div>
                 </div>
             </div>
@@ -61,8 +65,9 @@
     </div>
 </div>
 
-<a href="ajouter"><button>ajouter</button>
+<a  ><button>ajouter</button>
 </a>
+</form>
 <!-- ================ FOOTER END ================ -->
 
 <!--=================== TO TOP ===================-->
