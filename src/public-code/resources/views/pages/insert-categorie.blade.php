@@ -24,7 +24,7 @@
 		<div class="container">
 			<h2 class="title-decor">Nouveau <span>Programme</span></h2>
 			<p class="slogan">Maecenas consequat ex id lobortis venenatis. Mauris id erat enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.</p>
-			<form action="" method="post">
+			<form action="{{route('store')}}" method="post">
 			<div class="row">
 				<div class="col-md-5 col-lg-4">
 					<a ><img src="assets/img/about-top-2.jpg" alt="img"></a>
