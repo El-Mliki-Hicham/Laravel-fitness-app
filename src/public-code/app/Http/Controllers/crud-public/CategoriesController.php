@@ -18,10 +18,10 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-    
+
      $categorie =categories::all();
       return view('pages.tableau-categorie', compact('categorie'));
-       
+
     }
 
     /**
@@ -42,7 +42,7 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        
+
 
        $name=$request->input('nom_categorie');
        $description=$request->input('description_categorie');
@@ -57,18 +57,18 @@ class CategoriesController extends Controller
         else{
             $photo = null;
         }
-        
+
         $insert=categories::create([
             "nom" => $name ,
             "description" =>$description ,
             "photo_categorie" =>$photo
-            
+
         ]);
-        
+
         if ($insert) {
             return redirect('afficher-categorie');
         }
-       
+
     }
 
     /**
@@ -92,7 +92,7 @@ class CategoriesController extends Controller
     {
         $edit =categories::where('id_categorie',$id)
         ->get();
-        
+
         return view('pages.edit-categorie', compact('edit'));
     }
 
@@ -118,16 +118,16 @@ class CategoriesController extends Controller
           }
         else{
             $image= $request->input("img");
-       } 
-       
+       }
+
       categories::where('id_categorie',$id)
-       ->update(['nom_categorie'=>$name, 
+       ->update(['nom_categorie'=>$name,
        'photo_categorie'=>$image,
        "description_categorie"=>$description
     ]);
-       
+
        return redirect('afficher-categorie');
- 
+
     }
 
     /**
