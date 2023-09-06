@@ -7,6 +7,7 @@ use App\Http\Controllers\JoursController;
 use App\Http\Controllers\ProgrammeController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\public\PublicController as PublicPublicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,15 +27,13 @@ use Illuminate\Support\Facades\Route;
 
 
 // public routes
-route::namespace("public")->group(function(){
 
-Route::get('/index',"PublicController@index" )->name('home');
-Route::get('/jours/{id}',"PublicController@afficher_jours_id" );
-Route::get('/exercice-categorie/{id}',"PublicController@categorie_exercice" );
-Route::get('/exercices/{id}/{id_c}',"PublicController@afficher_exercices_id" );
+Route::get('/index',[PublicPublicController::class,"index"])->name('home');
+Route::get('/jours/{id}',[PublicPublicController::class,"afficher_jours_id"] );
+Route::get('/exercice-categorie/{id}',[PublicPublicController::class,"categorie_exercice"] );
+Route::get('/exercices/{id}/{id_c}',[PublicPublicController::class,"afficher_exercices_id"] );
 
 
-});
 
 
 
@@ -44,8 +43,8 @@ route::namespace("crud-public")->group(function(){
        route::resource("exercice",ExercicesController::class);
        route::resource("jour",JoursController::class);
        route::resource("programme",ProgrammeController::class);
-       
-       
+
+
        });
 
 
