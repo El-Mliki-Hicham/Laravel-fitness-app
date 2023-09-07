@@ -25,7 +25,7 @@
     <br>
     <section class="s-related-posts">
         <div class="container">
-            <h2 class="title-decor">les exercices de <span>News</span></h2>
+            <h2 class="title-decor">les exercices de <span>jour</span></h2>
             <br>
             <div class="row">
                 @forelse ($exercices as $value)
@@ -38,7 +38,7 @@
                             {{-- <div class="related-post-categ " style="color: white">{{$value->nom_categorie_exercice}} --}}
                             {{-- </div> --}}
                             <div class="post-thumbnail">
-                                <a href="single-blog.html"><img class="rx-lazy"
+                                <a ><img class="rx-lazy"
                                         src="{{asset('assets/img/exercices')}}/{{$value->photo_exercice}}"
                                         data-src="{{asset('assets/img/exercices')}}/{{$value->photo_exercice}}"
                                         alt="img"></a>
@@ -47,14 +47,14 @@
                         <div class="post-content  ">
                             <div class="meta">
                             </div>
-                            <h3 class="title"><a href="single-blog.html">repetition : </a></h3>
+                            <h3 class="title"><a >repetition : </a></h3>
                             <div class="post-footer">
                                 <div class="meta">
                                     <span class="post-by name text-dark	">
                                         {{$value->repetition_exercice}}</span>
 
                                 </div>
-                                <a href="single-blog.html" class="btn"><span>{{$value->nom_exercice}}</span></a>
+                                <a  class="btn"><span>{{$value->nom_exercice}}</span></a>
                             </div>
                             <div class="text">
                                 <br>
@@ -67,13 +67,7 @@
                 @endforelse
             </div>
         </div>
-
-
-
-
-
-
-        <section class=" testimonials-border" style="">
+        {{-- <section class=" testimonials-border" style="">
             <div class="container">
                 <div class="testimonials-slider">
                     <div class="testimonial-slide">
@@ -82,7 +76,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- ============ S-TESTIMONIALS END ============ -->
     </section>
     <!--============== FOOTER ==============-->

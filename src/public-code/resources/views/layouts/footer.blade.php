@@ -4,23 +4,25 @@
 <footer class="footer-fitness">
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-3 col-lg-12 footer-item-logo">
-                <a href="" class="logo-footer"><img src="{{asset('assets/img/logo-spartel-gym.png')}}" alt="logo"></a>
+            <div class="col-md-2">
+                <h5 class="text-md-right">Contact Us</h5>
+                <hr>
             </div>
-        
-            <div class="footer-bottom  ">
-				<ul class="footer-menu">
-                    <li class="dropdown title-decor">
-                        <a  href="{{route('home')}}">ACCUEIL<i class=""></i></a>
-                        
-                    </li>
-                    <li class="title-decor"><a href="{{route('home')}}#a-propos">À propos</a></li>
-                    <li class="title-decor"><a href="{{route('home')}}#exercices">Exercices</a></li>
-                    <li class="title-decor"><a href="{{route('home')}}#programmes">Programmes</a></li>
-				</ul>
+            <div class="col-md-5" style="margin-bottom: 18px">
+                <form>
+                    <fieldset class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                    </fieldset>
+                    <fieldset class="form-group text-xs-right">
+                        <button type="button" class="btn btn-secondary-outline btn-lg">Send</button>
+                    </fieldset>
+                </form>
 			</div>
 
         </div>
-      
+
 </footer>
 
