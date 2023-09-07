@@ -59,7 +59,7 @@
                                     {{ Auth::user()->name }}
                                 </a>
                             </li>
-                            <li>   
+                            <li>
                             <div class="nav-item " aria-labelledby="nav-link">
                                     <a class="nav-link" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

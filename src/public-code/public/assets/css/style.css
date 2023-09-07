@@ -3371,7 +3371,7 @@ blockquote:before {
     position: absolute;
     top: 80px;
     right: -15px;
-    left: -113px;
+    left: 20px;
     height: 100%;
     border: 7px solid #f23849;
     pointer-events: none; }

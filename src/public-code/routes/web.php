@@ -28,6 +28,10 @@ use Illuminate\Support\Facades\Route;
 
 // public routes
 
+Route::get('/',function(){
+   return redirect("/index");
+});
+
 Route::get('/index',[PublicPublicController::class,"index"])->name('home');
 Route::get('/jours/{id}',[PublicPublicController::class,"afficher_jours_id"] );
 Route::get('/exercice-categorie/{id}',[PublicPublicController::class,"categorie_exercice"] );

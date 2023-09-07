@@ -4,7 +4,7 @@
 
 <body id="home" class="page-fitness">
 	<!--================ PRELOADER ================-->
-	<div class="preloader-cover">
+	{{-- <div class="preloader-cover">
 		<div id="cube-loader">
 			<div class="caption">
 				<div class="cube-loader">
@@ -15,9 +15,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	
+	</div> --}}
+
+
 	<!-- ================= HEADER ================= -->
 	@include('layouts.header')
 	<!-- =============== HEADER END =============== -->
@@ -88,7 +88,7 @@
             </div>
         </div>
     </div>
-    
+
 </section>
 
 
@@ -106,14 +106,14 @@
                         <div class="price"><span></span><img style="width: 250px;" src="{{asset('assets/img/categories/plus.png')}}" alt=""></div>
                         <div class="date">ajouter</div>
                     </div>
-                    <div class="club-card-text">creat votre programmes sportif</div>
-                    <a href="/jours/" class="btn">ajouter</a>
+                    <div class="club-card-text">créer votre programmes sportif</div>
+                    <a class="btn">ajouter</a>
                 </div>
             </div>
 
 			@forelse ($categories as $value)
-				
-			
+
+
             <div class="col-md-4 club-card-col">
                 <div class="club-card-item" style="background-image: url(assets/img/bg-price-1.svg); ">
                     <div class="price-cover">
@@ -125,7 +125,7 @@
                 </div>
             </div>
 			@empty
-				
+
 			@endforelse
         </div>
     </div>
@@ -138,10 +138,10 @@
 	<div class="container">
 		<div class="about-info-row">
 			<div class="about-info-col">
-				
+
 			</div>
 			<div class="about-info-col">
-				
+
                 <h1 class="title-decor"> <span> 1-3mois</h1>
                 <h3>Dureé</h3>
 			</div>
@@ -154,7 +154,7 @@
 				<h3>exercices</h3>
 			</div>
 			<div class="about-info-col">
-				
+
 			</div>
 		</div>
 	</div>
@@ -175,15 +175,15 @@
                             <h3>{{$value->nom_categorie_exercice}}</h3>
                         </div>
                     </div>
-                   
+
                 </div></a>
             </div>
 			@empty
-				
+
 			@endforelse
-          
+
         </div>
-        
+
     </div>
 </section>
 <!-- ========= FITNESS-OUR-PROGRAM END ========= -->
@@ -196,7 +196,7 @@
         <p class="slogan">
 			</p>
     </div>
-   
+
 </section>
 <!-- ============ S-BEST-TRAINER END ============ -->
 
@@ -216,9 +216,9 @@
 <!-- =========== S-FITN =ESS-BANNER END =========== -->
 
 
-	
-	
-	
+
+
+
 	<!-- ================== FOOTER ================== -->
 	@include('layouts.footer')
 	<!-- ================ FOOTER END ================ -->
